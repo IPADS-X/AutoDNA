@@ -1,0 +1,10 @@
+[
+  {
+    "name": "DNA template in vitro transcription",
+    "user_requirement": "Synthesize single-stranded siRNA from the prepared DNA template in 3 parallel runs."
+  },
+  {
+    "name": "DNA template removal and siRNA clean-up",
+    "user_requirement": "Purify the products from the 3 parallel transcription reactions."
+  }
+]

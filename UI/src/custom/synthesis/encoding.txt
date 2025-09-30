@@ -1,0 +1,92 @@
+好的，我从编码库中找到了如下编码方案：
+```python
+def text_to_ternary_chunks(text):
+    ascii_bytes = text.encode(\'ascii\')
+    binary_str = \'\'.join(format(b, \'08b\') for b in ascii_bytes)
+    binary_val = int(binary_str, 2)
+    
+    # Convert to base3 digits (MSB first)
+    digits = []
+    n = binary_val
+    if n == 0:
+        digits.append(0)
+    else:
+        while n > 0:
+            digits.append(n % 3)
+            n = n // 3
+    digits = digits[::-1]  # MSB first
+    
+    # Pad with one zero and ensure length is 234
+    digits.append(0)
+    while len(digits) < 234:
+        digits.append(0)
+    
+    # Split into chunks
+    chunks = [digits[i*3 : (i+1)*3] for i in range(78)]
+    return chunks
+
+def sequence_number_to_ternary(n):
+    digits = []
+    for _ in range(4):
+        digits.append(n % 3)
+        n = n // 3
+    digits = digits[::-1]
+    return digits
+
+def compute_error_check(s_digits, d_digits):
+    total = sum(s_digits) + sum(d_digits)
+    return total % 3
+
+def encode_part(digits, prev_nuc=None, is_start=False):
+    encoded = []
+    current_prev = prev_nuc
+    for i, digit in enumerate(digits):
+        if i == 0 and is_start:
+            # Initial mapping
+            if digit == 0:
+                nuc = \'A\'
+            elif digit == 1:
+                nuc = \'T\'
+            elif digit == 2:
+                nuc = \'C\'
+            else:
+                raise ValueError(f"Invalid digit {digit} in initial mapping")
+        else:
+            if current_prev is None:
+                raise ValueError("Previous nucleotide is None for non-start part")
+            transition_map = {
+                \'A\': {0: \'T\', 1: \'C\', 2: \'G\'},
+                \'T\': {0: \'A\', 1: \'C\', 2: \'G\'},
+                \'C\': {0: \'A\', 1: \'T\', 2: \'G\'},
+                \'G\': {0: \'A\', 1: \'T\', 2: \'C\'},
+            }
+            nuc = transition_map[current_prev][digit]
+        encoded.append(nuc)
+        current_prev = nuc
+    return \'\'.join(encoded), current_prev
+
+def encode_strand(s_digits, d_digits, e_digit):
+    # Encode S part
+    s_part, last_nuc = encode_part(s_digits, is_start=True)
+    # Encode D part
+    d_part, last_nuc = encode_part(d_digits, prev_nuc=last_nuc, is_start=False)
+    # Encode E part
+    e_part, _ = encode_part([e_digit], prev_nuc=last_nuc, is_start=False)
+    return s_part + d_part + e_part
+
+def main():
+    text = "Intelligence is the ability to adapt to change"
+    chunks = text_to_ternary_chunks(text)
+    for i in range(78):
+        s_digits = sequence_number_to_ternary(i)
+        d_digits = chunks[i]
+        e_digit = compute_error_check(s_digits, d_digits)
+        strand = encode_strand(s_digits, d_digits, e_digit)
+        print(strand)
+
+if __name__ == "__main__":
+    main()
+```
+
+运行上述代码，可以得到编码序列为：
+ATATATACATACATACATAGATAGATCATATCATCTATAGATCGATATATGATATGATGTATATATGCATACACATATAC

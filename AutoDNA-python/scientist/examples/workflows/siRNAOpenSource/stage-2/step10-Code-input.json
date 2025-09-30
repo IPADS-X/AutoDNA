@@ -1,0 +1,1 @@
+{"name": "Code", "args": {"code_request_id": "Protocol-7ac5", "inputs_from_previous_stage": "The final product is stored in the container 'synthesized_ssRNA_solution' with a volume of 20.0 \u00b5L.", "pure_software": false}, "id": "d794ea21-8979-4702-adc5-6bea95159d14", "type": "tool_call"}

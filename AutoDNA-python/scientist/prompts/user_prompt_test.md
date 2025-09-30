@@ -1,0 +1,1 @@
+Design and implement an scheme for encoding "Intelligence is the ability to adapt to change" (46 ASCII characters) into multiple DNA strands, with each strand exactly 8 bases in length.

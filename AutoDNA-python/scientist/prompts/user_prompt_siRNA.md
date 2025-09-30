@@ -1,0 +1,2 @@
+The goal is to design and implement an experiment for single-stranded siRNA in vitro transcription and clean-up from a prepared DNA template with fewest stages.
+Do 3 parallel runs for the whole experiment to ensure correctness.

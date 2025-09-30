@@ -1,0 +1,1 @@
+{"name": "Protocol", "args": {"experiment_name": "enzymatic de novo DNA synthesis of ACTCTGAT", "file_ids": ["Protocol-57ea", "Hypothesis-0104"], "manuals": ["beads-manual", "3-ONH2-dnTP-manual"], "pure_software": false, "retry": false}, "id": "call_6b758bf889e54a2d9f2a915c0753a553", "type": "tool_call"}

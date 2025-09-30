@@ -1,0 +1,3 @@
+Design and optimize an enzymatic de novo DNA synthesis experiment(the target DNA sequence ACTCTGAT) to achieve a state-of-the-art stepwise yield while minimizing time. Repeat the experiment 4 times so that the measured yield is more accurate.
+When minimizing time, the maximum allowable drop from the state-of-the-art stepwise yield is 1%. When the stepwise yield drops more than 1% of the SOTA stepwise yield, you must stop optimizing.
+When you finish all target optimization, output the complete procedure that is exactly the same as the best procedure.

@@ -1,0 +1,7 @@
+
+experiment_name: The goal of the experiment with a short description (no more than 10 words).
+Generate the experiment_name parameter for the following experiment description(output only the parameter value):
+------------------------------
+Design and optimize enzymatic de novo DNA synthesis experiment(the target DNA sequence ACATGATA) to achieve a state-of-the-art stepwise yield while minimizing time. Repeat the experiment 4 times so that the measured yield is more accurate.
+When minimizing time, the maximum allowable drop from the state-of-the-art stepwise yield is 1%. When the stepwise yield drops more than 1% of the SOTA stepwise yield, you must stop optimizing.
+When you finish all target optimization, output the complete procedure that is exactly the same as the best procedure.

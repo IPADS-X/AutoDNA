@@ -1,0 +1,1 @@
+{"name": "Literature", "args": {"experiment_name": "enzymatic de novo DNA synthesis of ACTCTGAT", "questions": ["What is the state-of-the-art stepwise yield for enzymatic de novo DNA synthesis?", "What is the general procedure for enzymatic de novo DNA synthesis of ACTCTGAT?"]}, "id": "call_702c5ba5fb22425f874d3633a2e1484b", "type": "tool_call"}

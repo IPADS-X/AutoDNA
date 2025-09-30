@@ -1,0 +1,3 @@
+[submodule "3rdparty/dtl"]
+	path = 3rdparty/dtl
+	url = git@github.com:cubicdaiya/dtl.git

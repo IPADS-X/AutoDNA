@@ -1,0 +1,779 @@
+{
+    "carriers": [
+        {
+            "name": "Reaction_Carrier",
+            "machine": "FLUORESCENCE",
+            "machineArea": "SAMPLE_AREA",
+            "type": "STRIP_TUBE",
+            "is_consume": true
+        },
+        {
+            "name": "Nuc_Reagent_Carrier_1",
+            "machine": "FLUORESCENCE",
+            "machineArea": "PCR_STRIP_SAMPLE_CONSUMABLE_AREA",
+            "type": "STRIP_TUBE"
+        },
+        {
+            "name": "Puri_Reagent_Carrier_1",
+            "machine": "PURIFICATION",
+            "machineArea": "EMPTY_TUBE_AREA",
+            "type": "STRIP_TUBE"
+        },
+        {
+            "name": "Puri_Reagent_Carrier_2",
+            "machine": "PURIFICATION",
+            "machineArea": "REACTION_AREA_02",
+            "type": "STRIP_TUBE"
+        },
+        {
+            "name": "Puri_Reagent_Cold_Carrier",
+            "machine": "PURIFICATION",
+            "machineArea": "LOW_TEMP_AREA",
+            "type": "STRIP_TUBE"
+        },
+        {
+            "name": "Puri_Reagent_Chamber_Carrier_1",
+            "machine": "PURIFICATION",
+            "machineArea": "NORMAL_TEMP_AREA",
+            "type": "CHAMBER"
+        },
+        {
+            "name": "Puri_Reagent_Chamber_Carrier_2",
+            "machine": "PURIFICATION",
+            "machineArea": "CLEANING_AREA",
+            "type": "CHAMBER"
+        },
+        {
+            "name": "Puri_Reaction_Carrier",
+            "machine": "PURIFICATION",
+            "machineArea": "SAMPLE_AREA",
+            "type": "STRIP_TUBE",
+            "is_consume": true
+        },
+        {
+            "name": "PCR_Tube_Carrier",
+            "machine": "LIBRARY",
+            "machineArea": "PCR_STRIP_CONSUMABLE_AREA",
+            "type": "PCR_TUBE",
+            "is_consume": true
+        },
+        {
+            "name": "Chamber_Tube_Carrier",
+            "machine": "LIBRARY",
+            "machineArea": "NORMAL_TEMP_REAGENT_AREA",
+            "type": "PCR_TUBE"
+        },
+        {
+            "name": "Cold_Label_Tube_Carrier",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_LABEL_AREA",
+            "type": "STRIP_TUBE"
+        },
+        {
+            "name": "Cold_Reagent_Tube_Carrier",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_REAGENT_AREA",
+            "type": "PCR_TUBE"
+        }
+    ],
+    "tubes": [
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_NC_Sample",
+            "label": "Reaction_NC_Sample",
+            "machine": "FLUORESCENCE",
+            "machineArea": "SAMPLE_AREA",
+            "AreaIndex": 2
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_NTC_Sample",
+            "label": "Reaction_NTC_Sample",
+            "machine": "FLUORESCENCE",
+            "machineArea": "SAMPLE_AREA",
+            "AreaIndex": 3
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_1_Sample",
+            "label": "Reaction_1_Sample",
+            "machine": "FLUORESCENCE",
+            "machineArea": "PCR_STRIP_SAMPLE_CONSUMABLE_AREA",
+            "AreaIndex": 2
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_2_Sample",
+            "label": "Reaction_2_Sample",
+            "machine": "FLUORESCENCE",
+            "machineArea": "PCR_STRIP_SAMPLE_CONSUMABLE_AREA",
+            "AreaIndex": 3
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_3_Sample",
+            "label": "Reaction_3_Sample",
+            "machine": "FLUORESCENCE",
+            "machineArea": "PCR_STRIP_SAMPLE_CONSUMABLE_AREA",
+            "AreaIndex": 4
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_4_Sample",
+            "label": "Reaction_4_Sample",
+            "machine": "FLUORESCENCE",
+            "machineArea": "PCR_STRIP_SAMPLE_CONSUMABLE_AREA",
+            "AreaIndex": 5
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_5_Sample",
+            "label": "Reaction_5_Sample",
+            "machine": "FLUORESCENCE",
+            "machineArea": "PCR_STRIP_SAMPLE_CONSUMABLE_AREA",
+            "AreaIndex": 6
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_6_Sample",
+            "label": "Reaction_6_Sample",
+            "machine": "FLUORESCENCE",
+            "machineArea": "PCR_STRIP_SAMPLE_CONSUMABLE_AREA",
+            "AreaIndex": 7
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_Initiator",
+            "label": "Reaction_Initiator",
+            "machine": "FLUORESCENCE",
+            "machineArea": "SAMPLE_AREA",
+            "AreaIndex": 4
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Reaction_Buffer",
+            "label": "Reaction_Buffer",
+            "machine": "FLUORESCENCE",
+            "machineArea": "SAMPLE_AREA",
+            "AreaIndex": 1
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "AMPure XP Beads",
+            "label": "AMPure XP Beads",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_REAGENT_AREA",
+            "AreaIndex": 10
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "DNA Control Sample",
+            "label": "DNA Control Sample",
+            "machine": "PURIFICATION",
+            "machineArea": "REACTION_AREA_02",
+            "AreaIndex": 1
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "NEBNext FFPE DNA Repair Mix",
+            "label": "NEBNext FFPE DNA Repair Mix",
+            "machine": "PURIFICATION",
+            "machineArea": "LOW_TEMP_AREA",
+            "AreaIndex": 0
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Ultra II End-prep Enzyme Mix",
+            "label": "Ultra II End-prep Enzyme Mix",
+            "machine": "PURIFICATION",
+            "machineArea": "LOW_TEMP_AREA",
+            "AreaIndex": 2
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "NEBNext FFPE DNA Repair Buffer",
+            "label": "NEBNext FFPE DNA Repair Buffer",
+            "machine": "PURIFICATION",
+            "machineArea": "LOW_TEMP_AREA",
+            "AreaIndex": 3
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Ultra II End-prep Reaction Buffer",
+            "label": "Ultra II End-prep Reaction Buffer",
+            "machine": "PURIFICATION",
+            "machineArea": "LOW_TEMP_AREA",
+            "AreaIndex": 4
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Elution Buffer",
+            "label": "Elution Buffer",
+            "machine": "PURIFICATION",
+            "machineArea": "SAMPLE_AREA",
+            "AreaIndex": 2
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "nuclease-free water",
+            "label": "nuclease-free water",
+            "machine": "PURIFICATION",
+            "machineArea": "SAMPLE_AREA",
+            "AreaIndex": 1
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "gDNA",
+            "label": "gDNA",
+            "machine": "PURIFICATION",
+            "machineArea": "REACTION_AREA_02",
+            "AreaIndex": 2
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "80% ethanol",
+            "label": "80% ethanol",
+            "machine": "LIBRARY",
+            "machineArea": "NORMAL_TEMP_REAGENT_AREA",
+            "AreaIndex": 0
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "NB01",
+            "label": "NB01",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_REAGENT_AREA",
+            "AreaIndex": 0
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "Blunt/TA Ligase Master Mix",
+            "label": "Blunt/TA Ligase Master Mix",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_REAGENT_AREA",
+            "AreaIndex": 1
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "EDTA (blue cap)",
+            "label": "EDTA (blue cap)",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_REAGENT_AREA",
+            "AreaIndex": 2
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "Native Adapter",
+            "label": "Native Adapter",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_LABEL_AREA",
+            "AreaIndex": 0
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "NEBNext Quick Ligation Reaction Buffer",
+            "label": "NEBNext Quick Ligation Reaction Buffer",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_REAGENT_AREA",
+            "AreaIndex": 3
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "Quick T4 DNA Ligase",
+            "label": "Quick T4 DNA Ligase",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_REAGENT_AREA",
+            "AreaIndex": 4
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "Short Fragment Buffer",
+            "label": "Short Fragment Buffer",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_REAGENT_AREA",
+            "AreaIndex": 5
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "Initiator-immobilized magnetic beads",
+            "label": "Initiator-immobilized magnetic beads",
+            "machine": "LIBRARY",
+            "machineArea": "PCR_STRIP_CONSUMABLE_AREA",
+            "AreaIndex": 0,
+            "is_reagent": false
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "Reaction Buffer",
+            "label": "Reaction Buffer",
+            "machine": "LIBRARY",
+            "machineArea": "PCR_STRIP_CONSUMABLE_AREA",
+            "AreaIndex": 1
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "2.5 mM CoCl2",
+            "label": "2.5 mM CoCl2",
+            "machine": "LIBRARY",
+            "machineArea": "PCR_STRIP_CONSUMABLE_AREA",
+            "AreaIndex": 2
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "10 mM dATP",
+            "label": "10 mM dATP",
+            "machine": "LIBRARY",
+            "machineArea": "PCR_STRIP_CONSUMABLE_AREA",
+            "AreaIndex": 3
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "Terminal Deoxynucleotidyl Transferase",
+            "label": "Terminal Deoxynucleotidyl Transferase",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_LABEL_AREA",
+            "AreaIndex": 1
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "2x Phanta Max Master Mix",
+            "label": "2x Phanta Max Master Mix",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_LABEL_AREA",
+            "AreaIndex": 2
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "primer1 10uM",
+            "label": "primer1 10uM",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_LABEL_AREA",
+            "AreaIndex": 3
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "primer2 10uM",
+            "label": "primer2 10uM",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_LABEL_AREA",
+            "AreaIndex": 4
+        },
+        {
+            "type": "STRIP_TUBE",
+            "name": "VAHTS DNA Clean Beads",
+            "label": "VAHTS DNA Clean Beads",
+            "machine": "LIBRARY",
+            "machineArea": "COLD_LABEL_AREA",
+            "AreaIndex": 4
+        },
+        {
+            "type": "PCR_TUBE",
+            "name": "Nuclease-Free Water",
+            "label": "Nuclease-Free Water",
+            "machine": "LIBRARY",
+            "machineArea": "NORMAL_TEMP_REAGENT_AREA",
+            "AreaIndex": 1
+        }
+    ],
+    "reagents": [
+        {
+            "reagent": "NC-1",
+            "volume": 5,
+            "tube": "Reaction_NC_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0
+        },
+        {
+            "reagent": "NC-2",
+            "volume": 5,
+            "tube": "Reaction_NC_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 1
+        },
+        {
+            "reagent": "NC-3",
+            "volume": 5,
+            "tube": "Reaction_NC_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 2
+        },
+        {
+            "reagent": "NTC-1",
+            "volume": 5,
+            "tube": "Reaction_NTC_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0
+        },
+        {
+            "reagent": "NTC-2",
+            "volume": 5,
+            "tube": "Reaction_NTC_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 1
+        },
+        {
+            "reagent": "NTC-3",
+            "volume": 5,
+            "tube": "Reaction_NTC_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 2
+        },
+        {
+            "reagent": "Sample1-1",
+            "volume": 5,
+            "tube": "Reaction_1_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0
+        },
+        {
+            "reagent": "Sample1-2",
+            "volume": 5,
+            "tube": "Reaction_1_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 1
+        },
+        {
+            "reagent": "Sample1-3",
+            "volume": 5,
+            "tube": "Reaction_1_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 2
+        },
+        {
+            "reagent": "Sample2-1",
+            "volume": 5,
+            "tube": "Reaction_2_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0
+        },
+        {
+            "reagent": "Sample2-2",
+            "volume": 5,
+            "tube": "Reaction_2_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 1
+        },
+        {
+            "reagent": "Sample2-3",
+            "volume": 5,
+            "tube": "Reaction_2_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 2
+        },
+        {
+            "reagent": "Sample3-1",
+            "volume": 5,
+            "tube": "Reaction_3_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0
+        },
+        {
+            "reagent": "Sample3-2",
+            "volume": 5,
+            "tube": "Reaction_3_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 1
+        },
+        {
+            "reagent": "Sample3-3",
+            "volume": 5,
+            "tube": "Reaction_3_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 2
+        },
+        {
+            "reagent": "Sample4-1",
+            "volume": 5,
+            "tube": "Reaction_4_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0
+        },
+        {
+            "reagent": "Sample4-2",
+            "volume": 5,
+            "tube": "Reaction_4_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 1
+        },
+        {
+            "reagent": "Sample4-3",
+            "volume": 5,
+            "tube": "Reaction_4_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 2
+        },
+        {
+            "reagent": "Sample5-1",
+            "volume": 5,
+            "tube": "Reaction_5_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0
+        },
+        {
+            "reagent": "Sample5-2",
+            "volume": 5,
+            "tube": "Reaction_5_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 1
+        },
+        {
+            "reagent": "Sample5-3",
+            "volume": 5,
+            "tube": "Reaction_5_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 2
+        },
+        {
+            "reagent": "Sample6-1",
+            "volume": 5,
+            "tube": "Reaction_6_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0
+        },
+        {
+            "reagent": "Sample6-2",
+            "volume": 5,
+            "tube": "Reaction_6_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 1
+        },
+        {
+            "reagent": "Sample6-3",
+            "volume": 5,
+            "tube": "Reaction_6_Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 2
+        },
+        {
+            "reagent": "Reaction initiator",
+            "volume": 42,
+            "tube": "Reaction_Initiator",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 3
+        },
+        {
+            "reagent": "RPA Reagent Buffer",
+            "volume": 42,
+            "tube": "Reaction_Buffer",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 3
+        },
+        {
+            "reagent": "AMPure XP Beads",
+            "volume": 2000,
+            "tube": "AMPure XP Beads",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0
+        },
+        {
+            "reagent": "DNA Control Sample",
+            "volume": 200,
+            "tube": "DNA Control Sample",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 4
+        },
+        {
+            "reagent": "NEBNext FFPE DNA Repair Mix",
+            "volume": 200,
+            "tube": "NEBNext FFPE DNA Repair Mix",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 2
+        },
+        {
+            "reagent": "Ultra II End-prep Enzyme Mix",
+            "volume": 200,
+            "tube": "NEBNext FFPE DNA Repair Mix",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 2,
+            "num": 1
+        },
+        {
+            "reagent": "NEBNext FFPE DNA Repair Buffer",
+            "volume": 200,
+            "tube": "NEBNext FFPE DNA Repair Mix",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 3,
+            "num": 1
+        },
+        {
+            "reagent": "Ultra II End-prep Reaction Buffer",
+            "volume": 200,
+            "tube": "NEBNext FFPE DNA Repair Mix",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 4,
+            "num": 1
+        },
+        {
+            "reagent": "Elution Buffer",
+            "volume": 200,
+            "tube": "Elution Buffer",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 4
+        },
+        {
+            "reagent": "nuclease-free water",
+            "volume": 200,
+            "tube": "nuclease-free water",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 4
+        },
+        {
+            "reagent": "gDNA",
+            "volume": 200,
+            "tube": "gDNA",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 4
+        },
+        {
+            "reagent": "80% ethanol",
+            "volume": 1500,
+            "tube": "80% ethanol",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "NB01",
+            "volume": 200,
+            "tube": "NB01",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "Blunt/TA Ligase Master Mix",
+            "volume": 200,
+            "tube": "Blunt/TA Ligase Master Mix",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "EDTA (blue cap)",
+            "volume": 200,
+            "tube": "EDTA (blue cap)",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "Native Adapter",
+            "volume": 200,
+            "tube": "Native Adapter",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "NEBNext Quick Ligation Reaction Buffer",
+            "volume": 200,
+            "tube": "NEBNext Quick Ligation Reaction Buffer",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "Quick T4 DNA Ligase",
+            "volume": 200,
+            "tube": "Quick T4 DNA Ligase",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "Short Fragment Buffer",
+            "volume": 200,
+            "tube": "Short Fragment Buffer",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "Initiator-immobilized magnetic beads",
+            "volume": 200,
+            "tube": "Initiator-immobilized magnetic beads",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "Reaction Buffer",
+            "volume": 200,
+            "tube": "Reaction Buffer",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "2.5 mM CoCl2",
+            "volume": 200,
+            "tube": "2.5 mM CoCl2",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "10 mM dATP",
+            "volume": 200,
+            "tube": "10 mM dATP",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        },
+        {
+            "reagent": "Terminal Deoxynucleotidyl Transferase",
+            "volume": 200,
+            "tube": "Terminal Deoxynucleotidyl Transferase",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 4
+        },
+        {
+            "reagent": "2x Phanta Max Master Mix",
+            "volume": 200,
+            "tube": "2x Phanta Max Master Mix",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 4
+        },
+        {
+            "reagent": "primer1 10uM",
+            "volume": 200,
+            "tube": "primer1 10uM",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 4
+        },
+        {
+            "reagent": "primer2 10uM",
+            "volume": 200,
+            "tube": "primer2 10uM",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 4
+        },
+        {
+            "reagent": "VAHTS DNA Clean Beads",
+            "volume": 200,
+            "tube": "VAHTS DNA Clean Beads",
+            "tube_type": "STRIP_TUBE",
+            "tube_index": 0,
+            "num": 4
+        },
+        {
+            "reagent": "Nuclease-Free Water",
+            "volume": 200,
+            "tube": "Nuclease-Free Water",
+            "tube_type": "PCR_TUBE",
+            "tube_index": 0,
+            "num": 1
+        }
+    ]
+}

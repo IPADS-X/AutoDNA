@@ -1,0 +1,1 @@
+{"name": "Protocol", "args": {"experiment_name": "MinION sequencing", "manuals": ["MinION-manual"], "retry": true, "file_ids": ["Reagent-68a6"]}, "id": "2725b620-cc2e-48de-9c56-fd6ee12199e9", "type": "tool_call"}
