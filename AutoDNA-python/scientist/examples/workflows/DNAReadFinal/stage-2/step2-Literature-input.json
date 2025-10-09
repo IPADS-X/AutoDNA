@@ -1,0 +1,1 @@
+{"name": "Literature", "args": {"experiment_name": "DNA Data Decoding", "questions": ["How to decode a list of DNA sequences into a sentence?", "What are the common methods for encoding text into DNA sequences?"]}, "id": "d6a3df09-689c-4b8a-8f7d-f43c2db4522e", "type": "tool_call"}

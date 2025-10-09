@@ -1,0 +1,1 @@
+{"name": "Literature", "args": {"experiment_name": "DNA sequence encoding", "questions": ["What are the methods for encoding text into DNA sequences?", "How to encode the sentence 'Intelligence is theability to adapt to change' into a DNA sequence?"]}, "id": "1ead179a-8d42-4256-87a9-644fa2ab13b5", "type": "tool_call"}

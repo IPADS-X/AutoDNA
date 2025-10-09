@@ -1,0 +1,6 @@
+
+experiment_name: The goal of the experiment with a short description (no more than 10 words).
+Generate the experiment_name parameter for the following experiment description(output only the parameter value):
+------------------------------
+The goal is to design and implement an experiment for single-stranded siRNA in vitro transcription and clean-up from a prepared DNA template with fewest stages.
+Do 3 parallel runs for the whole experiment to ensure correctness.

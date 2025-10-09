@@ -1,0 +1,10 @@
+[
+    {
+      "name": "DNA Sequencing",
+      "user_requirement": "The input DNA is stored at 4 degrees Celsius."
+    },
+    {
+      "name": "DNA Data Decoding",
+      "user_requirement": "The decoded output is a sentence."
+    }
+]

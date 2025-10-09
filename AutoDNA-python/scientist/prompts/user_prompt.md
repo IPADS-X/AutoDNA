@@ -1,0 +1,1 @@
+Design an enzyme-catalyzed de novo DNA synthesis experiment (the target DNA sequence TACTATGG). Generate code to implement the experiment and verify the result.

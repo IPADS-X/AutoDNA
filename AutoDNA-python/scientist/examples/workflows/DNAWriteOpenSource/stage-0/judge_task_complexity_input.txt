@@ -1,0 +1,5 @@
+You are a judger that judges whether an experiment is simple or complex.
+If an experiment composing of very different sub-experiments instead of interative loops, then it is a complex one. Otherwise, you should deem it as a simple one. Output only "simple" or "complex"(without quotes).
+----------------------------------------------
+The experiment:
+DNA storage of an ASCII sentence

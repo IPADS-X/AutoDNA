@@ -1,0 +1,55 @@
+以下是使用提供的接口进行解码 DNA 的示例代码：
+
+```python
+class DNASequencer:
+    def __init__(self):
+        self.pipette = Pipette()
+        self.robot = Robot()
+        self.magrack = MagRack()
+        self.heatershaker = Heatershaker()
+    
+    def decode_dna(self):
+        # 假设我们有一个初始位置和目标位置的列表
+        source_tubes = ['input_1', 'input_2', 'input_3']
+        dest_tubes = ['output_1', 'output_2', 'output_3']
+        
+        # 移动试剂到目的地
+        for src, dst in zip(source_tubes, dest_tubes):
+            self.pipette.move(dst, src, 50)  # 假设每次移动 50 uL 的试剂
+        
+        # 混合试剂
+        for dst in dest_tubes:
+            self.pipette.mix(dst)
+        
+        # 移动管子到磁力架
+        self.robot.moveTubeGroup(['magrack_1', 'magrack_2', 'magrack_3'], dest_tubes, 3)
+        
+        # 等待磁力架反应
+        self.magrack.wait(10)  # 等待 10 分钟
+        
+        # 移动管子到加热振荡器
+        self.robot.moveTubeGroup(['heatershaker_1', 'heatershaker_2', 'heatershaker_3'], ['magrack_1', 'magrack_2', 'magrack_3'], 3)
+        
+        # 设置温度并开始振荡
+        self.heatershaker.set_temp(37)  # 设置温度为 37 摄氏度
+        self.heatershaker.start(15)  # 振荡 15 分钟
+        
+        # 完成后，封盖管子
+        self.robot.capTubeGroup(['heatershaker_1', 'heatershaker_2', 'heatershaker_3'])
+
+if __name__ == "__main__":
+    sequencer = DNASequencer()
+    sequencer.decode_dna()
+```
+
+### 代码说明：
+
+1. **Pipette 操作**：使用移液器将试剂从源位置移动到目标位置，并进行混合。
+
+2. **磁力架操作**：将管子移动到磁力架上并等待一段时间，以便进行分离。
+
+3. **加热振荡器操作**：将管子移动到加热振荡器上，设置所需温度并进行振荡。
+
+4. **封盖操作**：振荡完成后，使用机器人手臂封盖管子。
+
+请根据具体的实验需求调整参数和位置。

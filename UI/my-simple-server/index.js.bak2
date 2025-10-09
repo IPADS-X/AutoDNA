@@ -1,0 +1,21 @@
+import { WebSocketServer } from 'ws';
+
+// 创建 WebSocket 服务器，监听指定端口
+const wss = new WebSocketServer({ port: 3001 });
+
+wss.on('connection', (ws) => {
+  console.log('Client connected');
+
+  // 监听消息事件
+  ws.on('message', (message) => {
+    console.log('Received:', message.toString());
+
+    // 发送消息给客户端
+    ws.send(JSON.stringify({ state: 'synthesis', taskId : 5 }));
+  });
+
+  // 监听关闭事件
+  ws.on('close', () => {
+    console.log('Client disconnected');
+  });
+});
