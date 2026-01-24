@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PointParame>
+  <Point>
+    <Point 点位名称="待机位置|Standby Position|Vị trí chờ" XAxis="22.451" YAxis="84.107" />
+    <Point 点位名称="吹离子风位置|Ion Wind Position|Vị trí máy thổi ion" XAxis="22.451" YAxis="52.213" />
+    <Point 点位名称="测试位置1|Test position 1|Vị trí kiểm tra 1" XAxis="34" YAxis="-87.194" />
+    <Point 点位名称="测试位置2|Test position 2|Vị trí kiểm tra 2" XAxis="-10.483" YAxis="-87.194" />
+    <Point 点位名称="测试位置3|Test position 3|Vị trí kiểm tra 3" XAxis="0.642" YAxis="15.864" />
+  </Point>
+</PointParame>

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "DNA Sample Sequencing",
+    "user_requirement": ""
+  },
+  {
+    "name": "DNA Mutation Identification",
+    "user_requirement": "The reference genome is hg38, stored in file `hg38.fa`."
+  },
+{
+      "name": "DNA Detection Primer Design",
+      "user_requirement": "The primer must be designed for the functional mutant type."
+    },
+  {
+    "name": "DNA Primer Synthesis",
+    "user_requirement": ""
+  },
+  {
+    "name": "DNA Primer Functional Validation",
+    "user_requirement": "Confirm the primer provides reliable detection."
+  }
+]

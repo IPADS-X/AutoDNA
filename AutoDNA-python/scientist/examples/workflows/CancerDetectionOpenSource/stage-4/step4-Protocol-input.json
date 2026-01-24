@@ -1,0 +1,1 @@
+{"name": "Protocol", "args": {"experiment_name": "Synthesize the DNA primers: Forward: AGTTGGAGCTGGTGA, Reverse: GAATGGTCCTGCACC", "file_ids": ["Reagent-de25"], "manuals": ["MinION-manual", "Terminator-manual", "qPCR-manual", "USER-manual"]}, "id": "call_9bf7541dedf44567858e1abed9975edc", "type": "tool_call"}

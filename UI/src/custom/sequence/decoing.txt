@@ -1,0 +1,89 @@
+为了解码给定的编码方案，我们需要逆转编码过程中每个步骤的操作。以下是一个解码方案的实现：
+
+```python
+def ternary_to_sequence_number(ternary_digits):
+    n = 0
+    for digit in ternary_digits:
+        n = n * 3 + digit
+    return n
+
+def decode_part(encoded_str, prev_nuc=None, is_start=False):
+    decoded_digits = []
+    current_prev = prev_nuc
+    for i, nuc in enumerate(encoded_str):
+        if i == 0 and is_start:
+            # Initial mapping
+            if nuc == 'A':
+                digit = 0
+            elif nuc == 'T':
+                digit = 1
+            elif nuc == 'C':
+                digit = 2
+            else:
+                raise ValueError(f"Invalid nucleotide {nuc} in initial mapping")
+        else:
+            if current_prev is None:
+                raise ValueError("Previous nucleotide is None for non-start part")
+            reverse_map = {
+                'A': {'T': 0, 'C': 1, 'G': 2},
+                'T': {'A': 0, 'C': 1, 'G': 2},
+                'C': {'A': 0, 'T': 1, 'G': 2},
+                'G': {'A': 0, 'T': 1, 'C': 2},
+            }
+            digit = reverse_map[current_prev][nuc]
+        decoded_digits.append(digit)
+        current_prev = nuc
+    return decoded_digits, current_prev
+
+def decode_strand(encoded_strand):
+    # Decode S part
+    s_part, last_nuc = decode_part(encoded_strand[:4], is_start=True)
+    # Decode D part
+    d_part, last_nuc = decode_part(encoded_strand[4:-1], prev_nuc=last_nuc, is_start=False)
+    # Decode E part
+    e_part, _ = decode_part(encoded_strand[-1:], prev_nuc=last_nuc, is_start=False)
+    return s_part, d_part, e_part
+
+def ternary_chunks_to_text(chunks):
+    binary_str = ''
+    for chunk in chunks:
+        binary_val = 0
+        for digit in chunk:
+            binary_val = binary_val * 3 + digit
+        binary_str += format(binary_val, '08b')
+    ascii_bytes = int(binary_str, 2).to_bytes((len(binary_str) + 7) // 8, byteorder='big')
+    return ascii_bytes.decode('ascii').rstrip('\x00')
+
+def main():
+    encoded_strands = [
+        "ATATATACATACATACATAGATAGATCATATCATCTATAGATCGATATATGATATGATGTATATATGCATACACATATAC",
+        # Add other strands here
+    ]
+    
+    chunks = []
+    for i, strand in enumerate(encoded_strands):
+        s_digits, d_digits, e_digit = decode_strand(strand)
+        if compute_error_check(s_digits, d_digits) != e_digit[0]:
+            raise ValueError(f"Error check failed for strand {i}")
+        chunks.append(d_digits)
+    
+    text = ternary_chunks_to_text(chunks)
+    print(text)
+
+if __name__ == "__main__":
+    main()
+```
+
+### 解码步骤：
+
+1. **解码 S 部分**：使用 `decode_part` 函数，从编码的核苷酸序列中提取 S 部分的三进制数字。
+
+2. **解码 D 部分**：从编码序列中提取 D 部分的三进制数字。
+
+3. **解码 E 部分**：提取 E 部分，用于错误检查。
+
+4. **错误检查**：使用 `compute_error_check` 函数验证解码是否正确。
+
+5. **组合成文本**：将所有 D 部分组合成一个完整的二进制字符串，并转换回 ASCII 文本。
+
+请确保将所有编码的 DNA 序列添加到 `encoded_strands` 列表中，以便完整解码。

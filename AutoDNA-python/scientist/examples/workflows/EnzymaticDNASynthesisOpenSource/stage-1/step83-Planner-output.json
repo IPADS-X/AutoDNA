@@ -1,0 +1,1 @@
+{"content": "", "tool_calls": [{"name": "Code", "args": {"code_request_id": "Protocol-c912", "pure_software": false}, "id": "call_ce3e1405429d49b5a52f7aad186bb49f", "type": "tool_call"}]}

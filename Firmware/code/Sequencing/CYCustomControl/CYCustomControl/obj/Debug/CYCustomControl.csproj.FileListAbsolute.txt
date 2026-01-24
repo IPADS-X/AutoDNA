@@ -1,0 +1,506 @@
+C:\Users\B01379\Desktop\CYRoundButton\CYRoundButton\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\CYRoundButton\CYRoundButton\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\CYRoundButton\CYRoundButton\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\CYRoundButton\CYRoundButton\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\CYRoundButton\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\CYRoundButton\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\CYRoundButton\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\CYRoundButton\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+I:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+I:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+I:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+I:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+I:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+I:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+I:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+I:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+I:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+D:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+D:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+D:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+D:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+D:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+D:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+D:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+D:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+D:\PickAndStickIDLabel 最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+D:\CY 上位机程序封装集合\PickAndStickIDLabel 最新20201107\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+D:\CY 上位机程序封装集合\PickAndStickIDLabel 最新20201107\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+D:\CY 上位机程序封装集合\PickAndStickIDLabel 最新20201107\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+D:\CY 上位机程序封装集合\PickAndStickIDLabel 最新20201107\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+D:\CY 上位机程序封装集合\PickAndStickIDLabel 最新20201107\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+D:\CY 上位机程序封装集合\PickAndStickIDLabel 最新20201107\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+D:\CY 上位机程序封装集合\PickAndStickIDLabel 最新20201107\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+D:\CY 上位机程序封装集合\PickAndStickIDLabel 最新20201107\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+D:\CY 上位机程序封装集合\PickAndStickIDLabel 最新20201107\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201117\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201117\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201117\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201117\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201117\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201117\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201117\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201117\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201117\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222 - 副本\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222 - 副本\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20201222 - 副本\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+D:\CYStandardProcedure最新20210422\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+E:\废料包\新产品测试标准化\框架_新\211206\CYStandardProcedure最新20211206最新\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240313\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240318\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240326\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240326\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240326\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240326\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240326\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240326\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240326\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240326\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240326\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240402\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240402\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240402\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240402\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240402\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240402\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240402\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240402\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240402\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240403 - 更新移液枪\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240403 - 更新移液枪\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240403 - 更新移液枪\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240403 - 更新移液枪\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240403 - 更新移液枪\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240403 - 更新移液枪\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240403 - 更新移液枪\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240403 - 更新移液枪\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240403 - 更新移液枪\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240413 - 带水精调\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240423 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240429 - 逻辑优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240515 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240523 - 完整流程\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240618 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240625 - 手动开关盖\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240717 - 文件解析\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240818 - 三色灯屏蔽\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240826 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240923 - 参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20240926 - 数字孪生\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241016 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241023 - 数据饼状图\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241106 - 新参观模式\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241119 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20241128 - 参观模式优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+F:\三代测序程序 -20250109 - 3D相机\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\bin\Debug\CYCustomControl.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.LampButton.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RightTab.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.RoundPanel.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.XListBox.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\CYCustomControl\CYCustomControl\obj\Debug\CYCustomControl.pdb

@@ -1,0 +1,244 @@
+chopper:
+Filtering and trimming of fastq files. Reads on stdin and writes to stdout.
+
+Usage: chopper [OPTIONS]
+
+Options:
+  -h, --help
+          Print help (see a summary with '-h')
+
+  -V, --version
+          Print version
+
+Filtering Options:
+  -q, --quality <MINQUAL>
+          Sets a minimum Phred average quality score
+          
+          [default: 0]
+
+      --maxqual <MAXQUAL>
+          Sets a maximum Phred average quality score
+          
+          [default: 1000]
+
+  -l, --minlength <MINLENGTH>
+          Sets a minimum read length
+          
+          [default: 1]
+
+      --maxlength <MAXLENGTH>
+          Sets a maximum read length
+          
+          [default: INF]
+
+      --mingc <MINGC>
+          Filter min GC content
+
+      --maxgc <MAXGC>
+          Filter max GC content
+
+  -c, --contam <CONTAM>
+          Filter contaminants against a fasta
+
+Trimming Options:
+      --trim-approach <TRIM_APPROACH>
+          Select the trimming strategy to apply to the reads
+
+          Possible values:
+          - fixed-crop:           Remove a fixed number of bases from both ends of the read. Requires setting both --headcrop and --tailcrop
+          - trim-by-quality:      Trim low-quality bases from the ends of the read until reaching a base with quality ≥ --cutoff
+          - best-read-segment:    Extract the highest-quality read segment based on --cutoff, trimming low-quality bases from both ends
+          - split-by-low-quality: Split reads by low-quality segments and output high-quality parts on the left and right, provided they pass the length filter
+
+      --cutoff <CUTOFF>
+          Set the minimum quality score (Q-score) threshold for trimming low-quality bases from read ends. Required when using the `trim-by-quality` or `best-read-segment` trimming approaches
+
+      --headcrop <HEADCROP>
+          Trim N bases from the start of each read. Required only when using the `fixed-crop` trimming approach
+          
+          [default: 0]
+
+      --tailcrop <TAILCROP>
+          Trim N bases from the end of each read. Required only when using the `fixed-crop` trimming approach
+          
+          [default: 0]
+
+Setup Options:
+  -t, --threads <THREADS>
+          Use N parallel threads
+          
+          [default: 4]
+
+  -i, --input <INPUT>
+          Input filename [default: read from stdin]
+
+      --inverse
+          Output the opposite of the normal results
+
+
+samtools:
+Program: samtools (Tools for alignments in the SAM format)
+Version: 1.21 (using htslib 1.21)
+
+Usage:   samtools <command> [options]
+
+Commands:
+  -- Indexing
+     dict           create a sequence dictionary file
+     faidx          index/extract FASTA
+     fqidx          index/extract FASTQ
+     index          index alignment
+
+  -- Editing
+     calmd          recalculate MD/NM tags and '=' bases
+     fixmate        fix mate information
+     reheader       replace BAM header
+     targetcut      cut fosmid regions (for fosmid pool only)
+     addreplacerg   adds or replaces RG tags
+     markdup        mark duplicates
+     ampliconclip   clip oligos from the end of reads
+
+  -- File operations
+     collate        shuffle and group alignments by name
+     cat            concatenate BAMs
+     consensus      produce a consensus Pileup/FASTA/FASTQ
+     merge          merge sorted alignments
+     mpileup        multi-way pileup
+     sort           sort alignment file
+     split          splits a file by read group
+     quickcheck     quickly check if SAM/BAM/CRAM file appears intact
+     fastq          converts a BAM to a FASTQ
+     fasta          converts a BAM to a FASTA
+     import         Converts FASTA or FASTQ files to SAM/BAM/CRAM
+     reference      Generates a reference from aligned data
+     reset          Reverts aligner changes in reads
+
+  -- Statistics
+     bedcov         read depth per BED region
+     coverage       alignment depth and percent coverage
+     depth          compute the depth
+     flagstat       simple stats
+     idxstats       BAM index stats
+     cram-size      list CRAM Content-ID and Data-Series sizes
+     phase          phase heterozygotes
+     stats          generate stats (former bamcheck)
+     ampliconstats  generate amplicon specific stats
+
+  -- Viewing
+     flags          explain BAM flags
+     head           header viewer
+     tview          text alignment viewer
+     view           SAM<->BAM<->CRAM conversion
+     depad          convert padded BAM to unpadded BAM
+     samples        list the samples in a set of SAM/BAM/CRAM files
+
+  -- Misc
+     help [cmd]     display this help message or help for [cmd]
+     version        detailed version information
+
+
+minimap2:
+Usage: minimap2 [options] <target.fa>|<target.idx> [query.fa] [...]
+Options:
+  Indexing:
+    -H           use homopolymer-compressed k-mer (preferrable for PacBio)
+    -k INT       k-mer size (no larger than 28) [15]
+    -w INT       minimizer window size [10]
+    -I NUM       split index for every ~NUM input bases [8G]
+    -d FILE      dump index to FILE []
+  Mapping:
+    -f FLOAT     filter out top FLOAT fraction of repetitive minimizers [0.0002]
+    -g NUM       stop chain enlongation if there are no minimizers in INT-bp [5000]
+    -G NUM       max intron length (effective with -xsplice; changing -r) [200k]
+    -F NUM       max fragment length (effective with -xsr or in the fragment mode) [800]
+    -r NUM[,NUM] chaining/alignment bandwidth and long-join bandwidth [500,20000]
+    -n INT       minimal number of minimizers on a chain [3]
+    -m INT       minimal chaining score (matching bases minus log gap penalty) [40]
+    -X           skip self and dual mappings (for the all-vs-all mode)
+    -p FLOAT     min secondary-to-primary score ratio [0.8]
+    -N INT       retain at most INT secondary alignments [5]
+  Alignment:
+    -A INT       matching score [2]
+    -B INT       mismatch penalty (larger value for lower divergence) [4]
+    -O INT[,INT] gap open penalty [4,24]
+    -E INT[,INT] gap extension penalty; a k-long gap costs min{O1+k*E1,O2+k*E2} [2,1]
+    -z INT[,INT] Z-drop score and inversion Z-drop score [400,200]
+    -s INT       minimal peak DP alignment score [80]
+    -u CHAR      how to find GT-AG. f:transcript strand, b:both strands, n:don't match GT-AG [n]
+    -J INT       splice mode. 0: original minimap2 model; 1: miniprot model [1]
+    -j FILE      junctions in BED12 to extend *short* RNA-seq alignment []
+  Input/Output:
+    -a           output in the SAM format (PAF by default)
+    -o FILE      output alignments to FILE [stdout]
+    -L           write CIGAR with >65535 ops at the CG tag
+    -R STR       SAM read group line in a format like '@RG\tID:foo\tSM:bar' []
+    -c           output CIGAR in PAF
+    --cs[=STR]   output the cs tag; STR is 'short' (if absent) or 'long' [none]
+    --ds         output the ds tag, which is an extension to cs
+    --MD         output the MD tag
+    --eqx        write =/X CIGAR operators
+    -Y           use soft clipping for supplementary alignments
+    -y           copy FASTA/Q comments to output SAM
+    -t INT       number of threads [3]
+    -K NUM       minibatch size for mapping [500M]
+    --version    show version number
+  Preset:
+    -x STR       preset (always applied before other options; see minimap2.1 for details) []
+                 - lr:hq - accurate long reads (error rate <1%) against a reference genome
+                 - splice/splice:hq - spliced alignment for long reads/accurate long reads
+                 - splice:sr - spliced alignment for short RNA-seq reads
+                 - asm5/asm10/asm20 - asm-to-ref mapping, for ~0.1/1/5% sequence divergence
+                 - sr - short reads against a reference
+                 - map-pb/map-hifi/map-ont/map-iclr - CLR/HiFi/Nanopore/ICLR vs reference mapping
+                 - ava-pb/ava-ont - PacBio CLR/Nanopore read overlap
+
+See `man ./minimap2.1' for detailed description of these and other advanced command-line options.
+
+
+bcftools:
+
+Program: bcftools (Tools for variant calling and manipulating VCFs and BCFs)
+License: GNU GPLv3+, due to use of the GNU Scientific Library
+Version: 1.21 (using htslib 1.21)
+
+Usage:   bcftools [--version|--version-only] [--help] <command> <argument>
+
+Commands:
+
+ -- Indexing
+    index        index VCF/BCF files
+
+ -- VCF/BCF manipulation
+    annotate     annotate and edit VCF/BCF files
+    concat       concatenate VCF/BCF files from the same set of samples
+    convert      convert VCF/BCF files to different formats and back
+    head         view VCF/BCF file headers
+    isec         intersections of VCF/BCF files
+    merge        merge VCF/BCF files files from non-overlapping sample sets
+    norm         left-align and normalize indels
+    plugin       user-defined plugins
+    query        transform VCF/BCF into user-defined formats
+    reheader     modify VCF/BCF header, change sample names
+    sort         sort VCF/BCF file
+    view         VCF/BCF conversion, view, subset and filter VCF/BCF files
+
+ -- VCF/BCF analysis
+    call         SNP/indel calling
+    consensus    create consensus sequence by applying VCF variants
+    cnv          HMM CNV calling
+    csq          call variation consequences
+    filter       filter VCF/BCF files using fixed thresholds
+    gtcheck      check sample concordance, detect sample swaps and contamination
+    mpileup      multi-way pileup producing genotype likelihoods
+    polysomy     detect number of chromosomal copies
+    roh          identify runs of autozygosity (HMM)
+    stats        produce VCF/BCF stats
+
+ -- Plugins (collection of programs for calling, file manipulation & analysis)
+    39 plugins available, run "bcftools plugin -lv" to see a complete list
+
+ Most commands accept VCF, bgzipped VCF, and BCF with the file type detected
+ automatically even when streaming from a pipe. Indexed VCF and BCF will work
+ in all situations. Un-indexed VCF and BCF and streams will work in most but
+ not all situations.
+

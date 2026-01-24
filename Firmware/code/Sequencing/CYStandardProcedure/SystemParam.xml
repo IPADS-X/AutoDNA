@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemParam>
+  <SafetyShiledParame>
+    <SafetyShiledParame 键值="ShiledPatternSenso" 参数描述="屏蔽安全光栅(0:不屏蔽 1:屏蔽)|Shielding safety grating(0:Unshielded 1:Shiled)|Tấm chắn lưới an toàn(0:Không 1:Khiên)" 当前值="0" 单位="" 最小值="0" 最大值="1" />
+    <SafetyShiledParame 键值="ShiledLeftDoorSenso" 参数描述="屏蔽左边门禁(0:不屏蔽 1:屏蔽)|Shield left access control(0:Unshielded 1:Shiled)|Khiêng để bên trái kiểm soát.(0:Không 1:Khiên)" 当前值="1" 单位="" 最小值="0" 最大值="1" />
+    <SafetyShiledParame 键值="ShiledRightDoorSenso" 参数描述="屏蔽右边门禁(0:不屏蔽 1:屏蔽)|Shield right access control(0:Unshielded 1:Shiled)|Quản lý quyền xâm nhập khiên(0:Không 1:Khiên)" 当前值="1" 单位="" 最小值="0" 最大值="1" />
+  </SafetyShiledParame>
+  <ShopFloorParame>
+    <ShopFloorParame 键值="ACC_SFLine" 参数描述="所在的线别名称|Line Name|Tên dòng" 当前值="BU18-CPB05" 单位="" 最小值="" 最大值="" />
+    <ShopFloorParame 键值="ACC_SFStation" 参数描述="ShopFloor的站别名称|Station Name|Tên trạm" 当前值="ACC ID Label BX" 单位="" 最小值="" 最大值="" />
+    <ShopFloorParame 键值="ACC_SFApp" 参数描述="ShopFloor交互fixed指令的关键信息|Fixed Key Information Of Interaction|Fixed Thông tin chính về hướng dẫn tương tác" 当前值="PTL" 单位="" 最小值="" 最大值="" />
+    <ShopFloorParame 键值="ACC_SFFixed" 参数描述="ShopFloor交互app指令的关键信息|App Key Information Of Interaction|App Thông tin chính về hướng dẫn tương tác" 当前值="001" 单位="" 最小值="" 最大值="" />
+    <ShopFloorParame 键值="ACC_SFQuery" 参数描述="QueryShopFloor的关键信息|Query Shopfloor Key Information Of Interactio|Query Shopfloor Thông tin chính" 当前值="checkrouting,complist,fgmodel" 单位="" 最小值="" 最大值="" />
+    <ShopFloorParame 键值="ACC_SFAdd" 参数描述="AddShopFloor的关键信息|Add Shopfloor Key Information Of Interactio|Add Shopfloor Thông tin chính" 当前值="checkrouting" 单位="" 最小值="" 最大值="" />
+    <ShopFloorParame 键值="ACC_SFAppFail" 参数描述="产品NG后AddShopFloor的关键信息|NG Product Add Shopfloor Key Information Of Interactio|Mẫu Shopfloor Thông tin chính" 当前值="MPQC" 单位="" 最小值="" 最大值="" />
+  </ShopFloorParame>
+  <TimeoutParame>
+    <TimeoutParame 键值="MotorRunTimeOut" 参数描述="电机运动超时|Motor Run Timeout|Thời gian vận động cơ" 当前值="20" 单位="s" 最小值="1" 最大值="20" />
+    <TimeoutParame 键值="MotorHomeTimeOut" 参数描述="电机回原点超时|Motor Home Timeout|Thời gian quay về nguồn xe" 当前值="15" 单位="s" 最小值="1" 最大值="30" />
+    <TimeoutParame 键值="VacumTimeOut" 参数描述="真空负压感应超时|Vacuum TimeOut|Khoảng thời gian cảm ứng dưới nhiệt" 当前值="3" 单位="s" 最小值="1" 最大值="5" />
+    <TimeoutParame 键值="CCDTimeOut" 参数描述="相机接收超时|Camera Receive Timeout|Máy ảnh nhận giờ" 当前值="70" 单位="s" 最小值="1" 最大值="5" />
+  </TimeoutParame>
+  <OtherParame>
+    <OtherParame 键值="SNLength" 参数描述="FCM SN长度|FCM SN Length|FCM Độ dài mã Bar" 当前值="17" 单位="" 最小值="1" 最大值="50" />
+    <OtherParame 键值="WindyTime" 参数描述="离子吹风时间|Ion blowing time|Thời gian gió IonName" 当前值="1000" 单位="ms" 最小值="50" 最大值="3000" />
+    <OtherParame 键值="LinerAcc" 参数描述="线扫加速度|Line scan acceleration|Tốc độ tuyến" 当前值="50" 单位="mm/s" 最小值="10" 最大值="200" />
+    <OtherParame 键值="LinerDec" 参数描述="线扫减速度|Line scan deceleration|Giảm tốc độ quét tuyến" 当前值="50" 单位="mm/s" 最小值="10" 最大值="200" />
+    <OtherParame 键值="LinerVel" 参数描述="线扫速度|Line scan speed|Tốc độ quét tuyến" 当前值="15" 单位="mm/s" 最小值="10" 最大值="100" />
+  </OtherParame>
+</SystemParam>

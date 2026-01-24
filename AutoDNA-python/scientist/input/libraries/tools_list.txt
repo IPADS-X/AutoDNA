@@ -1,0 +1,46 @@
+chopper
+DESCRIPTION
+    Rust implementation of [NanoFilt](https://github.com/wdecoster/nanofilt)+[NanoLyse](https://github.com/wdecoster/nanolyse), both originally written in Python. This tool, intended for long read sequencing such as PacBio or ONT, filters and trims a fastq file.  
+
+    Filtering is based on average read quality, minimum or maximum read length, and GC content percentage.
+
+    On the other hand, trimming is performed using one of four approaches:
+
+    * Fixed cropping (head crop at the start of the read and tail crop at the end),
+
+    * Quality-based trimming using a threshold,
+
+    * Extracting the highest-quality sub-read based on a quality score,
+
+    * Splitting reads by low-quality segments and outputting high-quality parts.
+
+    Reads that pass the filters are printed to standard output (STDOUT).
+
+    Compared to the Python implementation the scope is to deliver the same results, almost the same functionality, at much faster execution times. At the moment this tool does not support filtering using a sequencing_summary file. If those features are of interest then please reach out.  
+
+samtools
+DESCRIPTION
+    Samtools is a set of utilities that manipulate alignments in the SAM (Sequence Alignment/Map), BAM, and CRAM formats. It converts between the formats, does sorting, merging and indexing, and can retrieve reads in any regions swiftly.
+
+    Samtools is designed to work on a stream. It regards an input file `-' as the standard input (stdin) and an output file `-' as the standard output (stdout). Several commands can thus be combined with Unix pipes. Samtools always output warning and error messages to the standard error output (stderr).
+
+    Samtools is also able to open files on remote FTP or HTTP(S) servers if the file name starts with `ftp://', `http://', etc. Samtools checks the current working directory for the index file and will download the index upon absence. Samtools does not retrieve the entire alignment file unless it is asked to do so.
+
+    If an index is needed, samtools looks for the index suffix appended to the filename, and if that isn't found it tries again without the filename suffix (for example in.bam.bai followed by in.bai). However if an index is in a completely different location or has a different name, both the main data filename and index filename can be pasted together with ##idx##. For example /data/in.bam##idx##/indices/in.bam.bai may be used to explicitly indicate where the data and index files reside.
+
+minimap2
+DESCRIPTION
+       Minimap2	is a fast sequence mapping and alignment program that can find
+       overlaps	 between  long	noisy reads, or	map long reads or their	assem-
+       blies to	a reference genome optionally with  detailed  alignment	 (i.e.
+       CIGAR).	At  present,  it works efficiently with	query sequences	from a
+       few kilobases to	~100 megabases in length at a error  rate  ~15%.  Min-
+       imap2 outputs in	the PAF	or the SAM format.
+
+bcftools
+DESCRIPTION
+    BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.
+
+    Most commands accept VCF, bgzipped VCF and BCF with filetype detected automatically even when streaming from a pipe. Indexed VCF and BCF will work in all situations. Un-indexed VCF and BCF and streams will work in most, but not all situations. In general, whenever multiple VCFs are read simultaneously, they must be indexed and therefore also compressed. (Note that files with non-standard index names can be accessed as e.g. "bcftools view -r X:2928329 file.vcf.gz##idx##non-standard-index-name".)
+
+    BCFtools is designed to work on a stream. It regards an input file "-" as the standard input (stdin) and outputs to the standard output (stdout). Several commands can thus be combined with Unix pipes.

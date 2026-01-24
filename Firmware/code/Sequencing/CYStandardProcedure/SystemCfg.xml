@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemHardWareCfg>
+  <MotionCard>
+    <MotionCard 卡编号="1"  卡数目="1" 卡类型="8254" />
+  </MotionCard>
+  <IOCard>
+    <IOCard 卡编号="1" 卡ID="0" 卡类型="8254" />
+  </IOCard>
+  <IOIn>
+    <IOIn 卡编号="1" 卡端口="0" 点索引="8" 点名称="复位按钮|Reset button|Đặt lại nút" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="9" 点名称="启动按钮|Start button|Nút khởi động" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="10" 点名称="安全光幕|Safety Light Curtain|Tấm màn an toàn" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="11" 点名称="备用1|Spare 1|Thả" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="12" 点名称="左门门限|Left Door Threshold|Ngưỡng cửa trái" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="13" 点名称="右门门限|Right Door Threshold|Ngưỡng cửa phải" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="14" 点名称="负压信号|Negative Pressure Signal|Tín hiệu áp suất âm" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="15" 点名称="吸气按钮|Inspiratory Button|Nút đệm" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="16" 点名称="急停按钮|Emergency Stop Button|Nút dừng khẩn cấp" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="17" 点名称="备用2|Spare 2|Dừng 2" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="18" 点名称="备用3|Spare 3|Tha 3" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="19" 点名称="备用4|Spare 4|Tha thứ 4" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="20" 点名称="备用5|Spare 5|Tha hồ 5" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="21" 点名称="备用6|Spare 6|Phần thừa 6" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="22" 点名称="备用7|Spare 7|Phần thừa 7" />
+    <IOIn 卡编号="1" 卡端口="0" 点索引="23" 点名称="备用8|Spare 8|Bộ thừa 8" />
+  </IOIn>
+  <IOOut>
+    <IOOut 卡编号="1" 卡端口="0" 点索引="8" 点名称="三色灯红|Red Light|đèn đỏ" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="9" 点名称="三色灯绿|Green Light|Ánh sáng xanh" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="10" 点名称="三色灯黄|Yellow Light|Ánh sáng vàng" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="11" 点名称="蜂鸣器|Buzzer|Ong" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="12" 点名称="日光灯|Fluorescent Lamp|Đèn huỳnh quang" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="13" 点名称="真空吸|Vacuum suction|Hút dưới bụi" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="14" 点名称="光源|Light Source|nguồn sáng" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="15" 点名称="Laser头触发|Laser head trigger|Kích hoạt đầu Lase" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="16" 点名称="离子风电磁阀|Ion air solenoid valve|Phong tỏa khí ion" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="17" 点名称="备用3|Spare 3|Tha 3" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="18" 点名称="离子风|Ionic wind|Làn gió IonName" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="19" 点名称="备用4|Spare 4|Tha thứ 4" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="20" 点名称="备用5|Spare 5|Tha hồ 5" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="21" 点名称="备用6|Spare 6|Phần thừa 6" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="22" 点名称="备用7|Spare 7|Phần thừa 7" />
+    <IOOut 卡编号="1" 卡端口="0" 点索引="23" 点名称="备用8|Spare 8|Bộ thừa 8" />
+  </IOOut>
+  <PanelControl>
+    <PanelControl 卡编号="1" 卡端口="0" 点索引="8" 点名称="复位按钮" />
+    <PanelControl 卡编号="1" 卡端口="0" 点索引="9" 点名称="启动按钮" />
+    <PanelControl 卡编号="1" 卡端口="0" 点索引="16" 点名称="急停按钮" />
+  </PanelControl>
+  <SafetyDevice>
+    <SafetyDevice 卡编号="1" 卡端口="0" 点索引="10" 点名称="安全光幕" 电平="0"/>
+    <SafetyDevice 卡编号="1" 卡端口="0" 点索引="12" 点名称="左门门限" 电平="1"/>
+    <SafetyDevice 卡编号="1" 卡端口="0" 点索引="13" 点名称="右门门限" 电平="1"/>
+  </SafetyDevice>
+  <WebApiConfig>
+    <Port>8081</Port>
+    <EnableLogging>true</EnableLogging>
+    <EnableCors>true</EnableCors>
+    <RequestTimeout>30000</RequestTimeout>
+    <BaseUrl>http://localhost</BaseUrl>
+    <Description>Web API配置 - 用于远程硬件控制</Description>
+  </WebApiConfig>
+</SystemHardWareCfg>

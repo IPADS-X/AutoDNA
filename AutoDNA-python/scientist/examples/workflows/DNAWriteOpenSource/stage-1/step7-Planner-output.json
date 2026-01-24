@@ -1,0 +1,1 @@
+{"content": "", "tool_calls": [{"name": "Hardware", "args": {"pure_software": true, "repeat_num": 1.0, "file_ids": ["Code-4031"]}, "id": "3d0fc10c-9703-4e47-8f39-df2795517478", "type": "tool_call"}]}

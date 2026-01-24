@@ -1,0 +1,59 @@
+/* CodeDiffViewer.css */
+
+.code-diff-viewer {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  max-width: 100%;
+}
+
+.code-diff-viewer h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #24292e;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.diff-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.old-code,
+.new-code {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  border: 1px solid #e1e4e8;
+}
+
+.line {
+  display: block;
+  line-height: 1.5;
+  padding: 2px 4px;
+  margin: 0;
+}
+
+.removed {
+  background-color: #ffeef0;
+  color: #cb2431;
+}
+
+.added {
+  background-color: #e6ffed;
+  color: #22863a;
+}
+
+.unchanged {
+  color: #586069;
+}

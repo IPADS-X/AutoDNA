@@ -1,0 +1,1 @@
+{"name": "Protocol", "args": {"experiment_name": "DNA Primer Functional Validation", "file_ids": ["Reagent-1158", "Literature-f7f5"], "manuals": ["qPCR-manual"], "retry": true}, "id": "call_65c59e160c7a4c7297a65a37d8c363dd", "type": "tool_call"}

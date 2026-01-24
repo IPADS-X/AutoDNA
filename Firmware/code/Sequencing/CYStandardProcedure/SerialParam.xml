@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemSerialParam>
+  <COM>
+    <COM 串口定义="TestCom" 串口号="COM5" 波特率="115200" 数据位="8" 校验位="None" 停止位="One" 接收延时="0.2" 超时时间="3" 结束符="NONE" />
+  </COM>
+</SystemSerialParam>

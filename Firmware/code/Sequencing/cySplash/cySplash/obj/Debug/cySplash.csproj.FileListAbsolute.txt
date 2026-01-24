@@ -1,0 +1,611 @@
+C:\Users\Administrator\Desktop\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\Administrator\Desktop\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\Administrator\Desktop\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\Administrator\Desktop\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\Administrator\Desktop\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\Administrator\Desktop\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\Administrator\Desktop\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\2019的项目\立讯包装线\立讯包装线\OCR Check\程序\OCRCheck\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\2019的项目\立讯包装线\立讯包装线\OCR Check\程序\OCRCheck\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\2019的项目\立讯包装线\立讯包装线\OCR Check\程序\OCRCheck\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\2019的项目\立讯包装线\立讯包装线\OCR Check\程序\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\2019的项目\立讯包装线\立讯包装线\OCR Check\程序\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\2019的项目\立讯包装线\立讯包装线\OCR Check\程序\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\2019的项目\立讯包装线\立讯包装线\OCR Check\程序\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\2019的项目\立讯包装线\立讯包装线\OCR Check\程序\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\OCRCheck\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\OCRCheck\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\OCRCheck\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+D:\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\OCRCheck\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\OCRCheck 20200329\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\OCRCheck 20200329\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\OCRCheck 20200329\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\OCRCheck 20200329\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+D:\OCRCheck 20200329\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\OCRCheck 20200329\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\OCRCheck 20200329\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\OCRCheck 20200329\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\OCRCheck 20200329\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\admin\Desktop\OCR Check20200418 中心测量\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\admin\Desktop\OCR Check20200418 中心测量\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\admin\Desktop\OCR Check20200418 中心测量\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\admin\Desktop\OCR Check20200418 中心测量\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\OCR Check20200418 中心测量\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\admin\Desktop\OCR Check20200418 中心测量\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\admin\Desktop\OCR Check20200418 中心测量\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\OCR Check20200418 中心测量\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\admin\Desktop\OCR Check20200418 中心测量\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\OCR Check20200419\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\OCR Check20200419\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\OCR Check20200419\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\OCR Check20200419\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+D:\OCR Check20200419\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\OCR Check20200419\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\OCR Check20200419\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\OCR Check20200419\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\OCR Check20200419\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\OCR Check20200420\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\OCR Check20200420\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\OCR Check20200420\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\OCR Check20200420\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+D:\OCR Check20200420\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\OCR Check20200420\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\OCR Check20200420\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\OCR Check20200420\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\OCR Check20200420\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\OCR Check20200427\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\OCR Check20200427\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\OCR Check20200427\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\OCR Check20200427\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+D:\OCR Check20200427\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\OCR Check20200427\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\OCR Check20200427\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\OCR Check20200427\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\OCR Check20200427\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200513-登录日志\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200513-登录日志\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200513-登录日志\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200513-登录日志\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200513-登录日志\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200513-登录日志\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200513-登录日志\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200513-登录日志\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\OCR Check20200514\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\OCR Check20200514\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\OCR Check20200514\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\OCR Check20200514\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+D:\OCR Check20200514\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\OCR Check20200514\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\OCR Check20200514\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\OCR Check20200514\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\OCR Check20200514\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200516\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200516\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200516\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200516\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200516\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200516\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200516\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200516\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\CY\Desktop\陶新专用文件夹\OCR Check20200516\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\admin\Desktop\OCR Check20200516-1\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\admin\Desktop\OCR Check20200516-1\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\admin\Desktop\OCR Check20200516-1\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\admin\Desktop\OCR Check20200516-1\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\OCR Check20200516-1\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\admin\Desktop\OCR Check20200516-1\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\admin\Desktop\OCR Check20200516-1\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\OCR Check20200516-1\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\admin\Desktop\OCR Check20200516-1\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\admin\Desktop\0608\FinalInspection20200610\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\admin\Desktop\0608\FinalInspection20200610\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\admin\Desktop\0608\FinalInspection20200610\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\admin\Desktop\0608\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\admin\Desktop\0608\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\admin\Desktop\0608\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\0608\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\admin\Desktop\0608\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\admin\Desktop\FinalInspection20200610\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\admin\Desktop\FinalInspection20200610\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\admin\Desktop\FinalInspection20200610\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\admin\Desktop\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\admin\Desktop\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\admin\Desktop\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\admin\Desktop\FinalInspection20200610\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200618_HOUR\FinalInspection20200618_HOUR\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200618_HOUR\FinalInspection20200618_HOUR\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200618_HOUR\FinalInspection20200618_HOUR\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200618_HOUR\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200618_HOUR\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200618_HOUR\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200618_HOUR\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200618_HOUR\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200619\FinalInspection20200618_HOUR\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200619\FinalInspection20200618_HOUR\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200619\FinalInspection20200618_HOUR\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200619\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200619\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200619\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200619\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200619\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陈鸿\FinalInspection20200619\FinalInspection20200618_HOUR\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\FinalInspection20200622\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\admin\Desktop\FinalInspection20200622\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\admin\Desktop\FinalInspection20200622\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\admin\Desktop\FinalInspection20200622\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\FinalInspection20200622\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\admin\Desktop\FinalInspection20200622\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\admin\Desktop\FinalInspection20200622\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\FinalInspection20200622\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\admin\Desktop\FinalInspection20200622\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\ChenH\Desktop\FinalInspection20200623_线体\FinalInspection20200623_线体\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\ChenH\Desktop\FinalInspection20200623_线体\FinalInspection20200623_线体\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\ChenH\Desktop\FinalInspection20200623_线体\FinalInspection20200623_线体\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\ChenH\Desktop\FinalInspection20200623_线体\FinalInspection20200623_线体\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\ChenH\Desktop\FinalInspection20200623_线体\FinalInspection20200623_线体\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\ChenH\Desktop\FinalInspection20200623_线体\FinalInspection20200623_线体\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\ChenH\Desktop\FinalInspection20200623_线体\FinalInspection20200623_线体\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\ChenH\Desktop\FinalInspection20200623_线体\FinalInspection20200623_线体\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\ChenH\Desktop\FinalInspection20200623_线体\FinalInspection20200623_线体\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\FinalInspection20200727\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\FinalInspection20200727\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\FinalInspection20200727\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\FinalInspection20200727\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\FinalInspection20200727\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\FinalInspection20200727\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\FinalInspection20200727\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\FinalInspection20200727\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\FinalInspection20200727\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200803\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200803\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200803\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200803\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200803\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200803\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200803\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200803\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200803\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\FinalInspection20200803_1\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\FinalInspection20200803_1\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\FinalInspection20200803_1\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\FinalInspection20200803_1\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\FinalInspection20200803_1\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\FinalInspection20200803_1\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\FinalInspection20200803_1\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\FinalInspection20200803_1\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\FinalInspection20200803_1\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\FinalInspection20200819\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\FinalInspection20200819\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\FinalInspection20200819\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\FinalInspection20200819\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\FinalInspection20200819\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\FinalInspection20200819\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\FinalInspection20200819\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\FinalInspection20200819\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\FinalInspection20200819\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200819(优化)\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200819(优化)\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200819(优化)\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200819(优化)\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200819(优化)\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200819(优化)\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200819(优化)\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\CY\Desktop\陈鸿\OCR\量产\FinalInspection20200819(优化)\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\CY 上位机程序封装集合\Stick ID PC\PickAndStickIDLabel\cySplash\cySplash\obj\Debug\cySplash.pdb
+I:\PickAndStickIDLabel 最新\cySplash\cySplash\bin\Debug\cySplash.dll.config
+I:\PickAndStickIDLabel 最新\cySplash\cySplash\bin\Debug\cySplash.dll
+I:\PickAndStickIDLabel 最新\cySplash\cySplash\bin\Debug\cySplash.pdb
+I:\PickAndStickIDLabel 最新\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+I:\PickAndStickIDLabel 最新\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+I:\PickAndStickIDLabel 最新\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+I:\PickAndStickIDLabel 最新\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+I:\PickAndStickIDLabel 最新\cySplash\cySplash\obj\Debug\cySplash.dll
+I:\PickAndStickIDLabel 最新\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201113\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\B01379\Desktop\11111111111\PickAndStickIDLabel 最新20201113 - 副本\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201114\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PickAndStickIDLabel 最新20201119 - 副本\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20210105\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20210105\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20210105\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20210105\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20210105\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20210105\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20210105\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20210105\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\Administrator\Desktop\PickAndStickIDLabel 最新20210105\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PC标准框架20210313\PickAndStickIDLabel 最新20210313新DLL更改窗体取消窗体容器\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\B01379\Desktop\PC标准框架20210313\CYStandardProcedure最新\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\CYStandardProcedure最新20210422\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\CYStandardProcedure最新20210422\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\CYStandardProcedure最新20210422\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\CYStandardProcedure最新20210422\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+D:\CYStandardProcedure最新20210422\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\CYStandardProcedure最新20210422\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\CYStandardProcedure最新20210422\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\CYStandardProcedure最新20210422\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\CYStandardProcedure最新20210422\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\B01379\Desktop\量测程序备份\平面度\小线最新\CYStandardProcedure最新20210507\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\PC标准框架20210313\CY程序框架最新20210605\CYStandardProcedure最新20210630(三国语言翻译含源码)\cySplash\cySplash\obj\Debug\cySplash.pdb
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\cySplash\cySplash\bin\Debug\cySplash.dll.config
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\cySplash\cySplash\bin\Debug\cySplash.dll
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\cySplash\cySplash\bin\Debug\cySplash.pdb
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\cySplash\cySplash\obj\Debug\cySplash.dll
+D:\PC标准框架20210313\CY程序框架最新20210705\CYStandardProcedure最新20210630(三国语言翻译含源码)-添加汇川机器人\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\B01990\Desktop\20211118\CYStandardProcedure最新20211113最新\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240313\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20240313\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240313\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240313\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240313\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240313\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240313\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240313\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240313\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240318\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20240318\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240318\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240318\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240318\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240318\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240318\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240318\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240318\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240326\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20240326\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240326\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240326\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240326\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240326\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240326\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240326\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240326\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240402\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240402\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240402\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240402\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240402\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240402\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240402\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240402\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240402\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240403 - 更新移液枪\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240403 - 更新移液枪\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240403 - 更新移液枪\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240403 - 更新移液枪\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240403 - 更新移液枪\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240403 - 更新移液枪\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240403 - 更新移液枪\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240403 - 更新移液枪\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240413 - 带水精调\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240413 - 带水精调\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240413 - 带水精调\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240413 - 带水精调\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240413 - 带水精调\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240413 - 带水精调\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240413 - 带水精调\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240413 - 带水精调\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240413 - 带水精调\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240423 - 逻辑优化\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240423 - 逻辑优化\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240423 - 逻辑优化\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240423 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240423 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240423 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240423 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240423 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240423 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240429 - 逻辑优化\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240429 - 逻辑优化\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240429 - 逻辑优化\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240429 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240429 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240429 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240429 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240429 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240429 - 逻辑优化\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240515 - 完整流程\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240515 - 完整流程\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240515 - 完整流程\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240515 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240515 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240515 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240515 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240515 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240515 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240523 - 完整流程\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240618 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240625 - 手动开关盖\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240625 - 手动开关盖\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240625 - 手动开关盖\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240625 - 手动开关盖\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240625 - 手动开关盖\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240625 - 手动开关盖\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240625 - 手动开关盖\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240625 - 手动开关盖\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240625 - 手动开关盖\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240717 - 文件解析\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240717 - 文件解析\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240717 - 文件解析\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240717 - 文件解析\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240717 - 文件解析\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240717 - 文件解析\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240717 - 文件解析\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240717 - 文件解析\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240717 - 文件解析\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240802 - 提前上料\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240818 - 三色灯屏蔽\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240818 - 三色灯屏蔽\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240818 - 三色灯屏蔽\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240818 - 三色灯屏蔽\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240818 - 三色灯屏蔽\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240818 - 三色灯屏蔽\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240818 - 三色灯屏蔽\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240818 - 三色灯屏蔽\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240818 - 三色灯屏蔽\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240826 - 参观模式\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240826 - 参观模式\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240826 - 参观模式\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240826 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240826 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240826 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240826 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240826 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240826 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20240913 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240923 - 参观模式\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240923 - 参观模式\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240923 - 参观模式\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240923 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240923 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240923 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240923 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240923 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240923 - 参观模式\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20240926 - 数字孪生\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20240926 - 数字孪生\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20240926 - 数字孪生\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20240926 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20240926 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20240926 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20240926 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20240926 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20240926 - 数字孪生\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20241016 - 数据饼状图\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20241016 - 数据饼状图\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20241016 - 数据饼状图\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20241016 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241016 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20241016 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20241016 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241016 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20241016 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20241023 - 数据饼状图\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20241023 - 数据饼状图\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20241023 - 数据饼状图\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20241023 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241023 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20241023 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20241023 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241023 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20241023 - 数据饼状图\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20241106 - 新参观模式\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20241106 - 新参观模式\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20241106 - 新参观模式\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20241106 - 新参观模式\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241106 - 新参观模式\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20241106 - 新参观模式\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20241106 - 新参观模式\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241106 - 新参观模式\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20241106 - 新参观模式\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20241118 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20241119 - 参观模式优化\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20241119 - 参观模式优化\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20241119 - 参观模式优化\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20241119 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241119 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20241119 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20241119 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241119 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20241119 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20241128 - 参观模式优化\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20241128 - 参观模式优化\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20241128 - 参观模式优化\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20241128 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20241128 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20241128 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20241128 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20241128 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20241128 - 参观模式优化\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250106 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.pdb
+F:\三代测序程序 -20250109 - 3D相机\cySplash\cySplash\bin\Debug\cySplash.dll.config
+F:\三代测序程序 -20250109 - 3D相机\cySplash\cySplash\bin\Debug\cySplash.dll
+F:\三代测序程序 -20250109 - 3D相机\cySplash\cySplash\bin\Debug\cySplash.pdb
+F:\三代测序程序 -20250109 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+F:\三代测序程序 -20250109 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+F:\三代测序程序 -20250109 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+F:\三代测序程序 -20250109 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+F:\三代测序程序 -20250109 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.dll
+F:\三代测序程序 -20250109 - 3D相机\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250121 - 手动测序\cySplash\cySplash\obj\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\cySplash\cySplash\bin\Debug\cySplash.dll.config
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\cySplash\cySplash\bin\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\cySplash\cySplash\bin\Debug\cySplash.pdb
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\cySplash\cySplash\obj\Debug\cySplash.csprojResolveAssemblyReference.cache
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\cySplash\cySplash\obj\Debug\cySplash.SplashForm.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\cySplash\cySplash\obj\Debug\cySplash.Properties.Resources.resources
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\cySplash\cySplash\obj\Debug\cySplash.csproj.GenerateResource.Cache
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\cySplash\cySplash\obj\Debug\cySplash.dll
+C:\Users\A04828\Desktop\三代测序程序 -20250326 - 程序优化\cySplash\cySplash\obj\Debug\cySplash.pdb

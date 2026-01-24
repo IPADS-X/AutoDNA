@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Programs\\PLC\\DNA\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\Sequencing\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E0B2E3F-04AC-471C-B2C1-407AAFB8EB79}|CYStandardProcedure\\CYStandardProcedure.csproj|d:\\programs\\plc\\dna\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\sequencing\\cystandardprocedure\\hive\\hivelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E0B2E3F-04AC-471C-B2C1-407AAFB8EB79}|CYStandardProcedure\\CYStandardProcedure.csproj|solutionrelative:cystandardprocedure\\hive\\hivelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{879E21C5-2B76-4670-AD12-4DFEE0A59576}|CYCustomControl\\CYCustomControl\\CYCustomControl.csproj|d:\\programs\\plc\\dna\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\sequencing\\cycustomcontrol\\cycustomcontrol\\xlistbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{879E21C5-2B76-4670-AD12-4DFEE0A59576}|CYCustomControl\\CYCustomControl\\CYCustomControl.csproj|solutionrelative:cycustomcontrol\\cycustomcontrol\\xlistbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{879E21C5-2B76-4670-AD12-4DFEE0A59576}|CYCustomControl\\CYCustomControl\\CYCustomControl.csproj|d:\\programs\\plc\\dna\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\sequencing\\cycustomcontrol\\cycustomcontrol\\cyrighttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{879E21C5-2B76-4670-AD12-4DFEE0A59576}|CYCustomControl\\CYCustomControl\\CYCustomControl.csproj|solutionrelative:cycustomcontrol\\cycustomcontrol\\cyrighttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HiveLog.cs",
+              "DocumentMoniker": "D:\\Programs\\PLC\\DNA\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\Sequencing\\CYStandardProcedure\\Hive\\HiveLog.cs",
+              "RelativeDocumentMoniker": "CYStandardProcedure\\Hive\\HiveLog.cs",
+              "ToolTip": "D:\\Programs\\PLC\\DNA\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\Sequencing\\CYStandardProcedure\\Hive\\HiveLog.cs",
+              "RelativeToolTip": "CYStandardProcedure\\Hive\\HiveLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T16:26:10.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "XListBox.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\Programs\\PLC\\DNA\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\Sequencing\\CYCustomControl\\CYCustomControl\\XListBox.cs",
+              "RelativeDocumentMoniker": "CYCustomControl\\CYCustomControl\\XListBox.cs",
+              "ToolTip": "D:\\Programs\\PLC\\DNA\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\Sequencing\\CYCustomControl\\CYCustomControl\\XListBox.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "CYCustomControl\\CYCustomControl\\XListBox.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T16:26:04.188Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CYRightTable.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\Programs\\PLC\\DNA\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\Sequencing\\CYCustomControl\\CYCustomControl\\CYRightTable.cs",
+              "RelativeDocumentMoniker": "CYCustomControl\\CYCustomControl\\CYRightTable.cs",
+              "ToolTip": "D:\\Programs\\PLC\\DNA\\\u6C47\u603B\u4E0E\u6559\u7A0B\\code\\Sequencing\\CYCustomControl\\CYCustomControl\\CYRightTable.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "CYCustomControl\\CYCustomControl\\CYRightTable.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T16:25:58.732Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

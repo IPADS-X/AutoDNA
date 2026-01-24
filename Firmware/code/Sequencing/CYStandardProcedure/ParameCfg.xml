@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ParamCfg>
+  <ParamDescribe>
+    <ParamDescribe 参数名称="System" 文件名称="SystemParam.xml" />
+    <ParamDescribe 参数名称="Axis" 文件名称="AxisParame.xml" />
+    <ParamDescribe 参数名称="Point" 文件名称="PointParame.xml" />
+    <ParamDescribe 参数名称="Net" 文件名称="NetParam.xml" />
+    <ParamDescribe 参数名称="Com" 文件名称="SerialParam.xml" />
+  </ParamDescribe>
+</ParamCfg>

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CYStandardProcedure", "CYStandardProcedure\CYStandardProcedure.csproj", "{9E0B2E3F-04AC-471C-B2C1-407AAFB8EB79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cySplash", "cySplash\cySplash\cySplash.csproj", "{00257495-1A92-4AB0-B369-6848A8E7CB85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CYCustomControl", "CYCustomControl\CYCustomControl\CYCustomControl.csproj", "{879E21C5-2B76-4670-AD12-4DFEE0A59576}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigFile", "ConfigFile", "{2B26CB13-2323-4F7A-9DD9-4C68721EF495}"
+	ProjectSection(SolutionItems) = preProject
+		CYStandardProcedure\bin\Debug\ExeFile\AxisParame.xml = CYStandardProcedure\bin\Debug\ExeFile\AxisParame.xml
+		CYStandardProcedure\bin\Debug\ExeFile\CY.PNG = CYStandardProcedure\bin\Debug\ExeFile\CY.PNG
+		CYStandardProcedure\bin\Debug\ExeFile\CY.sec = CYStandardProcedure\bin\Debug\ExeFile\CY.sec
+		CYStandardProcedure\bin\Debug\ExeFile\eni.xml = CYStandardProcedure\bin\Debug\ExeFile\eni.xml
+		CYStandardProcedure\bin\Debug\ExeFile\ErrorCode.txt = CYStandardProcedure\bin\Debug\ExeFile\ErrorCode.txt
+		CYStandardProcedure\bin\Debug\ExeFile\InovanceRobotParame.xml = CYStandardProcedure\bin\Debug\ExeFile\InovanceRobotParame.xml
+		CYStandardProcedure\bin\Debug\ExeFile\Machine.ini = CYStandardProcedure\bin\Debug\ExeFile\Machine.ini
+		CYStandardProcedure\bin\Debug\ExeFile\MotionConfig1.xml = CYStandardProcedure\bin\Debug\ExeFile\MotionConfig1.xml
+		CYStandardProcedure\bin\Debug\ExeFile\NetParam.xml = CYStandardProcedure\bin\Debug\ExeFile\NetParam.xml
+		CYStandardProcedure\bin\Debug\ExeFile\ParameCfg.xml = CYStandardProcedure\bin\Debug\ExeFile\ParameCfg.xml
+		CYStandardProcedure\bin\Debug\ExeFile\PointParame.xml = CYStandardProcedure\bin\Debug\ExeFile\PointParame.xml
+		CYStandardProcedure\bin\Debug\ExeFile\SerialParam.xml = CYStandardProcedure\bin\Debug\ExeFile\SerialParam.xml
+		CYStandardProcedure\bin\Debug\ExeFile\Stick ID.png = CYStandardProcedure\bin\Debug\ExeFile\Stick ID.png
+		CYStandardProcedure\bin\Debug\ExeFile\SystemCfg.xml = CYStandardProcedure\bin\Debug\ExeFile\SystemCfg.xml
+		CYStandardProcedure\bin\Debug\ExeFile\SystemParam.xml = CYStandardProcedure\bin\Debug\ExeFile\SystemParam.xml
+		CYStandardProcedure\bin\Debug\ExeFile\User.ini = CYStandardProcedure\bin\Debug\ExeFile\User.ini
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CY|Any CPU = CY|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E0B2E3F-04AC-471C-B2C1-407AAFB8EB79}.CY|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0B2E3F-04AC-471C-B2C1-407AAFB8EB79}.CY|Any CPU.Build.0 = Release|Any CPU
+		{9E0B2E3F-04AC-471C-B2C1-407AAFB8EB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0B2E3F-04AC-471C-B2C1-407AAFB8EB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0B2E3F-04AC-471C-B2C1-407AAFB8EB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0B2E3F-04AC-471C-B2C1-407AAFB8EB79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00257495-1A92-4AB0-B369-6848A8E7CB85}.CY|Any CPU.ActiveCfg = CY|Any CPU
+		{00257495-1A92-4AB0-B369-6848A8E7CB85}.CY|Any CPU.Build.0 = CY|Any CPU
+		{00257495-1A92-4AB0-B369-6848A8E7CB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00257495-1A92-4AB0-B369-6848A8E7CB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00257495-1A92-4AB0-B369-6848A8E7CB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00257495-1A92-4AB0-B369-6848A8E7CB85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{879E21C5-2B76-4670-AD12-4DFEE0A59576}.CY|Any CPU.ActiveCfg = Release|Any CPU
+		{879E21C5-2B76-4670-AD12-4DFEE0A59576}.CY|Any CPU.Build.0 = Release|Any CPU
+		{879E21C5-2B76-4670-AD12-4DFEE0A59576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879E21C5-2B76-4670-AD12-4DFEE0A59576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879E21C5-2B76-4670-AD12-4DFEE0A59576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879E21C5-2B76-4670-AD12-4DFEE0A59576}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

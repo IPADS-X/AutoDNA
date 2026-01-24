@@ -1,0 +1,16 @@
+Er01&板卡故障&MotionCardFault&Lỗi thẻ kiểm soát vận động
+Er02&驱动报警&ServoAlarm&Báo động ổ
+Er03&参数配置故障&ParameLoadFault&Lỗi tải Tham số
+Er04&串口通讯故障&SerialFault&Lỗi liên lạc hàng loạt
+Er05&Mes通讯故障&MesFault&Lỗi liên lạc MES
+Er06&急停拍下&EmgStopPress&Dừng lại chụp ảnh đi.
+Er07&电机超时故障&MotorRunTimeOut&Lỗi chạy xe
+Er08&负压信号异常&VacuumFault&Tín hiệu âm bất thường
+Er09&磁环信号异常&MagneticSwitchFault&Tín hiệu rung từ bất thường
+Er10&光电信号异常&PhotoelectricityFault&Bất thường tín hiệu điện
+Er11&轴极限信号异常&AxisLimitFault&Tín hiệu giới hạn trục kỳ thường
+Er12&安全装置触发&PatternTrigger&Nút thắt an toàn
+Er13&安全门禁触发&ThresholdTrigger&Hệ thống điều khiển an ninh
+Er14&网口通讯超时&NetworkTimeOut&Khoảng thời gian thông báo mạng
+Er15&串口通讯超时&SerialTimeOut&Thời hạn liên lạc tiếp
+Er16&等待按钮按下超时&WaitPressButtonTimeOut&Nút chờ bấm thời gian

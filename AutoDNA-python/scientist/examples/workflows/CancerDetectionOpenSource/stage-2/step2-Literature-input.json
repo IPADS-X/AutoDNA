@@ -1,0 +1,1 @@
+{"name": "Literature", "args": {"experiment_name": "DNA Mutation Identification", "questions": ["What is the standard bioinformatics pipeline to identify mutations from DNA sequencing data, given a reference genome and a FASTQ file?"]}, "id": "call_dc73c2cf056a4a36950230cab037bead", "type": "tool_call"}

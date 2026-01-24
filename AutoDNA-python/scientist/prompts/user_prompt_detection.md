@@ -1,0 +1,1 @@
+There's a DNA sample with unknown sequence. Please locate the site of the mutation, and synthesize the functional mutant type primer for reliable detection. The reference genome is hg38, and its information is stored in the hg38.fa file.

@@ -1,0 +1,1 @@
+{"name": "Protocol", "args": {"experiment_name": "Nanopore DNA Sample Sequencing", "file_ids": ["Reagent-73c0"], "manuals": ["MinION-manual", "Terminator-manual", "qPCR-manual", "USER-manual"], "retry": true}, "id": "call_8d8911fbe34841668bb4d5d8547a2b13", "type": "tool_call"}

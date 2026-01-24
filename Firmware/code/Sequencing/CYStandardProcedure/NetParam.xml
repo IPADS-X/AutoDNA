@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemNetParam>
+  <NetworkClient>
+    <NetworkClient 网口定义="CCDSoftWare" IP地址="127.0.0.1" 端口号="9600" 超时时间="10" 结束符="NONE" />
+  </NetworkClient>
+</SystemNetParam>

@@ -1,0 +1,1 @@
+The goal is to design and implement a polyA tailing experiment for a 300ul reaction system.

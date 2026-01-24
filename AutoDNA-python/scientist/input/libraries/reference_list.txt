@@ -1,0 +1,3 @@
+hg38.fa (reference genome file)
+P5-adapter.fa (file containing the P5 adapter sequence)
+P7-adapter.fa (file containing the P7 adapter sequence)

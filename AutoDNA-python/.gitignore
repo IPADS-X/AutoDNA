@@ -1,0 +1,12 @@
+.vscode/
+__pycache__/
+data/dna_sequence_result/*
+output/
+**/tests/*/
+log
+.env
+test16/
+backup/
+testChunk7000
+ready/
+*.dat

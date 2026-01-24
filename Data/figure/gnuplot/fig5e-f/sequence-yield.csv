@@ -1,0 +1,7 @@
+""              "Value"	        "Error"	"Color"
+"Deletion"      0 0 "Deletion"
+"Insertion"     0 0 "Insertion"
+"Substitution"  0 0 "Substitution"
+"Base-correct"  89.33     5.02 "Base-correct"
+"Full-length"   62.36     15.44 "Full-length"
+"Stepwise"      93.77     4.10 "Stepwise"
