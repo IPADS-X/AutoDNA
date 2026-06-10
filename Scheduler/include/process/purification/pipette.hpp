@@ -67,7 +67,7 @@ public:
             input[Volume] = (uint16_t)CommonVolumeId::AUTO;
         }
 
-        if (input[Volume] < 100){
+        if (input[Volume] < 100) {
             input[Volume] = 100; // minimum volume is 100ul
         }
 
@@ -127,11 +127,8 @@ public:
     }
 
     uint16_t getCurrentNum() const {
-        if (user_input_.find(PuriPipette::PipetteNum) !=
-            user_input_.end()) {
-            return user_input_
-                .at(PuriPipette::PipetteNum)
-                .get<uint16_t>();
+        if (user_input_.find(PuriPipette::PipetteNum) != user_input_.end()) {
+            return user_input_.at(PuriPipette::PipetteNum).get<uint16_t>();
         }
         return 1;
     }
@@ -219,7 +216,7 @@ public:
             }
 
             if (end_pos == (uint16_t)CommonAreaId::WASTE_AREA) {
-                end_pos = (uint16_t)PurificationArea::WASTE_AREA;
+                end_pos   = (uint16_t)PurificationArea::WASTE_AREA;
                 end_index = 0;
             }
         }
@@ -239,8 +236,8 @@ public:
                 start_volume      = std::max(0, start_volume - volume);
                 end_volume        = std::max(0, end_volume + volume);
 
-                start_tube->setVolume(i, start_volume);
-                end_tube->setVolume(i, end_volume);
+                start_tube->setVolume(start_volume, i);
+                end_tube->setVolume(end_volume, i);
             }
         }
 
@@ -260,8 +257,33 @@ public:
     phase1(Reality& reality, std::shared_ptr<MachineManager> mac_manager, ActionId action_id) {
         std::vector<ExecutionResult> results;
 
+        auto machine = mac_manager->getMachine<PurificationModbusMachine>(machine_type_);
+
+        auto volume           = user_input_[PuriPipette::Volume].get<uint16_t>();
+        auto pipette_tr_index = user_input_[PuriPipette::PipetteTrIndex].get<uint16_t>();
+
+        // mirror phase0 logic to determine the actual tip type used
+        if (volume <= 5000) {
+            pipette_tr_index = (uint16_t)PipetteTrType::UL_50;
+        }
+
+        auto planned_num = user_input_[PuriPipette::PipetteNum].get<uint16_t>();
+        auto actual_num  = machine->get_pipette_tr_used();
+        if (actual_num > planned_num) {
+            machine->consumePipetteTr(static_cast<PipetteTrType>(pipette_tr_index),
+                                      actual_num - planned_num);
+            logger->info("PuriPipetteStep, actually used pipette num: {} of type: {}", actual_num,
+                         magic_enum::enum_name(static_cast<PipetteTrType>(pipette_tr_index)));
+        }
+
         results.push_back(ExecutionResult{next_steps_[PuriPipette::kOutput], Variables(), false});
         return results;
+    }
+
+    std::string getOperationName() const override { return "Pipette"; }
+
+    bool canExecuteWithoutEquipment(EquipmentType type) const override {
+        return type != EquipmentType::PIPETEE_GUN;
     }
 
     std::vector<std::pair<MachineType, EquipmentType>>

@@ -170,6 +170,13 @@ void PurificationModbusMachine::pipette(uint16_t start_pos, uint16_t start_index
     SPDLOG_ASSERT(rc == 1, "");
 }
 
+uint16_t PurificationModbusMachine::get_pipette_tr_used() {
+    uint16_t result = 0;
+    int      rc = client_.readHoldingRegisters(PuriPipetteModbus::USED_TIP_NUM_ADDR, 1, &result);
+    SPDLOG_ASSERT(rc == 1, "");
+    return result;
+}
+
 void PurificationModbusMachine::move_tube(uint16_t start_pos, uint16_t start_index,
                                           uint16_t end_pos, uint16_t end_index,
                                           ActionId action_id) {

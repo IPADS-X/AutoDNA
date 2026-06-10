@@ -178,8 +178,7 @@ public:
                                        ->getParams()[std::to_string(
                                            static_cast<int>(Dummy::ParamType::END_POSITION))];
                     if (dst_pos == Dummy::DummyEquipment::REACTION_POS) {
-                        dynamic_cast<DummyStep*>(step.get())->setMachine(last_machine_type);
-                        new_workflow->addStep(step);
+                        step_queue.push(std::dynamic_pointer_cast<DummyStep>(step));
                         continue;
                     } else if (equipment_sig_map_.find(dst_pos) != equipment_sig_map_.end()) {
                         auto        machines    = equipment_sig_map_.at(dst_pos);
@@ -196,6 +195,7 @@ public:
                         }
 
                         dynamic_cast<DummyStep*>(step.get())->setMachine(machineType);
+                        last_machine_type = machineType;
                         // logger_->debug("Directly allocated step: {}, to machine: {}",
                         //                magic_enum::enum_name(name),
                         //                magic_enum::enum_name(machineType));
@@ -239,24 +239,24 @@ public:
 
                     while (step_queue.size() > 0) {
                         auto dummy_step = step_queue.front();
-                        step_queue.pop();
                         dummy_step->setMachine(machineType);
                         // logger_->debug("Prepare Allocated step: {}, to machine: {}",
                         //                magic_enum::enum_name(dummy_step->getType()),
                         //                magic_enum::enum_name(machineType));
                         new_workflow->addStep(dummy_step);
+                        step_queue.pop();
                     }
                 }
             }
 
             while (step_queue.size() > 0) {
                 auto dummy_step = step_queue.front();
-                step_queue.pop();
                 dummy_step->setMachine(last_machine_type);
                 // logger_->debug("Prepare Allocated step: {}, to machine: {}",
                 //                magic_enum::enum_name(dummy_step->getType()),
                 //                magic_enum::enum_name(machineType));
                 new_workflow->addStep(dummy_step);
+                step_queue.pop();
             }
 
             results.push_back(workflow);

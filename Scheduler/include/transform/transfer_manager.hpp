@@ -33,6 +33,7 @@ public:
                   std::vector<std::shared_ptr<Workflow>> sources,
                   std::shared_ptr<spdlog::logger> logger, std::string workflow_name, int times,
                   int jump_from, bool is_prealloc) {
+        // return sources;
         return BlockTransformer::transferBlock(reality, mac_manager_, sources, logger, is_prealloc);
     }
 

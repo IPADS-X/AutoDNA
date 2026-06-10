@@ -89,6 +89,8 @@ public:
         return results;
     }
 
+    std::string getOperationName() const override { return "Shake"; }
+
     static std::shared_ptr<PuriShakeStep> fromDummy(DummyStep& dummy_step) {
         if (dummy_step.getType() == Dummy::DummyType::SHAKE) {
             return std::make_shared<PuriShakeStep>(PuriShake::Name,

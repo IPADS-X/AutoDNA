@@ -1,11 +1,12 @@
 #pragma once
 
 #include <iostream>
+#include <stack>
 #include <string>
 
 #include "common.hpp"
-// #include "machine/check_manager.hpp"
 #include "machine/mac_manager.hpp"
+#include "machine/check_manager.hpp"
 #include "reality/reality.hpp"
 
 #include "common/logging.h"
@@ -22,7 +23,20 @@ public:
     Step(MachineType machine_type, std::string name, Variables&& user_input = Variables())
         : machine_type_(machine_type), name_(name), user_input_(std::move(user_input)) {}
 
-    virtual ~Step() = default;
+    virtual ~Step() {
+        // Iteratively sever next_steps_ to avoid recursive destructor stack overflow
+        // on deep step chains (e.g. 37k+ steps).
+        std::stack<std::shared_ptr<Step>> stk;
+        for (auto& [k, next] : next_steps_) stk.push(std::move(next));
+        next_steps_.clear();
+        while (!stk.empty()) {
+            auto s = std::move(stk.top());
+            stk.pop();
+            if (!s || s.use_count() != 1) continue;
+            for (auto& [k, next] : s->next_steps_) stk.push(std::move(next));
+            s->next_steps_.clear();
+        }
+    }
 
     void setId(StepId id) {
         id_ = id;
@@ -45,6 +59,21 @@ public:
     }
 
     virtual std::shared_ptr<Step> buildNewStep(Variables&& new_params) { return nullptr; }
+
+    virtual std::string getOperationName() const { return ""; }
+
+    virtual bool canExecuteWithoutEquipment(EquipmentType type) const { return true; }
+
+    std::shared_ptr<Step> getNextStep(int index = 0) {
+        if (next_steps_.count(index)) {
+            return next_steps_[index];
+        }
+        return nullptr;
+    }
+
+    void copyNextStepsFrom(const std::shared_ptr<Step>& other) {
+        next_steps_ = other->next_steps_;
+    }
 
     MachineTypeId      getMachineType() const { return (MachineTypeId)machine_type_; }
     const std::string& getName() const { return name_; }

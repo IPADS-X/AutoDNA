@@ -49,6 +49,24 @@ bool ProductionLineScheduler::waitChangeCode(std::shared_ptr<Action> action) {
     return succ;
 }
 
+bool ProductionLineScheduler::waitConfirmChangeEquipment(std::shared_ptr<Action> action) {
+    // here check if can execute
+    // if can not execute, called PDA to change code
+
+    auto message =
+        "Waiting for equipment change confirmation for step " + std::to_string(action->getStepId());
+
+    message += ", step change to: " + action->getStep()->getName();
+
+    paused_workflows_[workflows_.at(action->getWorkflowId())->getName()] =
+        std::make_pair(action, workflows_.at(action->getWorkflowId()));
+
+    // called PDA
+    auto succ = callCodeAgent(action, message);
+
+    return true;
+}
+
 void ProductionLineScheduler::start() {
     int times = 1;
 
@@ -143,9 +161,9 @@ void ProductionLineScheduler::start() {
         }
 
         if (failed_prealloc_workflows_.size() > 0) {
-            auto current_time = std::chrono::duration_cast<std::chrono::milliseconds>(
-                                    std::chrono::steady_clock::now().time_since_epoch())
-                                    .count();
+            auto  current_time  = std::chrono::duration_cast<std::chrono::milliseconds>(
+                                      std::chrono::steady_clock::now().time_since_epoch())
+                                      .count();
             auto& next_workflow = failed_prealloc_workflows_.front();
             if (next_workflow.first <= current_time) {
                 logger->info("Retrying adding prealloc workflow {} at {} ms",

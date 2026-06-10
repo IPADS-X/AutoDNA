@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 
@@ -22,6 +24,24 @@ public:
     using CarrierFunc = std::function<std::shared_ptr<Step>(TubeId, AreaId, AreaId)>;
 
     using MoveTubeToCarrierFunc = std::function<std::shared_ptr<Step>(TubeId)>;
+
+    using StepCreator = std::function<std::shared_ptr<Step>(const std::string&, Variables&&)>;
+
+    static std::map<MachineType, std::map<std::string, StepCreator>> step_factory_;
+
+    static void registerStep(MachineType type, const std::string& op_name, StepCreator creator) {
+        step_factory_[type][op_name] = creator;
+    }
+
+    static void registerAllSteps();
+
+    static std::shared_ptr<Step> createStep(MachineType type, const std::string& op_name, 
+                                           const std::string& name, Variables&& vars) {
+        if (step_factory_.count(type) && step_factory_[type].count(op_name)) {
+            return step_factory_[type][op_name](name, std::move(vars));
+        }
+        return nullptr;
+    }
 
     static std::map<MachineType, CarrierFunc> carrier_funcs_;
 
@@ -62,6 +82,11 @@ public:
                               std::shared_ptr<Action>   action,
                               std::shared_ptr<Workflow> original_workflow, CheckType check_type,
                               SubmitFunc func);
+
+    static bool checkReplaceEquipment(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
+                               std::shared_ptr<Action>   action,
+                               std::shared_ptr<Workflow> original_workflow, CheckType check_type,
+                               SubmitFunc func);
 
     static bool checkEquipment(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                                std::shared_ptr<Action>   action,
@@ -120,9 +145,16 @@ public:
     }
 
 private:
+
+#ifdef RECOVER_ENHANCED
+    static inline std::vector<CheckFunc> check_funcs_ = {
+        CheckFunc(checkReplaceEquipment), CheckFunc(checkPortageOnce), CheckFunc(checkConsumable), CheckFunc(checkPortageTwice),
+        CheckFunc(checkTubeType),    CheckFunc(checkReagents),   CheckFunc(checkEquipment)};
+#else
     static inline std::vector<CheckFunc> check_funcs_ = {
         CheckFunc(checkPortageOnce), CheckFunc(checkConsumable), CheckFunc(checkPortageTwice),
         CheckFunc(checkTubeType),    CheckFunc(checkReagents),   CheckFunc(checkEquipment)};
+#endif
 
     static inline bool                            check_pipette_tr = false;
     static inline std::shared_ptr<spdlog::logger> logger           = nullptr;

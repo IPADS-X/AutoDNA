@@ -131,12 +131,13 @@ public:
                                  .count() +
                              prealloc_retry_interval_ms_,
                          workflow});
-                    logger->info("addWorkflow: Prealloc workflow {} failed, will retry later at {} ms",
-                                 workflow->getName(),
-                                 std::chrono::duration_cast<std::chrono::milliseconds>(
-                                     std::chrono::steady_clock::now().time_since_epoch())
-                                         .count() +
-                                     prealloc_retry_interval_ms_);
+                    logger->info(
+                        "addWorkflow: Prealloc workflow {} failed, will retry later at {} ms",
+                        workflow->getName(),
+                        std::chrono::duration_cast<std::chrono::milliseconds>(
+                            std::chrono::steady_clock::now().time_since_epoch())
+                                .count() +
+                            prealloc_retry_interval_ms_);
                     return false;
                 }
             }
@@ -209,6 +210,8 @@ public:
 
     bool waitChangeCode(std::shared_ptr<Action> action);
 
+    bool waitConfirmChangeEquipment(std::shared_ptr<Action> action);
+
     bool handleEvent(std::shared_ptr<MyEvent> event) {
         ActionId action_id = event->action_id;
         SPDLOG_ASSERT(actions_waiting_ack_.count(action_id) != 0, "Action not found: {}",
@@ -227,6 +230,15 @@ public:
             logger->debug("Action {} can not execute now", action_id);
             return false;
         }
+
+#ifdef RECOVER_ENHANCED_USING_CODE_AGENT
+        if (action->isStepTransfered()) {
+            logger->debug("Action {} has been transfered to other machine, just wait for execution",
+                          action_id);
+            waitConfirmChangeEquipment(action);
+            return true;
+        }
+#endif
 
         // execute now!
         logger->debug("Action {} in phase {} can execute, and prepare to lock equipment", action_id,
@@ -257,6 +269,15 @@ public:
             logger->debug("Action {} can not execute now", action_id);
             return false;
         }
+
+#ifdef RECOVER_ENHANCED_USING_CODE_AGENT
+        if (action->isStepTransfered()) {
+            logger->debug("Action {} has been transfered to other machine, just wait for execution",
+                          action_id);
+            waitConfirmChangeEquipment(action);
+            return true;
+        }
+#endif
 
         // execute now
         logger->debug("Action {} in phase {} can execute, and prepare to lock equipment", action_id,

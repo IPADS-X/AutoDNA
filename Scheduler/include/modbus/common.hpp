@@ -332,6 +332,8 @@ public:
     static const int AFTER_MIX_ADDR        = 51209;
     static const int AFTER_MIX_VOLUME_ADDR = 51210;
     static const int MIX_SPEED_ADDR        = 51211;
+
+    static const int USED_TIP_NUM_ADDR = 51212;
 };
 
 class PuriMoveTubeModbus {

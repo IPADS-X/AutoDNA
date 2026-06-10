@@ -63,6 +63,8 @@ public:
         return results;
     }
 
+    std::string getOperationName() const override { return "PCR"; }
+
     static std::shared_ptr<AmpPcrStep> fromDummy(DummyStep& dummy_step) {
         if (dummy_step.getType() == Dummy::DummyType::PCR) {
             return std::make_shared<AmpPcrStep>(AmpPcr::Name, AmpPcr::fromDummy(dummy_step));

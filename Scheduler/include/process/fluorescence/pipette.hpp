@@ -343,8 +343,8 @@ public:
                 start_volume      = std::max(0, start_volume - volume);
                 end_volume        = std::max(0, end_volume + volume);
 
-                start_tube->setVolume(i, start_volume);
-                end_tube->setVolume(i, end_volume);
+                start_tube->setVolume(start_volume, i);
+                end_tube->setVolume(end_volume, i);
             }
         }
 
@@ -369,6 +369,12 @@ public:
 
         results.push_back(ExecutionResult{next_steps_[FluoPipette::kOutput], Variables(), false});
         return results;
+    }
+
+    std::string getOperationName() const override { return "Pipette"; }
+
+    bool canExecuteWithoutEquipment(EquipmentType type) const override {
+        return type != EquipmentType::PIPETEE_GUN;
     }
 
     std::vector<std::pair<MachineType, EquipmentType>>

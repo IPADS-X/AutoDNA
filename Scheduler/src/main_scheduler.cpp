@@ -58,6 +58,8 @@ int main(int argc, char* argv[]) {
 
     setSpdLog();
 
+    CheckManager::registerAllSteps();
+
     ThreadSafeQueue<std::shared_ptr<WebEvent>> web_recv_queue;
     ThreadSafeQueue<std::shared_ptr<WebEvent>> web_send_queue;
     ThreadSafeQueue<std::shared_ptr<MyEvent>>  event_queue;
@@ -78,6 +80,7 @@ int main(int argc, char* argv[]) {
 #endif
 
     mac_manager = std::make_shared<MachineManager>(event_queue);
+
     threads.emplace_back([]() { mac_manager->start(); });
 
     scheduler = std::make_shared<ProductionLineScheduler>(mac_manager, web_recv_queue,

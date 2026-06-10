@@ -67,6 +67,8 @@ public:
                  uint16_t aspiratation_speed, uint16_t dispense_speed, uint16_t free_dispense,
                  uint16_t tip_touching, ActionId action_id);
 
+    uint16_t getPipetteTrUsed();
+
     void capTubes(ActionId action_id);
 
     void time(uint32_t duration, ActionId action_id);
@@ -106,6 +108,8 @@ public:
                  uint16_t end_index, uint16_t num, uint16_t pipette_tr_index, uint16_t mix_time,
                  uint16_t mix_volume, uint16_t after_mix_time, uint16_t after_mix_volume,
                  uint16_t mix_speed, ActionId action_id);
+
+    uint16_t get_pipette_tr_used();
 
     void move_tube(uint16_t start_pos, uint16_t start_index, uint16_t end_pos, uint16_t end_index,
                    ActionId action_id);

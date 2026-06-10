@@ -45,6 +45,20 @@ std::vector<ExecutionResult> Step::execute(std::shared_ptr<Action> action, Reali
         "Step{} {} of workflow {} with action_id {} enter phase{}, user_input {}, step_input {}",
         id_, name_, workflow_id_, action_id, current_phase, user_input_, step_input_);
 
+#ifdef SIMULATE_ERROR
+    // Simulate pipette fault on FLUORESCENCE machine (failover test)
+    if (action_id > 1 && action_id < 10) {
+        auto fluo_machine = mac_manager->getMachine<Machine>(MachineType::FLUORESCENCE);
+        if (fluo_machine) {
+            auto fluo_pipette = fluo_machine->getEquipment(EquipmentType::PIPETEE_GUN);
+            if (fluo_pipette) {
+                fluo_pipette->markError(true);
+                // std::cout << "DEBUG: Simulated error on FLUORESCENCE PIPETEE_GUN" << std::endl;
+            }
+        }
+    }
+#endif
+
     auto user_continue_func = [&](std::string msg) {
         std::string dummy;
         logger->warn("Next will {}, please input 'c' to continue", msg);

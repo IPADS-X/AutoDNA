@@ -25,8 +25,12 @@ public:
     WorkflowId            getWorkflowId() const { return workflow_id_; }
     StepId                getStepId() const;
     std::shared_ptr<Step> getStep() const { return my_step_; }
+    void                  setStep(std::shared_ptr<Step> step) { my_step_ = step; }
     int                   getCurrentPhase() const { return cur_phase_; }
     int                   getPhaseTotalNum() const;
+
+    void setStepTransfered() { step_transfered_ = true; }
+    bool isStepTransfered() const { return step_transfered_; }
 
     void done() {
         finished = true;
@@ -73,11 +77,12 @@ public:
     }
 
 private:
-    int                                         num_waiting_ = 0;
-    int                                         cur_phase_   = 0;
-    WorkflowId                                  workflow_id_;
-    ActionId                                    action_id_;
-    std::shared_ptr<Step>                       my_step_;
+    int                   num_waiting_ = 0;
+    int                   cur_phase_   = 0;
+    WorkflowId            workflow_id_;
+    ActionId              action_id_;
+    std::shared_ptr<Step> my_step_;
+    bool                  step_transfered_ = false; // whether the step has been transfered to other machine for execution
     std::vector<std::shared_ptr<MyEvent>>       received_events_;
     std::map<int, std::vector<ExecutionResult>> results_map_;
     bool                                        finished;

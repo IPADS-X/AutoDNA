@@ -68,6 +68,8 @@ public:
         return results;
     }
 
+    std::string getOperationName() const override { return "Time"; }
+
     std::vector<Equipment> getLockedEquipment() const { return {}; }
 
     std::vector<Equipment> getUnlockedEquipment() const { return {}; }

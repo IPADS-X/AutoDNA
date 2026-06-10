@@ -69,6 +69,8 @@ public:
         return results;
     }
 
+    std::string getOperationName() const override { return "Centrifuge"; }
+
     static std::shared_ptr<PuriCentrifugeStep> fromDummy(DummyStep& dummy_step) {
         if (dummy_step.getType() == Dummy::DummyType::CENTRIFUGE) {
             return std::make_shared<PuriCentrifugeStep>(PuriCentrifuge::Name,

@@ -92,6 +92,8 @@ public:
         return results;
     }
 
+    std::string getOperationName() const override { return "MoveCarrier"; }
+
     std::vector<std::pair<MachineType, EquipmentType>>
     getNeedLockEquipment(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                          std::shared_ptr<Action> action) const {

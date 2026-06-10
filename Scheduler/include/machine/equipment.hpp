@@ -25,6 +25,10 @@ public:
 
     bool isEmpty() const { return alloc_slot_num_ == 0; }
 
+    bool isError() const { return marked_error; }
+
+    void markError(bool error = true) { marked_error = error; }
+
     IndexId allocAll(std::shared_ptr<Workflow> workflow = nullptr) {
         if (single_alloc_workflow_ == workflow) {
             return 0;
@@ -128,6 +132,7 @@ private:
     EquipmentType                           equipment_type_;
     int                                     max_slot_num_;
     int                                     alloc_slot_num_;
+    bool                                    marked_error;
     std::vector<std::shared_ptr<Container>> containers_;
 
     std::shared_ptr<Workflow> single_alloc_workflow_;

@@ -84,6 +84,8 @@ public:
         return results;
     }
 
+    std::string getOperationName() const override { return "Heat"; }
+
     static std::shared_ptr<LibHeatStep> fromDummy(DummyStep& dummy_step) {
         if (dummy_step.getType() == Dummy::DummyType::HEATER) {
             return std::make_shared<LibHeatStep>(LibHeat::Name, LibHeat::fromDummy(dummy_step));

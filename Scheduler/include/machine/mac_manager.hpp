@@ -69,6 +69,10 @@ public:
 
     ThreadSafeQueue<std::shared_ptr<MyEvent>>& getEventQueue() { return event_queue_; }
 
+    const std::map<MachineTypeId, std::shared_ptr<Machine>>& getAllMachines() const {
+        return machines_;
+    }
+
     static MachineType toMachineType(std::string machine_type) {
         for (int i = 0; i < (int)MachineType::TOTAL_NUM; i++) {
             if (machine_type == magic_enum::enum_name((MachineType)i)) {

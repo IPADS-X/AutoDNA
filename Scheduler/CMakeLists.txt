@@ -65,6 +65,12 @@ endforeach(mode)
 target_compile_definitions(main_local_web PUBLIC -DLOCAL_TEST -DJUMP_ORIGIN_STEP -DWEB_MODE)
 target_compile_options(main_local_web PUBLIC -g)
 target_compile_definitions(main_web PUBLIC -DJUMP_ORIGIN_STEP -DWEB_MODE)
+target_compile_definitions(main_web PUBLIC -DRECOVER_ENHANCED)
+target_compile_definitions(main_web PUBLIC -DRECOVER_ENHANCED_USING_CODE_AGENT)
+# target_compile_definitions(main_web PUBLIC -DSIMULATE_ERROR)
+target_compile_definitions(main_local_web PUBLIC -DRECOVER_ENHANCED)
+target_compile_definitions(main_local_web PUBLIC -DRECOVER_ENHANCED_USING_CODE_AGENT)
+# target_compile_definitions(main_local_web PUBLIC -DSIMULATE_ERROR)
 
 
 # sender

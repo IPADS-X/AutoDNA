@@ -103,6 +103,12 @@ public:
         auto origin_tube       = reality->getTube(origin_tube_id);
         auto new_tube          = reality->getTube(new_tube_id);
 
+        // if (!origin_tube_alloc || !new_tube_alloc) {
+        //     if (origin_tube_id == new_tube_id && TubeManager::checkSameReagent()) {
+        //         return false;
+        //     }
+        // }
+
         if (!origin_tube_alloc || !new_tube_alloc) {
             if (origin_tube_id == new_tube_id) {
                 return false;
