@@ -3,6 +3,17 @@
 
 #include "process/library/heater.hpp"
 
+// When more than WORKFLOW_BATCH_THRESHOLD workflows are dispatched at once,
+// they are split into independent batches of WORKFLOW_BATCH_SIZE, each run
+// through the full transform pipeline and dispatched separately.
+// Override at build time with -DWORKFLOW_BATCH_THRESHOLD=.. / -DWORKFLOW_BATCH_SIZE=..
+#ifndef WORKFLOW_BATCH_THRESHOLD
+#define WORKFLOW_BATCH_THRESHOLD 50
+#endif
+#ifndef WORKFLOW_BATCH_SIZE
+#define WORKFLOW_BATCH_SIZE 4
+#endif
+
 std::shared_ptr<spdlog::logger> ProductionLineScheduler::logger = nullptr;
 
 bool ProductionLineScheduler::waitChangeCode(std::shared_ptr<Action> action) {
@@ -108,9 +119,11 @@ void ProductionLineScheduler::start() {
                                  magic_enum::enum_name((MachineType)machine_type));
                 }
             } else {
-                std::string workflow_name = "default";
-                if (json_data.contains("workflow_name")) {
-                    workflow_name = json_data["workflow_name"];
+                std::vector<std::string> workflow_names = {"default"};
+                if (json_data.contains("workflow_names")) {
+                    workflow_names = json_data["workflow_names"].get<std::vector<std::string>>();
+                } else if (json_data.contains("workflow_name")) {
+                    workflow_names = {json_data["workflow_name"]};
                 }
 
                 int jump_from = 1;
@@ -120,9 +133,12 @@ void ProductionLineScheduler::start() {
                     jump_from = 1;
                 }
 
-                if (paused_workflows_.count(workflow_name) > 0) {
+                // Because after block, the workflow will merged and use the first workflow's name,
+                // so here we just check the first workflow's name in the list to decide whether to
+                // jump from a paused workflow.
+                if (paused_workflows_.count(workflow_names[0]) > 0) {
                     // resume from stop step
-                    jump_from = paused_workflows_[workflow_name].first->getStep()->getId();
+                    jump_from = paused_workflows_[workflow_names[0]].first->getStep()->getId();
                 }
 
                 int exec_times = 1;
@@ -132,32 +148,73 @@ void ProductionLineScheduler::start() {
                     exec_times = 1;
                 }
 
+                std::vector<std::string> all_workflow_names;
+                for (int i = 0; i < exec_times; ++i) {
+                    all_workflow_names.insert(all_workflow_names.end(), workflow_names.begin(),
+                                              workflow_names.end());
+                }
+
                 bool is_prealloc = false;
                 if (json_data.contains("prealloc")) {
                     is_prealloc = json_data["prealloc"];
-                    logger->info("Workflow {} is prealloc: {}", workflow_name, is_prealloc);
+                    logger->info("Workflows are prealloc: {}", is_prealloc);
                 }
 
                 if (json_data.contains("uninterruptible")) {
                     is_prealloc = json_data["uninterruptible"];
-                    logger->info("Workflow {} is prealloc: {}", workflow_name, is_prealloc);
+                    logger->info("Workflows are prealloc: {}", is_prealloc);
                 }
 
-                auto workflows = TransferManager::parse_and_generate(
-                    reality_, mac_manager_, workflow_name, exec_times, jump_from, is_prealloc);
-                for (const auto& workflow : workflows) {
-                    logger->info("Generate a new workflow");
-                    workflow->setName(workflow_name);
-                    workflow->setOriginalTimes(exec_times);
-                    workflow->setPreAlloc(is_prealloc);
-                    if (!addWorkflowAndReOrder(nullptr, workflow)) {
-                        logger->info("Added workflow {} to scheduler failed", workflow_name);
+                // When too many workflows are dispatched at once, intercept here and
+                // dispatch them in independent batches: each batch runs through the
+                // full parse/merge/alloc/interval pipeline and is added separately.
+                // e.g. 78 workflows -> 20 batches of 4 -> 20 separate dispatches.
+                const size_t kBatchThreshold = WORKFLOW_BATCH_THRESHOLD;
+                const size_t kBatchSize      = WORKFLOW_BATCH_SIZE;
+
+                std::vector<std::vector<std::string>> batches;
+                if (all_workflow_names.size() > kBatchThreshold) {
+                    for (size_t start = 0; start < all_workflow_names.size(); start += kBatchSize) {
+                        size_t end = start + kBatchSize;
+                        if (end > all_workflow_names.size()) {
+                            end = all_workflow_names.size();
+                        }
+                        batches.emplace_back(all_workflow_names.begin() + start,
+                                             all_workflow_names.begin() + end);
                     }
+                    logger->info("Workflow count {} exceeds {}, dispatching in {} batches of {}",
+                                 all_workflow_names.size(), kBatchThreshold, batches.size(),
+                                 kBatchSize);
+                } else {
+                    batches.push_back(all_workflow_names);
+                }
+
+                for (const auto& batch : batches) {
+                    pending_batches_.push({batch, jump_from, exec_times, is_prealloc});
                 }
             }
         } else if (web_event) {
             // generateWorkflow(stage, web_event->get()->data);
             logger->debug("not accepted: {}", web_event->get()->data);
+        }
+
+        if (active_user_workflows_ == 0 && !pending_batches_.empty()) {
+            auto pending = pending_batches_.front();
+            pending_batches_.pop();
+            auto workflows = TransferManager::parse_and_generate(
+                reality_, mac_manager_, pending.batch, pending.jump_from, pending.is_prealloc);
+            for (int i = 0; i < workflows.size(); ++i) {
+                auto& workflow = workflows[i];
+                logger->info("Generate a new workflow: {}", workflow->getName());
+                workflow->setName(pending.batch[i]);
+                workflow->setOriginalTimes(pending.exec_times);
+                workflow->setPreAlloc(pending.is_prealloc);
+                active_user_workflows_++;
+                if (!addWorkflowAndReOrder(nullptr, workflow)) {
+                    logger->info("Added workflow {} to scheduler failed, will be retried",
+                                 workflow->getName());
+                }
+            }
         }
 
         if (failed_prealloc_workflows_.size() > 0) {

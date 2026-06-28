@@ -18,40 +18,39 @@ class TransferManager {
 public:
     using TransferFunc = std::function<std::vector<std::shared_ptr<Workflow>>(
         Reality&, std::shared_ptr<MachineManager>, std::vector<std::shared_ptr<Workflow>>,
-        std::shared_ptr<spdlog::logger>, std::string, int, int, bool)>;
+        std::shared_ptr<spdlog::logger>, std::vector<std::string>, int, bool)>;
     static std::vector<std::shared_ptr<Workflow>>
     transferParser(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                    std::vector<std::shared_ptr<Workflow>> sources,
-                   std::shared_ptr<spdlog::logger> logger, std::string workflow_name, int times,
+                   std::shared_ptr<spdlog::logger> logger, std::vector<std::string> workflow_names,
                    int jump_from, bool is_prealloc) {
-        return ParserCode::transferParser(reality, mac_manager_, sources, logger, workflow_name,
-                                          times);
+        return ParserCode::transferParser(reality, mac_manager_, sources, logger, workflow_names);
     }
 
     static std::vector<std::shared_ptr<Workflow>>
     transferBlock(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                   std::vector<std::shared_ptr<Workflow>> sources,
-                  std::shared_ptr<spdlog::logger> logger, std::string workflow_name, int times,
+                  std::shared_ptr<spdlog::logger> logger, std::vector<std::string> workflow_names,
                   int jump_from, bool is_prealloc) {
         // return sources;
-        return BlockTransformer::transferBlock(reality, mac_manager_, sources, logger, is_prealloc);
+        return BlockTransformer::transferBlock(reality, mac_manager_, sources, logger, workflow_names, jump_from, is_prealloc);
     }
 
     static std::vector<std::shared_ptr<Workflow>>
     transferAlloc(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                   std::vector<std::shared_ptr<Workflow>> sources,
-                  std::shared_ptr<spdlog::logger> logger, std::string workflow_name, int times,
+                  std::shared_ptr<spdlog::logger> logger, std::vector<std::string> workflow_names,
                   int jump_from, bool is_prealloc) {
-        return AllocMachine::transferAlloc(reality, mac_manager_, sources, logger);
+        return AllocMachine::transferAlloc(reality, mac_manager_, sources, logger, workflow_names, jump_from);
     }
 
     static std::vector<std::shared_ptr<Workflow>>
     transferInterval(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                      std::vector<std::shared_ptr<Workflow>> sources,
-                     std::shared_ptr<spdlog::logger> logger, std::string workflow_name, int times,
+                     std::shared_ptr<spdlog::logger> logger, std::vector<std::string> workflow_names,
                      int jump_from, bool is_prealloc) {
         return IntervalProcedure::transferInterval(reality, mac_manager_, sources, logger,
-                                                   workflow_name, jump_from);
+                                                   workflow_names, jump_from);
     }
 
     // TODO: stage 4: alloc carrier and tubes
@@ -66,10 +65,10 @@ public:
 
     static std::vector<std::shared_ptr<Workflow>>
     parse_and_generate(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
-                       std::string workflow_name, int times, int jump_from = 1, bool is_prealloc = false) {
+                       std::vector<std::string> workflow_names, int jump_from, bool is_prealloc = false) {
         std::vector<std::shared_ptr<Workflow>> sources = {};
         for (const auto& func : transfer_funcs_) {
-            sources = func(reality, mac_manager_, sources, logger, workflow_name, times, jump_from, is_prealloc);
+            sources = func(reality, mac_manager_, sources, logger, workflow_names, jump_from, is_prealloc);
         }
         return sources;
     }

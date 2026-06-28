@@ -40,7 +40,7 @@ public:
                                  std::placeholders::_2, std::placeholders::_3)};
     }
 
-    long long getTime() const {
+    long long getTime(bool conflict = false) const {
         // Simulate time for purification
         auto duration = user_input_[LibHeat::Duration].get<uint32_t>();
         return duration / 1000;

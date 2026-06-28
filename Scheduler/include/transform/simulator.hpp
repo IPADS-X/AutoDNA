@@ -10,7 +10,7 @@ public:
 
     bool operator==(const StepGroup& other) const;
 
-    long long getTime() const {
+    long long getTime(bool conflict = false) const {
         long long total_time = 0;
         for (const auto& step : steps_) {
             total_time += step->getTime();

@@ -21,9 +21,7 @@ public:
         }
 
         if (dummy_params.contains(std::to_string(static_cast<int>(Dummy::ParamType::DURATION)))) {
-            input[Duration] =
-                num *
-                (int)dummy_params[std::to_string(static_cast<int>(Dummy::ParamType::DURATION))];
+            input[Duration] = (int)dummy_params[std::to_string(static_cast<int>(Dummy::ParamType::DURATION))];
         } else {
             input[Duration] = 30 * 1000;
         }
@@ -42,7 +40,10 @@ public:
                                  std::placeholders::_2, std::placeholders::_3)};
     }
 
-    long long getTime() const {
+    long long getTime(bool conflict = false) const {
+        if (conflict) {
+            return 0;
+        }
         // Simulate time for purification
         return user_input_.value(PuriTime::Duration, 0) / 1000;
     }

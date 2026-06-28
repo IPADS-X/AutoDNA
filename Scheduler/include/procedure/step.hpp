@@ -5,8 +5,8 @@
 #include <string>
 
 #include "common.hpp"
-#include "machine/mac_manager.hpp"
 #include "machine/check_manager.hpp"
+#include "machine/mac_manager.hpp"
 #include "reality/reality.hpp"
 
 #include "common/logging.h"
@@ -27,13 +27,16 @@ public:
         // Iteratively sever next_steps_ to avoid recursive destructor stack overflow
         // on deep step chains (e.g. 37k+ steps).
         std::stack<std::shared_ptr<Step>> stk;
-        for (auto& [k, next] : next_steps_) stk.push(std::move(next));
+        for (auto& [k, next] : next_steps_)
+            stk.push(std::move(next));
         next_steps_.clear();
         while (!stk.empty()) {
             auto s = std::move(stk.top());
             stk.pop();
-            if (!s || s.use_count() != 1) continue;
-            for (auto& [k, next] : s->next_steps_) stk.push(std::move(next));
+            if (!s || s.use_count() != 1)
+                continue;
+            for (auto& [k, next] : s->next_steps_)
+                stk.push(std::move(next));
             s->next_steps_.clear();
         }
     }
@@ -71,9 +74,7 @@ public:
         return nullptr;
     }
 
-    void copyNextStepsFrom(const std::shared_ptr<Step>& other) {
-        next_steps_ = other->next_steps_;
-    }
+    void copyNextStepsFrom(const std::shared_ptr<Step>& other) { next_steps_ = other->next_steps_; }
 
     MachineTypeId      getMachineType() const { return (MachineTypeId)machine_type_; }
     const std::string& getName() const { return name_; }
@@ -114,7 +115,7 @@ public:
 
     virtual uint16_t getCurrentNum() const { return 1; }
 
-    virtual long long getTime() const { return 0; }
+    virtual long long getTime(bool conflict = false) const { return 0; }
 
     virtual std::vector<std::pair<MachineType, EquipmentType>>
     getNeedLockEquipment(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
@@ -134,7 +135,9 @@ public:
         auto now_step = this;
         for (int i = 0; i < 2; i++) {
             if (now_step) {
-                wait_time += now_step->getTime();
+                wait_time += now_step->getTime(true);
+            } else {
+                break;
             }
             if (now_step->next_steps_.empty()) {
                 break;

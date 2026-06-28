@@ -339,6 +339,9 @@ public:
         }
 
         if (workflow->isFinished()) {
+            if (workflow->getId() < system_workflow_id_base_) {
+                active_user_workflows_--;
+            }
             // TODO: NOTIFY finished?
             workflow->printResults();
             if (workflow->isPreAlloc()) {
@@ -392,7 +395,8 @@ public:
         if (!addWorkflow(workflow, is_user, skip_gen_id)) {
             return false;
         }
-        workflow->getSteps()[0]->genWorkflowForNextStep(*workflow, 1);
+        if (workflow->getSteps().size() > 1)
+            workflow->getSteps()[0]->genWorkflowForNextStep(*workflow, 1);
         if (!is_user && action) {
             action_depends_system_workflow_[action->getId()] = workflow->getId();
         }
@@ -425,8 +429,17 @@ private:
     // time, workflow
     std::queue<std::pair<uint64_t, std::shared_ptr<Workflow>>> failed_prealloc_workflows_;
     // if there are some system workflow not finished, prevent submit again
-    std::unordered_map<ActionId, WorkflowId>              action_depends_system_workflow_;
-    std::queue<std::shared_ptr<Action>>                   ready_actions_;
+    std::unordered_map<ActionId, WorkflowId> action_depends_system_workflow_;
+    std::queue<std::shared_ptr<Action>>      ready_actions_;
+    struct PendingBatch {
+        std::vector<std::string> batch;
+        int                      jump_from;
+        int                      exec_times;
+        bool                     is_prealloc;
+    };
+    std::queue<PendingBatch> pending_batches_;
+    int                      active_user_workflows_ = 0;
+
     std::unordered_map<ActionId, std::shared_ptr<Action>> actions_waiting_ack_;
 
     std::map<std::string, std::pair<std::shared_ptr<Action>, std::shared_ptr<Workflow>>>

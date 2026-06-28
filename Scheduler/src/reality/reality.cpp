@@ -87,7 +87,7 @@ void Reality::init(std::shared_ptr<MachineManager> mac_manager) {
 
     // set a waste tube
     auto waste_tube =
-        tube_manager_.allocTube(ParserCode::WASTE_TUBE, ParserCode::WASTE_TUBE, TubeType::CHAMBER);
+        tube_manager_.allocTube(WASTE_TUBE, WASTE_TUBE, TubeType::CHAMBER);
     waste_carrier->setTube(TubeManager::toChamberTube(waste_tube).get());
     TubeManager::setTubeCarrier(waste_tube, waste_carrier);
     setTubePosition(TubeManager::getTubeId(waste_tube),
@@ -126,7 +126,7 @@ void Reality::init(std::shared_ptr<MachineManager> mac_manager) {
     }
 
     // set a waste reagent
-    auto waste_reagent = getOrCreateReagent(ParserCode::WASTE_TUBE);
+    auto waste_reagent = getOrCreateReagent(WASTE_TUBE);
     waste_reagent->setContainer(waste_tube);
     waste_tube->setVolume(0, 0);
     waste_tube->forceSetReagentIndex(waste_reagent.get(), 0);

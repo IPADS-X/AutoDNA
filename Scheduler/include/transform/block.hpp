@@ -466,38 +466,33 @@ public:
     static std::vector<std::shared_ptr<Workflow>>
     transferBlock(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                   std::vector<std::shared_ptr<Workflow>> sources,
-                  std::shared_ptr<spdlog::logger> logger, bool is_prealloc) {
+                  std::shared_ptr<spdlog::logger> logger, std::vector<std::string> /*workflow_names*/,
+                  int /*jump_from*/, bool is_prealloc) {
         auto block_transformer = BlockTransformer(reality);
 
         logger_->info("Get {} workflows to merge", sources.size());
 
         Simulator::setReality(reality);
 
-        auto workflow = sources[0];
+        std::vector<std::shared_ptr<Workflow>> processed_sources;
 
         if (!is_prealloc) {
+            // After this step, all workflows will be merged into one.
             for (int i = 0; i < sources.size(); ++i) {
                 std::shared_ptr<Workflow> workflow = sources[i];
                 block_transformer.add_need_merge_workflow(workflow);
             }
-            workflow = block_transformer.get_merged_workflow();
+            processed_sources.push_back(block_transformer.get_merged_workflow());
         } else {
-            logger_->info("Workflow {} is prealloc, skip block transfer", workflow->getName());
+            logger_->info("Workflows are prealloc, skip block transfer");
+            processed_sources = sources;
         }
 
-        workflow =
-            BlockTransformer::transferSelfBlock(reality, mac_manager_, {workflow}, logger_)[0];
-
-        for (auto& step : workflow->getSteps()) {
-            auto dummy_step = dynamic_cast<DummyStep*>(step.get());
-            if (dummy_step) {
-                logger_->debug("Step type: {}, Step params: {}",
-                               magic_enum::enum_name(dummy_step->getType()),
-                               dummy_step->getParams());
-            }
+        if (sources.size() > 1){
+            return processed_sources;
         }
 
-        return {workflow};
+        return BlockTransformer::transferSelfBlock(reality, mac_manager_, processed_sources, logger_);
     }
 
     void setReality(Reality& reality) { this->reality = reality; }

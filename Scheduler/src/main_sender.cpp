@@ -100,7 +100,16 @@ int main(int argc, char** argv) {
         } else if (argv[1] == std::string("-w")) {
             nlohmann::json json_message;
             json_message["command"]       = "new_workflow";
-            json_message["workflow_name"] = argv[2];
+            try {
+                auto parsed = nlohmann::json::parse(argv[2]);
+                if (parsed.is_array()) {
+                    json_message["workflow_names"] = parsed;
+                } else {
+                    json_message["workflow_name"] = argv[2];
+                }
+            } catch (...) {
+                json_message["workflow_name"] = argv[2];
+            }
             if (argc >= 4) {
                 json_message["times"] = nlohmann::json::parse(argv[3]);
             } else {

@@ -269,10 +269,16 @@ public:
         if (addr == 0) {
             // timer
             addr               = allocNewTimeAddr();
+#if defined(LOCAL_TEST) && defined(WEB_MODE)
+            uint64_t end_value = std::chrono::duration_cast<std::chrono::seconds>(
+                                     std::chrono::system_clock::now().time_since_epoch())
+                                     .count(); // skip timer
+#else
             uint64_t end_value = std::chrono::duration_cast<std::chrono::seconds>(
                                      std::chrono::system_clock::now().time_since_epoch())
                                      .count() +
                                  expected_value; // now + duration
+#endif
             logger->debug("Subscribe a timer: {}'s address({}) with end_value {}, action_id {}, "
                           "expected value {}",
                           getName(), addr, end_value, action_id, expected_value);

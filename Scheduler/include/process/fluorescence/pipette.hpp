@@ -212,7 +212,7 @@ public:
         return 1;
     }
 
-    long long getTime() const {
+    long long getTime(bool conflict = false) const {
         return 50; // simulate time for pipetting
     }
 
@@ -223,7 +223,7 @@ public:
 
         auto start_pos        = user_input_[FluoPipette::StartPos].get<uint16_t>();
         auto start_index      = user_input_[FluoPipette::StartIndex].get<uint16_t>();
-        auto volume           = user_input_[FluoPipette::Volume].get<uint16_t>();
+        auto volume           = user_input_[FluoPipette::Volume].get<uint32_t>();
         auto end_pos          = user_input_[FluoPipette::EndPos].get<uint16_t>();
         auto end_index        = user_input_[FluoPipette::EndIndex].get<uint16_t>();
         auto num              = user_input_[FluoPipette::PipetteNum].get<uint16_t>();
@@ -340,8 +340,8 @@ public:
             for (int i = 0; i < user_input_[FluoPipette::PipetteNum].get<uint16_t>(); i++) {
                 auto start_volume = start_tube->getVolume(i);
                 auto end_volume   = end_tube->getVolume(i);
-                start_volume      = std::max(0, start_volume - volume);
-                end_volume        = std::max(0, end_volume + volume);
+                start_volume      = std::max(0, (int)(start_volume - volume));
+                end_volume        = std::max(0, (int)(end_volume + volume));
 
                 start_tube->setVolume(start_volume, i);
                 end_tube->setVolume(end_volume, i);

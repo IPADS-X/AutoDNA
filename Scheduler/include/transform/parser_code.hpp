@@ -130,7 +130,6 @@ public:
     static const inline std::string PARAMS     = "parameters";
     static const inline std::string ID         = "id";
     static const inline std::string ACTION     = "action";
-    static const inline std::string WASTE_TUBE = "Waste Tube";
 
     static const inline std::map<std::string, Dummy::ParamType> param_type_map_ = {
         {TUBE_INDEX, Dummy::ParamType::TUBE_INDEX},
@@ -175,8 +174,8 @@ public:
         {"'thermal_cycler'", Dummy::DummyEquipment::PCR},
         {"capper", Dummy::DummyEquipment::CAPPER},
         {"'capper'", Dummy::DummyEquipment::CAPPER},
-        {"refrigerator", Dummy::DummyEquipment::REFRIGERATOR},
-        {"'refrigerator'", Dummy::DummyEquipment::REFRIGERATOR},
+        {"refrigerator", Dummy::DummyEquipment::MAGNETIC_RACK},
+        {"'refrigerator'", Dummy::DummyEquipment::MAGNETIC_RACK},
         // {"tube_holder", Dummy::DummyEquipment::REACTION_POS},
         // {"'tube_holder'", Dummy::DummyEquipment::REACTION_POS},
         {"container_holder", Dummy::DummyEquipment::REACTION_POS},
@@ -199,28 +198,30 @@ public:
     static std::vector<std::shared_ptr<Workflow>>
     transferParser(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                    std::vector<std::shared_ptr<Workflow>> sources,
-                   std::shared_ptr<spdlog::logger> logger, std::string workflow_name, int times) {
+                   std::shared_ptr<spdlog::logger>        logger,
+                   std::vector<std::string>               workflow_names) {
         if (ParserCode::logger_ == nullptr) {
             ParserCode::logger_ = logger;
         }
 
         // workflow_name = CommonTransformFunc::removeLastNumber(workflow_name);
 
-        std::string file_path = ParserCode::BASE_FILE_PATH + workflow_name + ".json";
+        std::vector<std::shared_ptr<Workflow>> all_workflows;
+        std::map<std::string, int>             counts;
+        for (const auto& name : workflow_names) {
+            int         instance_idx  = counts[name]++;
+            std::string instance_name = name + "_" + std::to_string(instance_idx);
+            std::string file_path     = ParserCode::BASE_FILE_PATH + name + ".json";
 
-        if (!std::filesystem::exists(file_path)) {
-            logger->warn("Workflow file not found: {}, using default", file_path);
-            file_path = ParserCode::DEFAULT_FILE_PATH;
-        }
+            if (!std::filesystem::exists(file_path)) {
+                logger->warn("Workflow file not found: {}, using default", file_path);
+                file_path = ParserCode::DEFAULT_FILE_PATH;
+            }
 
-        std::vector<std::shared_ptr<Workflow>> workflows;
-        for (int i = 0; i < times; i++) {
-            auto workflow =
-                parseWorkflows(reality, workflow_name + "_" + std::to_string(i), file_path);
-            if (workflow.size() > 0)
-                workflows.push_back(workflow[0]);
+            auto wfs = parseWorkflows(reality, instance_name, file_path);
+            all_workflows.insert(all_workflows.end(), wfs.begin(), wfs.end());
         }
-        return workflows;
+        return all_workflows;
     }
 
     static std::vector<std::pair<std::string, nlohmann::basic_json<>::value_type>>
@@ -261,8 +262,8 @@ public:
                     {std::to_string(static_cast<int>(Dummy::ParamType::INDEX)), tube.second});
             }
 
-            logger_->debug("Mapping tube index: {} to real tube id: {}, index: {}", value.get<int>(),
-                           tube.first, tube.second);
+            logger_->debug("Mapping tube index: {} to real tube id: {}, index: {}",
+                           value.get<int>(), tube.first, tube.second);
             return results;
         }
 
@@ -394,7 +395,8 @@ public:
         auto tube_id          = TubeManager::getTubeId(tube_pair.first);
         tubeid_map[python_id] = {tube_id, tube_pair.second};
 
-        logger_->debug("Getting tube with id: {}, index: {}, label: {}", tube_id, tube_pair.second, tube_label);
+        logger_->debug("Getting tube with id: {}, index: {}, label: {}", tube_id, tube_pair.second,
+                       tube_label);
         return true;
     }
 
@@ -447,8 +449,8 @@ public:
                 tube_type;
 
             if (type->second == Dummy::DummyType::ALLOC_TUBE) {
-                if (!getTube(reality, type->second, step[PARAMS], tubeid_map))
-                    allocTube(reality, type->second, step[PARAMS], tubeid_map);
+                // if (!getTube(reality, type->second, step[PARAMS], tubeid_map))
+                allocTube(reality, type->second, step[PARAMS], tubeid_map);
                 continue;
             }
 

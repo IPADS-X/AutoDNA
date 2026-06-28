@@ -20,7 +20,7 @@ public:
                                  std::placeholders::_2, std::placeholders::_3)};
     }
 
-    long long getTime() const {
+    long long getTime(bool conflict = false) const {
         // Simulate time for purification
         return 30;
     }

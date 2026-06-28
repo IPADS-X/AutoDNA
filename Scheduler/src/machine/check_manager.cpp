@@ -37,30 +37,30 @@
 #include "process/refrigerator/picking.hpp"
 #include "process/refrigerator/placement.hpp"
 
-#include "process/purification/timer.hpp"
-#include "process/library/timer.hpp"
-#include "process/fluorescence/timer.hpp"
-#include "process/purification/pcr.hpp"
-#include "process/amplification/pcr.hpp"
-#include "process/purification/move_carrier.hpp"
-#include "process/library/move_carrier.hpp"
-#include "process/fluorescence/move_carrier.hpp"
-#include "process/amplification/move_carrier.hpp"
-#include "process/purification/move_tube.hpp"
-#include "process/library/move_tube.hpp"
-#include "process/fluorescence/move_tube.hpp"
-#include "process/amplification/move_tube.hpp"
-#include "process/purification/pipette.hpp"
-#include "process/library/pipette.hpp"
-#include "process/fluorescence/pipette.hpp"
-#include "process/purification/aspirate_mix.hpp"
-#include "process/library/aspirate_mix.hpp"
-#include "process/fluorescence/aspirate_mix.hpp"
 #include "process/amplification/aspirate_mix.hpp"
-#include "process/purification/centrifuge.hpp"
+#include "process/amplification/move_carrier.hpp"
+#include "process/amplification/move_tube.hpp"
+#include "process/amplification/pcr.hpp"
+#include "process/fluorescence/aspirate_mix.hpp"
+#include "process/fluorescence/move_carrier.hpp"
+#include "process/fluorescence/move_tube.hpp"
+#include "process/fluorescence/pipette.hpp"
+#include "process/fluorescence/timer.hpp"
+#include "process/library/aspirate_mix.hpp"
 #include "process/library/centrifuge.hpp"
 #include "process/library/heater.hpp"
+#include "process/library/move_carrier.hpp"
+#include "process/library/move_tube.hpp"
+#include "process/library/pipette.hpp"
+#include "process/library/timer.hpp"
+#include "process/purification/aspirate_mix.hpp"
+#include "process/purification/centrifuge.hpp"
+#include "process/purification/move_carrier.hpp"
+#include "process/purification/move_tube.hpp"
+#include "process/purification/pcr.hpp"
+#include "process/purification/pipette.hpp"
 #include "process/purification/shake.hpp"
+#include "process/purification/timer.hpp"
 
 std::map<MachineType, CheckManager::CarrierFunc> CheckManager::carrier_funcs_ = {
     {MachineType::PURIFICATION, &PuriMoveCarrierStep::fromDummy},
@@ -421,10 +421,11 @@ bool CheckManager::checkEquipment(Reality& reality, std::shared_ptr<MachineManag
     return true;
 }
 
-bool CheckManager::checkReplaceEquipment(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
-                                  std::shared_ptr<Action>   action,
-                                  std::shared_ptr<Workflow> original_workflow, CheckType check_type,
-                                  SubmitFunc func) {
+bool CheckManager::checkReplaceEquipment(Reality&                        reality,
+                                         std::shared_ptr<MachineManager> mac_manager_,
+                                         std::shared_ptr<Action>         action,
+                                         std::shared_ptr<Workflow>       original_workflow,
+                                         CheckType check_type, SubmitFunc func) {
     auto machine = mac_manager_->getMachine<Machine>(action->getStep()->getMachineType());
     if (!machine) {
         // dummy can always execute
@@ -442,30 +443,33 @@ bool CheckManager::checkReplaceEquipment(Reality& reality, std::shared_ptr<Machi
     case CheckType::APPLY: {
         for (const auto& req :
              action->getStep()->getNeedLockEquipment(reality, mac_manager_, action)) {
-            auto target_machine      = mac_manager_->getMachine<Machine>(req.first);
-            auto equipment = target_machine->getEquipment(req.second);
-            if (equipment && equipment->isError() && !action->getStep()->canExecuteWithoutEquipment(req.second)){
-                logger->warn(
-                    "Step {} can not execute, equipment {} in machine {} is in error, try to find another machine",
-                    action->getStep()->getId(), magic_enum::enum_name(req.second),
-                    target_machine->getName());
-                
+            auto target_machine = mac_manager_->getMachine<Machine>(req.first);
+            auto equipment      = target_machine->getEquipment(req.second);
+            if (equipment && equipment->isError() &&
+                !action->getStep()->canExecuteWithoutEquipment(req.second)) {
+                logger->warn("Step {} can not execute, equipment {} in machine {} is in error, try "
+                             "to find another machine",
+                             action->getStep()->getId(), magic_enum::enum_name(req.second),
+                             target_machine->getName());
+
                 std::shared_ptr<Step> new_step = nullptr;
-                std::string op_name = action->getStep()->getOperationName();
+                std::string           op_name  = action->getStep()->getOperationName();
                 // Traverse all machines to find a replacement
                 for (const auto& [id, machine_ptr] : mac_manager_->getAllMachines()) {
                     auto alt_equipment = machine_ptr->getEquipment(req.second);
                     if (alt_equipment && !alt_equipment->isError()) {
                         // Use factory to create replacement step
-                        if (!op_name.empty() && step_factory_.count((MachineType)id) && 
+                        if (!op_name.empty() && step_factory_.count((MachineType)id) &&
                             step_factory_[(MachineType)id].count(op_name)) {
                             new_step = step_factory_[(MachineType)id][op_name](
-                                action->getStep()->getName() + "_changed", Variables(action->getStep()->getParams()));
+                                action->getStep()->getName() + "_changed",
+                                Variables(action->getStep()->getParams()));
                         }
 
                         if (new_step) {
-                            logger->info("Found replacement machine {} for step {} (operation: {})", 
-                                         machine_ptr->getName(), action->getStep()->getId(), op_name);
+                            logger->info("Found replacement machine {} for step {} (operation: {})",
+                                         machine_ptr->getName(), action->getStep()->getId(),
+                                         op_name);
                             break;
                         }
                     }
@@ -486,9 +490,9 @@ bool CheckManager::checkReplaceEquipment(Reality& reality, std::shared_ptr<Machi
                     // Each machine's Area enum assigns a different integer to AUTO.
                     // Remap any position param that equals the source AUTO to the target AUTO.
                     static const std::map<MachineType, uint16_t> kAutoArea = {
-                        {MachineType::PURIFICATION,  (uint16_t)PurificationArea::AUTO},
-                        {MachineType::FLUORESCENCE,  (uint16_t)FluorescenceArea::AUTO},
-                        {MachineType::LIBRARY,       (uint16_t)LibraryArea::AUTO},
+                        {MachineType::PURIFICATION, (uint16_t)PurificationArea::AUTO},
+                        {MachineType::FLUORESCENCE, (uint16_t)FluorescenceArea::AUTO},
+                        {MachineType::LIBRARY, (uint16_t)LibraryArea::AUTO},
                         {MachineType::AMPLIFICATION, (uint16_t)AmplificationArea::AUTO},
                     };
                     auto src_type = (MachineType)action->getStep()->getMachineType();
@@ -510,7 +514,8 @@ bool CheckManager::checkReplaceEquipment(Reality& reality, std::shared_ptr<Machi
                     action->setStep(new_step);
                     action->setStepTransfered();
                 } else {
-                    logger->error("Failed to transfer step {}, no healthy replacement machine found for equipment {}", 
+                    logger->error("Failed to transfer step {}, no healthy replacement machine "
+                                  "found for equipment {}",
                                   action->getStep()->getId(), magic_enum::enum_name(req.second));
                     return false;
                 }
@@ -524,7 +529,6 @@ bool CheckManager::checkReplaceEquipment(Reality& reality, std::shared_ptr<Machi
 
     return true;
 }
-
 
 bool CheckManager::preAllocEquipment(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                                      std::shared_ptr<Action>   action,
@@ -610,92 +614,116 @@ bool CheckManager::moveToWaste(Reality& reality, std::shared_ptr<MachineManager>
 
 void CheckManager::registerAllSteps() {
     // Pipette
-    CheckManager::registerStep(MachineType::PURIFICATION, "Pipette", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<PuriPipetteStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::LIBRARY, "Pipette", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<LibPipetteStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::FLUORESCENCE, "Pipette", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<FluoPipetteStep>(name, std::move(vars));
-    });
+    CheckManager::registerStep(MachineType::PURIFICATION, "Pipette",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<PuriPipetteStep>(name, std::move(vars));
+                               });
+    CheckManager::registerStep(MachineType::LIBRARY, "Pipette",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<LibPipetteStep>(name, std::move(vars));
+                               });
+    CheckManager::registerStep(MachineType::FLUORESCENCE, "Pipette",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<FluoPipetteStep>(name, std::move(vars));
+                               });
 
     // AspirateMix
-    CheckManager::registerStep(MachineType::PURIFICATION, "AspirateMix", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<PuriAspirateMixStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::LIBRARY, "AspirateMix", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<LibAspirateMixStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::FLUORESCENCE, "AspirateMix", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<FluoAspirateMixStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::AMPLIFICATION, "AspirateMix", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<AmpAspirateMixStep>(name, std::move(vars));
-    });
+    CheckManager::registerStep(
+        MachineType::PURIFICATION, "AspirateMix", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<PuriAspirateMixStep>(name, std::move(vars));
+        });
+    CheckManager::registerStep(
+        MachineType::LIBRARY, "AspirateMix", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<LibAspirateMixStep>(name, std::move(vars));
+        });
+    CheckManager::registerStep(
+        MachineType::FLUORESCENCE, "AspirateMix", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<FluoAspirateMixStep>(name, std::move(vars));
+        });
+    CheckManager::registerStep(
+        MachineType::AMPLIFICATION, "AspirateMix", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<AmpAspirateMixStep>(name, std::move(vars));
+        });
 
     // Time
-    CheckManager::registerStep(MachineType::PURIFICATION, "Time", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<PuriTimeStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::LIBRARY, "Time", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<LibTimeStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::FLUORESCENCE, "Time", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<FluoTimeStep>(name, std::move(vars));
-    });
+    CheckManager::registerStep(MachineType::PURIFICATION, "Time",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<PuriTimeStep>(name, std::move(vars));
+                               });
+    CheckManager::registerStep(MachineType::LIBRARY, "Time",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<LibTimeStep>(name, std::move(vars));
+                               });
+    CheckManager::registerStep(MachineType::FLUORESCENCE, "Time",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<FluoTimeStep>(name, std::move(vars));
+                               });
 
     // PCR
-    CheckManager::registerStep(MachineType::AMPLIFICATION, "PCR", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<AmpPcrStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::PURIFICATION, "PCR", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<PuriPcrStep>(name, std::move(vars));
-    });
+    CheckManager::registerStep(MachineType::AMPLIFICATION, "PCR",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<AmpPcrStep>(name, std::move(vars));
+                               });
+    CheckManager::registerStep(MachineType::PURIFICATION, "PCR",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<PuriPcrStep>(name, std::move(vars));
+                               });
 
     // MoveTube
-    CheckManager::registerStep(MachineType::PURIFICATION, "MoveTube", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<PuriMoveTubeStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::LIBRARY, "MoveTube", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<LibMoveTubeStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::FLUORESCENCE, "MoveTube", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<FluoMoveTubeStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::AMPLIFICATION, "MoveTube", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<AmpMoveTubeStep>(name, std::move(vars));
-    });
+    CheckManager::registerStep(MachineType::PURIFICATION, "MoveTube",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<PuriMoveTubeStep>(name, std::move(vars));
+                               });
+    CheckManager::registerStep(MachineType::LIBRARY, "MoveTube",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<LibMoveTubeStep>(name, std::move(vars));
+                               });
+    CheckManager::registerStep(MachineType::FLUORESCENCE, "MoveTube",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<FluoMoveTubeStep>(name, std::move(vars));
+                               });
+    CheckManager::registerStep(MachineType::AMPLIFICATION, "MoveTube",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<AmpMoveTubeStep>(name, std::move(vars));
+                               });
 
     // MoveCarrier
-    CheckManager::registerStep(MachineType::PURIFICATION, "MoveCarrier", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<PuriMoveCarrierStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::LIBRARY, "MoveCarrier", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<LibMoveCarrierStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::FLUORESCENCE, "MoveCarrier", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<FluoMoveCarrierStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::AMPLIFICATION, "MoveCarrier", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<AmpMoveCarrierStep>(name, std::move(vars));
-    });
+    CheckManager::registerStep(
+        MachineType::PURIFICATION, "MoveCarrier", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<PuriMoveCarrierStep>(name, std::move(vars));
+        });
+    CheckManager::registerStep(
+        MachineType::LIBRARY, "MoveCarrier", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<LibMoveCarrierStep>(name, std::move(vars));
+        });
+    CheckManager::registerStep(
+        MachineType::FLUORESCENCE, "MoveCarrier", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<FluoMoveCarrierStep>(name, std::move(vars));
+        });
+    CheckManager::registerStep(
+        MachineType::AMPLIFICATION, "MoveCarrier", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<AmpMoveCarrierStep>(name, std::move(vars));
+        });
 
     // Centrifuge
-    CheckManager::registerStep(MachineType::PURIFICATION, "Centrifuge", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<PuriCentrifugeStep>(name, std::move(vars));
-    });
-    CheckManager::registerStep(MachineType::LIBRARY, "Centrifuge", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<LibCentrifugeStep>(name, std::move(vars));
-    });
+    CheckManager::registerStep(
+        MachineType::PURIFICATION, "Centrifuge", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<PuriCentrifugeStep>(name, std::move(vars));
+        });
+    CheckManager::registerStep(
+        MachineType::LIBRARY, "Centrifuge", [](const std::string& name, Variables&& vars) {
+            return std::make_shared<LibCentrifugeStep>(name, std::move(vars));
+        });
 
     // Heat
-    CheckManager::registerStep(MachineType::LIBRARY, "Heat", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<LibHeatStep>(name, std::move(vars));
-    });
+    CheckManager::registerStep(MachineType::LIBRARY, "Heat",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<LibHeatStep>(name, std::move(vars));
+                               });
 
     // Shake
-    CheckManager::registerStep(MachineType::PURIFICATION, "Shake", [](const std::string& name, Variables&& vars) {
-        return std::make_shared<PuriShakeStep>(name, std::move(vars));
-    });
+    CheckManager::registerStep(MachineType::PURIFICATION, "Shake",
+                               [](const std::string& name, Variables&& vars) {
+                                   return std::make_shared<PuriShakeStep>(name, std::move(vars));
+                               });
 }

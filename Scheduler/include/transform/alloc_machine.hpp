@@ -109,8 +109,8 @@ class AllocMachine {
     static const inline std::map<Dummy::DummyType, std::vector<MachineType>> action_sig_map_ = {
         {Dummy::DummyType::SHAKE, {MachineType::PURIFICATION}},
         {Dummy::DummyType::HEATER, {MachineType::LIBRARY}},
-        // {Dummy::DummyType::PCR, {MachineType::AMPLIFICATION, MachineType::PURIFICATION}},
-        {Dummy::DummyType::PCR, {MachineType::AMPLIFICATION}},
+        {Dummy::DummyType::PCR, {MachineType::AMPLIFICATION, MachineType::PURIFICATION}},
+        // {Dummy::DummyType::PCR, {MachineType::AMPLIFICATION}},
         {Dummy::DummyType::CENTRIFUGE, {MachineType::PURIFICATION, MachineType::LIBRARY}},
         {Dummy::DummyType::FLUO, {MachineType::FLUORESCENCE}},
         {Dummy::DummyType::CAP, {MachineType::FLUORESCENCE}},
@@ -123,9 +123,9 @@ class AllocMachine {
         equipment_sig_map_ = {
             {Dummy::DummyEquipment::HEATER_SHAKER, {MachineType::PURIFICATION}},
             {Dummy::DummyEquipment::METAL_BATH, {MachineType::LIBRARY}},
-            // {Dummy::DummyEquipment::PCR, {MachineType::AMPLIFICATION,
-            // MachineType::PURIFICATION}},
-            {Dummy::DummyEquipment::PCR, {MachineType::AMPLIFICATION}},
+            {Dummy::DummyEquipment::PCR, {MachineType::AMPLIFICATION,
+            MachineType::PURIFICATION}},
+            // {Dummy::DummyEquipment::PCR, {MachineType::AMPLIFICATION}},
             {Dummy::DummyEquipment::CENTRIFUGE, {MachineType::PURIFICATION, MachineType::LIBRARY}},
             {Dummy::DummyEquipment::FLUORESCENCE, {MachineType::FLUORESCENCE}},
             {Dummy::DummyEquipment::CAPPER, {MachineType::FLUORESCENCE}},
@@ -136,7 +136,8 @@ public:
     static std::vector<std::shared_ptr<Workflow>>
     transferAlloc(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                   std::vector<std::shared_ptr<Workflow>> sources,
-                  std::shared_ptr<spdlog::logger>        logger) {
+                  std::shared_ptr<spdlog::logger> logger, std::vector<std::string> /*workflow_names*/,
+                  int /*jump_from*/) {
         if (AllocMachine::logger_ == nullptr) {
             AllocMachine::logger_ = logger;
         }
@@ -317,6 +318,15 @@ public:
                 if (instance_func_map_.find(
                         std::make_pair(dummy_step->getType(), dummy_step->getMachine())) ==
                     instance_func_map_.end()) {
+                    // The UNKNOWN start sentinel is expected to drop; warn only on
+                    // real steps so silent step-dropping at instantiation is visible.
+                    if (dummy_step->getType() != Dummy::DummyType::UNKNOWN) {
+                        logger_->warn("Dropping step at instantiation: no instance function "
+                                      "for type {} on machine {}",
+                                      magic_enum::enum_name(dummy_step->getType()),
+                                      magic_enum::enum_name(
+                                          (MachineType)(dummy_step->getMachine())));
+                    }
                     continue;
                 }
                 auto instance_func =

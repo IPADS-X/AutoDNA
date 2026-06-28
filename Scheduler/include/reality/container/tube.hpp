@@ -31,6 +31,9 @@ enum class TubePositionType {
 using TubeName  = std::string;
 using TubeLabel = std::string;
 
+
+static const inline std::string WASTE_TUBE = "Waste Tube";
+
 template <uint32_t NUM>
 class Tube : public Container {
 public:
@@ -159,6 +162,8 @@ public:
     void setIsReagent(bool is_reagent) { this->is_reagent = is_reagent; }
 
     bool getIsOnCarrier() const { return is_on_carrier; }
+
+    bool getIsWaste() const { return label_ == WASTE_TUBE; }
 
 private:
     TubeId id_;
@@ -426,6 +431,16 @@ public:
             return TubeManager::toChamberTube(tube)->getIsReagent();
         } else {
             return TubeManager::toStripTube(tube)->getIsReagent();
+        }
+    }
+
+    static bool getTubeIsWaste(std::shared_ptr<Container> tube) {
+        if (TubeManager::getTubeType(tube) == TubeType::PCR_TUBE) {
+            return TubeManager::toPcrTube(tube)->getIsWaste();
+        } else if (TubeManager::getTubeType(tube) == TubeType::CHAMBER) {
+            return TubeManager::toChamberTube(tube)->getIsWaste();
+        } else {
+            return TubeManager::toStripTube(tube)->getIsWaste();
         }
     }
 

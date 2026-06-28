@@ -54,7 +54,7 @@ public:
     static std::vector<std::shared_ptr<Workflow>>
     transferInterval(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
                      std::vector<std::shared_ptr<Workflow>> sources,
-                     std::shared_ptr<spdlog::logger> logger, std::string workflow_name, int jump_from) {
+                     std::shared_ptr<spdlog::logger> logger, std::vector<std::string> workflow_names, int jump_from) {
 
         if (IntervalProcedure::logger_ == nullptr) {
             IntervalProcedure::logger_ = logger;
@@ -68,7 +68,7 @@ public:
                        addUseEquipment(reality, mac_manager_,
                                        addPortage(reality, mac_manager_, sources))));
 
-        workflows = addJump(reality, mac_manager_, workflows, workflow_name, jump_from);
+        workflows = addJump(reality, mac_manager_, workflows, workflow_names, jump_from);
 
         // std::vector<std::shared_ptr<Workflow>> workflows = combinePipetteMix(
         //     reality, mac_manager_,
@@ -88,11 +88,12 @@ public:
 
     static std::vector<std::shared_ptr<Workflow>>
     addJump(Reality& reality, std::shared_ptr<MachineManager> mac_manager_,
-            std::vector<std::shared_ptr<Workflow>> sources, std::string workflow_name, int jump_from) {
+            std::vector<std::shared_ptr<Workflow>> sources, std::vector<std::string> workflow_names, int jump_from) {
 
         std::vector<std::shared_ptr<Workflow>> results;
         // #ifdef JUMP_ORIGIN_STEP
-        for (const auto& workflow : sources) {
+        for (int i = 0; i < sources.size(); i++) {
+            const auto &workflow = sources[i];
             std::shared_ptr<Workflow> new_workflow = std::make_shared<Workflow>(1);
 
             auto jump_until_from_data = jump_from;
@@ -104,9 +105,9 @@ public:
 
             new_workflow->setBaseStepId(jump_until_from_data);
             auto steps = workflow->getSteps();
-            for (int i = 0; i < steps.size(); i++) {
-                if (i + 1 >= jump_until_from_data) {
-                    new_workflow->addStep(steps[i]);
+            for (int j = 0; j < steps.size(); j++) {
+                if (j + 1 >= jump_until_from_data) {
+                    new_workflow->addStep(steps[j]);
                 }
             }
             results.push_back(new_workflow);

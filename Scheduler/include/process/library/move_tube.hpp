@@ -80,7 +80,7 @@ public:
                                  std::placeholders::_2, std::placeholders::_3)};
     }
 
-    long long getTime() const { return 30; }
+    long long getTime(bool conflict = false) const { return 30; }
 
     std::vector<ExecutionResult>
     phase0(Reality& reality, std::shared_ptr<MachineManager> mac_manager, ActionId action_id) {
