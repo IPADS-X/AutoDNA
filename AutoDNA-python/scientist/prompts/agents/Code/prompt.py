@@ -35,6 +35,39 @@ Coding Hints:
 2. Do not add any error handlings. Use as least comments as possible.
 """
 
+PARALLEL_LOOP_REWRITE_PROMPT = """You will receive Python code as input.
+
+Your task is to modify the original code so that the loop immediately following this comment:
+
+# Consider parallelizing the following loop
+
+has exactly one function call inside its loop body.
+
+Requirements:
+1. Find the loop directly after `# Consider parallelizing the following loop`.
+2. Move all code currently inside that loop body into a new helper function.
+3. The loop body must contain only one executable statement: a call to that helper function.
+4. Preserve the original behavior as much as possible.
+5. Pass all required loop variables and external values into the helper function as parameters.
+6. Preserve mutations, return values, file writes, and other state changes.
+7. After the target loop finishes, there must be no more executable code.
+8. Move necessary trailing code before the loop or into the helper function.
+9. Do not rewrite unrelated code.
+10. Do not add explanations. Output only the modified Python code.
+
+The final structure should look conceptually like this:
+
+def helper_function(...):
+    ...
+
+# Consider parallelizing the following loop
+for ... in ...:
+    helper_function(...)
+
+Python code to modify:
+{code}
+"""
+
 extractor_prompt_extract = """
 You are tasked with generating multiple, complete, and independent procedure path based on the provided one-in-all procedure.
 Critical Rules:
@@ -94,6 +127,9 @@ prompt_multiple_inputs = PromptTemplate.from_template(
 """
 You must generate code that handles all inputs for this experiment protocol:
 {multi_inputs}
+
+If there are more than 10 inputs, add this exact comment immediately before the loop that iterates through them:
+# Consider parallelizing the following loop
 """
 )
 
@@ -101,6 +137,9 @@ prompt_inputs_from_previous_stage = PromptTemplate.from_template(
 """
 You must generate code that handles all inputs from the previous stage:
 {inputs_from_previous_stage}
+
+If there are more than 10 inputs, add this exact comment immediately before the loop that iterates through them:
+# Consider parallelizing the following loop
 """
 )
 

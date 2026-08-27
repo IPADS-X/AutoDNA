@@ -13,6 +13,8 @@ class WebSocketClient:
     def get_instance() -> 'WebSocketClient':
         if WebSocketClient._instance is None:
             WebSocketClient._instance = WebSocketClient("ws://" + scheduler_address)
+        connection = WebSocketClient._instance.websocket
+        if connection is None or not getattr(connection, "connected", False):
             WebSocketClient._instance.connect()
         return WebSocketClient._instance
 

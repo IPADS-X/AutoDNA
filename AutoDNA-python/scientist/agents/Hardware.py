@@ -94,59 +94,137 @@ def execute_and_log_files(file_ids: list[str], executor_path: str) -> str:
             
     return local_run_result
 
+
+def _ordered_execution_mode(file_ids: list[str]) -> tuple[str, list[str]]:
+    metadata = [file_manager.get_file_metadata(file_id) for file_id in file_ids]
+    parallel_metadata = [
+        item for item in metadata if item.get("execution_mode") == "parallel_batch"
+    ]
+
+    if not parallel_metadata:
+        return "optimization", list(file_ids)
+    if len(parallel_metadata) != len(file_ids):
+        raise ValueError(
+            "A parallel batch cannot be mixed with ordinary or optimization code IDs."
+        )
+
+    batch_ids = {item.get("batch_id") for item in parallel_metadata}
+    batch_sizes = {item.get("batch_size") for item in parallel_metadata}
+    batch_indexes = [item.get("batch_index") for item in parallel_metadata]
+    if None in batch_ids or len(batch_ids) != 1:
+        raise ValueError("Parallel code IDs do not belong to one complete batch.")
+    if batch_sizes != {len(file_ids)}:
+        raise ValueError(
+            "Parallel code IDs are incomplete; Hardware must receive the whole Code batch."
+        )
+    if set(batch_indexes) != set(range(len(file_ids))):
+        raise ValueError("Parallel code IDs have invalid or duplicate batch indexes.")
+
+    ordered_ids = [
+        file_id
+        for _, file_id in sorted(
+            zip(batch_indexes, file_ids), key=lambda indexed_id: indexed_id[0]
+        )
+    ]
+    return "parallel_batch", ordered_ids
+
+
+def _convert_code_to_scheduler_file(file_id: str, lib_path: str) -> str:
+    code = file_manager.get_file_content(file_id)
+    if not code:
+        raise ValueError(f"No Python code was found for workflow {file_id}.")
+
+    config_dir = os.path.abspath(os.path.expanduser(scheduler_config_path))
+    os.makedirs(config_dir, exist_ok=True)
+    origin_json_file_path = os.path.join(config_dir, "protocol_flow.json")
+    target_json_file_path = os.path.join(
+        config_dir,
+        f"protocol_flow_{file_id}.json",
+    )
+    if os.path.exists(origin_json_file_path):
+        os.remove(origin_json_file_path)
+
+    env = os.environ.copy()
+    env['PYTHONUTF8'] = '1'
+    env["SCHEDULER_CONFIG_PATH"] = config_dir
+    if lib_path:
+        existing_pythonpath = env.get("PYTHONPATH")
+        env["PYTHONPATH"] = os.path.abspath(lib_path)
+        if existing_pythonpath:
+            env["PYTHONPATH"] += os.pathsep + existing_pythonpath
+
+    conversion = subprocess.run(
+        [sys.executable, "-c", code],
+        capture_output=True,
+        text=True,
+        timeout=30,
+        env=env,
+        encoding='utf-8',
+    )
+    if conversion.returncode != 0:
+        details = conversion.stderr.strip() or conversion.stdout.strip() or "no output"
+        raise RuntimeError(f"Workflow conversion failed for {file_id}: {details}")
+    if not os.path.isfile(origin_json_file_path):
+        raise RuntimeError(f"Workflow converter produced no JSON for {file_id}.")
+
+    with open(origin_json_file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    if not isinstance(data, dict) or not isinstance(data.get("steps"), list):
+        raise ValueError(f"Workflow converter produced invalid JSON for {file_id}.")
+    with open(target_json_file_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+    logger.info(f"Converted workflow {file_id} to {target_json_file_path}")
+    return target_json_file_path
+
+
 # The env path is defined in config file
 # The scheduler config path is defined in config file
-def execute_code_to_scheduler(file_ids: list[str], lib_path: str, times: int) -> dict:
-    ## STEP 1: Execute to get json output
-    for file_id in file_ids:
-        code = file_manager.get_file_content(file_id)
-        if code is None:
-            logger.error(f"Failed to retrieve code for file ID: {file_id}")
-            continue
-        try:
-            env = os.environ.copy()
-            env['PYTHONUTF8'] = '1'
-            if lib_path:
-                env['PYTHONPATH'] = lib_path
-            env["SCHEDULER_CONFIG_PATH"] = scheduler_config_path
-            result = subprocess.run(
-                [sys.executable, "-c", code],
-                capture_output=True,
-                text=True,
-                timeout=30,
-                env=env,  # Pass the modified environment here
-                encoding='utf-8' 
-            )
-            if result.stderr!='':
-                logger.error(result.stderr)
-            logger.debug(result.stdout)
-        except Exception as e:
-            logger.error(f"Error during code execution: {e}")
-            
-        # STEP 2: move json file to config path
-        origin_json_file_path = os.path.join(scheduler_config_path, "protocol_flow.json")
-        target_json_file_path = os.path.join(scheduler_config_path, "protocol_flow_"+file_id+".json")
-        if os.path.exists(origin_json_file_path):
-            try:
-                with open(origin_json_file_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                with open(target_json_file_path, 'w', encoding='utf-8') as f:
-                    json.dump(data, f, indent=4, ensure_ascii=False)
-                logger.info(f"Copied protocol_flow.json to {target_json_file_path}")
-            except Exception as e:
-                logger.error(f"Error copying JSON file: {e}")
-        # STEP 3: notify scheduler to execute the workflow
-        if WebSocketClient.get_instance():
-            message = json.dumps({
+def execute_code_to_scheduler(
+    file_ids: list[str],
+    lib_path: str,
+    times: int,
+    parallel_batch: bool = False,
+) -> dict:
+    if not file_ids:
+        raise ValueError("At least one workflow Code ID is required.")
+
+    workflow_files = [
+        _convert_code_to_scheduler_file(file_id, lib_path)
+        for file_id in file_ids
+    ]
+    repeat_count = int(times)
+    if repeat_count < 1:
+        raise ValueError("Workflow repeat count must be positive.")
+
+    if parallel_batch:
+        messages = [{
+            "command": "new_workflow",
+            "workflow_names": list(file_ids),
+            "times": repeat_count,
+            "uninterruptible": not settings.interruptible,
+        }]
+    else:
+        messages = [
+            {
                 "command": "new_workflow",
                 "workflow_name": file_id,
-                "times": times,
-                "uninterruptible": not(settings.interruptible)
-            })
-            WebSocketClient.get_instance().send_message(message)
-            logger.info(f"Sent message to scheduler: {message}")
-        else:
-            logger.error("WebSocket client is not initialized.")
+                "times": repeat_count,
+                "uninterruptible": not settings.interruptible,
+            }
+            for file_id in file_ids
+        ]
+
+    scheduler_client = WebSocketClient.get_instance()
+    for message_data in messages:
+        message = json.dumps(message_data)
+        scheduler_client.send_message(message)
+        logger.info(f"Sent message to scheduler: {message}")
+
+    return {
+        "workflow_names": list(file_ids),
+        "workflow_files": workflow_files,
+        "messages": messages,
+    }
 
 def judge_info_enough(current_return: str):
     user_prompt = get_current_user_prompt()
@@ -403,11 +481,18 @@ def Hardware(file_ids: list[str], repeat_num: int, pure_software: bool = False):
         # directly execute the code and return
         result = execute_and_log_files(file_ids, executor_path)
         return str(result)
-        
+
     try:
-        execute_code_to_scheduler(file_ids, scheduler_path, repeat_num)
-    except Exception as e:
-        logger.error(f'execute code to scheduler error')
+        resolved_mode, ordered_file_ids = _ordered_execution_mode(file_ids)
+        execute_code_to_scheduler(
+            ordered_file_ids,
+            scheduler_path,
+            repeat_num,
+            parallel_batch=resolved_mode == "parallel_batch",
+        )
+    except Exception as exc:
+        logger.error(f"Failed to prepare or submit scheduler workflows: {exc}")
+        return f"Error: Failed to prepare or submit scheduler workflows: {exc}"
         
     result = {}
     metrics = []
@@ -427,7 +512,9 @@ def Hardware(file_ids: list[str], repeat_num: int, pure_software: bool = False):
             metrics = ["Time"]
 
     logger.debug(f"Metrics for Hardware: {metrics}")
-    optimizing_num = len(file_ids)
+    optimizing_num = (
+        1 if resolved_mode == "parallel_batch" else len(ordered_file_ids)
+    )
     logger.info(f"The number of records is: {optimizing_num}")
 
     for i in range(int(optimizing_num)):
@@ -442,9 +529,9 @@ def Hardware(file_ids: list[str], repeat_num: int, pure_software: bool = False):
         # Let the LLM choose the best result based on the user's goal
         best_index = choose_best_result_by_llm(result, optimizing_num)
     
-    if file_ids:
+    if ordered_file_ids:
         # Determine procedure_id based on the best_index (which is 0 if optimizing_num <= 1)
-        file_id = file_ids[best_index]
+        file_id = ordered_file_ids[best_index]
         procedure_id = file_manager.get_file_mapping(file_id)
         CoflowCache.update_best_protocol(procedure_id)
 
@@ -456,7 +543,7 @@ def Hardware(file_ids: list[str], repeat_num: int, pure_software: bool = False):
         SelfOptimizingCache.clear_tmp_result_history()
 
     # Now, execute the codes and get the local run results
-    local_run_result = execute_and_log_files(file_ids, executor_path)
+    local_run_result = execute_and_log_files(ordered_file_ids, executor_path)
     # for debug, save the local_run_result to a file
     with open(os.path.join(output_path, "local_run_result.txt"), "w", encoding="utf-8") as f:
         f.write(local_run_result)

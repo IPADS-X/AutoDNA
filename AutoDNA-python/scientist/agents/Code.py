@@ -8,6 +8,11 @@ from agents.constants import AgentOutputPrefix
 from config import output_path, input_path, hardware_abstractions_path, corrector_path, shared_files_path, scheduler_path, scheduler_config_path, current_output_file_path, external_libs_usage_path, reference_list_path
 from tools.file_manager import file_manager
 from tools.utils import format_reagents_json, get_inventory, CoflowCache, InitialCodeCache
+from tools.parallel_unroller import (
+    DEFAULT_MARKER as PARALLEL_LOOP_MARKER,
+    UnrollError as ParallelLoopUnrollError,
+    unroll_code_copies,
+)
 from tools.reagent_manager import reagent_manager
 from prompts.agents.Code.prompt import *
 import subprocess
@@ -253,7 +258,119 @@ def correct_and_execute_code(code: str, hardware_abstractions: str, coder_hints:
     else:
         logger.error(f"Failed to correct code after {max_retries} attempts. Last error: {final_exec_result['stderr']}")
         return current_code, False
-    
+
+
+def rewrite_parallel_loop_code_for_unrolling(
+    code: str,
+    LLM_model,
+    prompt_index: int = 0,
+) -> str:
+    """Normalize the marked loop to the deterministic unroller contract."""
+    final_prompt = PARALLEL_LOOP_REWRITE_PROMPT.format(code=code)
+    os.makedirs(InitialCodeCache.cache_dir, exist_ok=True)
+    prompt_path = os.path.join(
+        InitialCodeCache.cache_dir,
+        f"last_parallel_loop_rewrite_prompt_{prompt_index}.md",
+    )
+    with open(prompt_path, "w", encoding="utf-8") as f:
+        f.write(final_prompt)
+
+    response = LLM_model.invoke(final_prompt)
+    response_content = response.content if hasattr(response, "content") else str(response)
+    return extract_python_code(response_content)
+
+
+def _extract_parallel_loop_code_candidates(response: str) -> list[str]:
+    candidates = []
+    for part in response.split(SEPARATE_PATTERN):
+        if PARALLEL_LOOP_MARKER not in part:
+            continue
+        code_content = extract_python_code(part.strip())
+        if code_content:
+            candidates.append(code_content)
+    return candidates
+
+
+def _format_unrolled_code_blocks(code_copies: list[str]) -> str:
+    return "\n\n".join(
+        f"=== Code {index} ===\n{code}"
+        for index, code in enumerate(code_copies, start=1)
+    )
+
+
+def handle_parallel_unroll_code_response(
+    chosen_llm_response: str,
+    workflow: str,
+    LLM_model=code_model,
+    source_procedure_id: str | None = None,
+) -> str | None:
+    """Unroll a marked root script and persist one Code ID per loop entry."""
+    if PARALLEL_LOOP_MARKER not in chosen_llm_response:
+        return None
+
+    initial_codes = _extract_parallel_loop_code_candidates(chosen_llm_response)
+    if not initial_codes:
+        return "Error: Parallel loop marker was found, but no Python code block could be extracted."
+
+    root_code = f"\n\n{SEPARATE_PATTERN}\n\n".join(initial_codes)
+    os.makedirs(InitialCodeCache.cache_dir, exist_ok=True)
+    with open(
+        os.path.join(InitialCodeCache.cache_dir, "last_parallel_loop_root_code.py"),
+        "w",
+        encoding="utf-8",
+    ) as f:
+        f.write(root_code)
+    InitialCodeCache.push_code(source_procedure_id or workflow, root_code)
+
+    final_codes = []
+    for index, initial_code in enumerate(initial_codes):
+        try:
+            final_codes.extend(unroll_code_copies(initial_code))
+            continue
+        except ParallelLoopUnrollError as initial_exc:
+            logger.info(
+                "Root code requires normalization before unrolling: "
+                f"{initial_exc}"
+            )
+
+        rewritten_code = rewrite_parallel_loop_code_for_unrolling(
+            initial_code,
+            LLM_model,
+            prompt_index=index,
+        )
+        try:
+            final_codes.extend(unroll_code_copies(rewritten_code))
+        except ParallelLoopUnrollError as exc:
+            logger.error(f"Failed to unroll marked parallel loop: {exc}")
+            return f"Error: Failed to unroll marked parallel loop: {exc}"
+
+    if not final_codes:
+        return "Error: No code copies were produced from the marked parallel loop."
+
+    with open(
+        os.path.join(InitialCodeCache.cache_dir, "last_unrolled_parallel_codes.txt"),
+        "w",
+        encoding="utf-8",
+    ) as f:
+        f.write(_format_unrolled_code_blocks(final_codes))
+
+    file_ids = file_manager.add_batch_files(
+        AgentOutputPrefix.PDA_OUTPUT,
+        final_codes,
+        description="Unrolled code copies from the marked parallel loop.",
+        metadata={
+            "execution_mode": "parallel_batch",
+            "source_procedure_id": source_procedure_id,
+        },
+    )
+    if source_procedure_id:
+        for file_id in file_ids:
+            file_manager.add_file_mapping(file_id, source_procedure_id)
+
+    logger.info(f"Saved {len(final_codes)} unrolled code copies.")
+    return f"result: {', '.join(file_ids)}"
+
+
 def change_code_from_scheduler(json_str:str):
     try:
         json_obj = json.loads(json_str)
@@ -285,8 +402,8 @@ def change_code_from_scheduler(json_str:str):
     # step2: execute code
     try:
         execute_code_to_scheduler([workflow_name], lib_path=os.path.abspath(scheduler_path), times=int(repeat_num))
-    except json.JSONDecodeError:
-        logger.error("execute code to scheduler failed.")
+    except Exception as exc:
+        logger.error(f"execute code to scheduler failed: {exc}")
     
 
 @tool
@@ -314,9 +431,23 @@ def Code(code_request_id: str, pure_software: bool = False, multiple_inputs: str
     logger.info("!!!CODER INVOKED!!!")
     res = file_manager.get_file_content(code_request_id)
 
+    if not res:
+        logger.error(f"File with ID {code_request_id} not found.")
+        return f"Error: File with ID {code_request_id} not found."
 
     if pure_software:
         return no_instrument_invoke(res, multiple_inputs if inputs_from_previous_stage == "" else inputs_from_previous_stage)
+
+    cache_name = f"{AgentOutputPrefix.PDA_OUTPUT}_cache.json"
+    cache_result = file_manager.load_from_cache_kv(cache_name, code_request_id)
+    if cache_result and PARALLEL_LOOP_MARKER in cache_result:
+        logger.info(f"Parallel root-code cache hit for request '{code_request_id}'")
+        return handle_parallel_unroll_code_response(
+            chosen_llm_response=cache_result,
+            workflow=res,
+            LLM_model=code_model,
+            source_procedure_id=code_request_id,
+        )
 
     # --- Construct the prompt ---
     inventory = get_formated_inventory()
@@ -325,11 +456,7 @@ def Code(code_request_id: str, pure_software: bool = False, multiple_inputs: str
     with open(hardware_abstractions_path, 'r', encoding='utf-8') as file:
         hardware_abstractions = file.read()
     
-    if res:
-        workflow = res
-    else:
-        logger.error(f"File with ID {code_request_id} not found.")
-        return f"Error: File with ID {code_request_id} not found."
+    workflow = res
     
     workflow = linearize_procedure(workflow, code_model)
 
@@ -355,8 +482,6 @@ def Code(code_request_id: str, pure_software: bool = False, multiple_inputs: str
 
     # cache check
     chosen_llm_response = ""
-    cache_name = f"{AgentOutputPrefix.PDA_OUTPUT}_cache.json"
-    cache_result = file_manager.load_from_cache_kv(cache_name, code_request_id)
     if cache_result:
         logger.info(f"Cache hit for request '{code_request_id}'")
         chosen_llm_response = cache_result
@@ -376,6 +501,15 @@ def Code(code_request_id: str, pure_software: bool = False, multiple_inputs: str
         except Exception as e:
             logger.error(f"Error during code generation: {e}\n{traceback.format_exc()}")
             return "An error occurred during the code generation LLM call."
+
+    parallel_unroll_result = handle_parallel_unroll_code_response(
+        chosen_llm_response=chosen_llm_response,
+        workflow=workflow,
+        LLM_model=code_model,
+        source_procedure_id=code_request_id,
+    )
+    if parallel_unroll_result is not None:
+        return parallel_unroll_result
 
     # --- Extract and Validate the CHOSEN code ---
     parts = chosen_llm_response.split(SEPARATE_PATTERN)

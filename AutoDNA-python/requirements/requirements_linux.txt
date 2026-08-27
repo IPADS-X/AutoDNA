@@ -138,7 +138,7 @@ typing_extensions==4.13.1
 tzdata==2025.2
 urllib3==2.3.0
 uvicorn==0.35.0
-websocket==0.2.1
+websocket-client==1.9.0
 websockets==15.0.1
 wheel==0.45.1
 win32_setctime==1.2.0

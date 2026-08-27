@@ -70,7 +70,15 @@ class FileManager:
             os.makedirs(self.llm_logs_path, exist_ok=True)
         return highest_num + 1
     
-    def add_file(self, agent_name: str, content: str, original_filename: str = "output.txt", description: str = "", save: bool = True) -> str:
+    def add_file(
+        self,
+        agent_name: str,
+        content: str,
+        original_filename: str = "output.txt",
+        description: str = "",
+        save: bool = True,
+        metadata: Dict | None = None,
+    ) -> str:
         """Adds a file to the database."""
         file_id = self._generate_unique_id(agent_name)
         
@@ -78,7 +86,8 @@ class FileManager:
             'content': content,
             'agent_name': agent_name,
             'original_filename': original_filename,
-            'description': description
+            'description': description,
+            'metadata': dict(metadata or {}),
         }
         
         logger.info(f"Data saved to KV store with ID: {file_id}")
@@ -109,31 +118,53 @@ class FileManager:
         logger.info(f"Data saved to KV store with ID: {file_id} (Agent: {agent_name})")
         return file_id
     
-    def add_batch_files(self, agent_name: str, content_list: List[str], description: str = "") -> List[str]:
+    def add_batch_files(
+        self,
+        agent_name: str,
+        content_list: List[str],
+        description: str = "",
+        metadata: Dict | None = None,
+    ) -> List[str]:
         """Adds a batch of files, each with a unique ID."""
         if not content_list:
             return []
 
+        batch_id = secrets.token_hex(2)
+        batch_size = len(content_list)
+
         if len(content_list) == 1:
+            file_metadata = dict(metadata or {})
+            file_metadata.update({
+                'batch_id': batch_id,
+                'batch_index': 0,
+                'batch_size': batch_size,
+            })
             file_id = self.add_file(
                 agent_name=agent_name,
                 content=content_list[0],
-                description=description
+                description=description,
+                metadata=file_metadata,
             )
             return [file_id]
 
         new_file_ids = []
-        batch_id = secrets.token_hex(2)
         logger.info(f"Processing batch '{batch_id}' for agent '{agent_name}'.")
 
         for i, content in enumerate(content_list):
             file_id = self._generate_unique_id(agent_name)
+            file_metadata = dict(metadata or {})
+            file_metadata.update({
+                'batch_id': batch_id,
+                'batch_index': i,
+                'batch_size': batch_size,
+            })
             
             self.db[file_id] = {
                 'content': content,
                 'agent_name': agent_name,
                 'original_filename': f"batch_{batch_id}_file_{i}.txt",
-                'description': description
+                'description': description,
+                'metadata': file_metadata,
             }
             new_file_ids.append(file_id)
 
@@ -147,6 +178,14 @@ class FileManager:
 
         logger.error(f"Error: File ID '{file_id}' not found in the database.")
         return None
+
+    def get_file_metadata(self, file_id: str) -> Dict:
+        """Returns structured metadata for a stored file, if present."""
+        if file_id in self.db:
+            return dict(self.db[file_id].get('metadata', {}))
+
+        logger.error(f"Error: File ID '{file_id}' not found in the database.")
+        return {}
     
     def get_latest_files(self, count: int) -> List[str]:
         """
