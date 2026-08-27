@@ -9,7 +9,7 @@ public:
               MachineType::AMPLIFICATION, ip, port,
               {Equipment::build(EquipmentType::ROBOT_ARM),
                Equipment::build(EquipmentType::PIPETEE_GUN),
-               Equipment::build(EquipmentType::PCR, 3), Equipment::build(EquipmentType::ENTER_POS),
+               Equipment::build(EquipmentType::PCR, 1), Equipment::build(EquipmentType::ENTER_POS),
                Equipment::build(EquipmentType::EXIT_POS)},
               {(AreaId)AmplificationArea::SAMPLE_AREA, (AreaId)AmplificationArea::TUBE_AREA_01,
                (AreaId)AmplificationArea::TUBE_AREA_02}) {}

@@ -58,6 +58,10 @@ public:
         results_map_[cur_phase_] = execution_results;
     }
 
+    const std::map<int, std::vector<ExecutionResult>>& getResultsMap() const {
+        return results_map_;
+    }
+
     std::string getResultsString() const {
         std::string res = "";
         for (const auto& [phase, results] : results_map_) {

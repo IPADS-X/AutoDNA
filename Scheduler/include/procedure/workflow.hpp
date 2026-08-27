@@ -1,10 +1,13 @@
 #pragma once
 
+#include <chrono>
 #include <functional>
+#include <iomanip>
 #include <iostream>
 #include <map>
 #include <memory>
 #include <queue>
+#include <sstream>
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -28,6 +31,58 @@ public:
     void setOriginalTimes(uint times) { original_times_ = times; }
 
     const uint getOriginalTimes() const { return original_times_; }
+
+    static uint64_t nowMs() {
+        return std::chrono::duration_cast<std::chrono::milliseconds>(
+                   std::chrono::steady_clock::now().time_since_epoch())
+            .count();
+    }
+
+    // Wall-clock timing of the whole workflow. Nothing is ever subtracted, so the
+    // reported duration also covers the time the workflow sat interrupted (paused
+    // while the code agent regenerated it): a resumed run inherits the start time
+    // of the run it continues.
+    void markStarted() {
+        if (start_time_ms_ == 0) {
+            start_time_ms_ = nowMs();
+        }
+    }
+
+    void setStartTimeMs(uint64_t start_time_ms) { start_time_ms_ = start_time_ms; }
+
+    uint64_t getStartTimeMs() const { return start_time_ms_; }
+
+    void markFinished() {
+        if (end_time_ms_ == 0) {
+            end_time_ms_ = nowMs();
+        }
+    }
+
+    uint64_t getDurationMs() const {
+        if (start_time_ms_ == 0) {
+            return 0;
+        }
+        return (end_time_ms_ == 0 ? nowMs() : end_time_ms_) - start_time_ms_;
+    }
+
+    static std::string formatDuration(uint64_t duration_ms) {
+        uint64_t total_seconds = duration_ms / 1000;
+        uint64_t hours         = total_seconds / 3600;
+        uint64_t minutes       = (total_seconds % 3600) / 60;
+        uint64_t seconds       = total_seconds % 60;
+
+        std::ostringstream oss;
+        if (hours > 0) {
+            oss << hours << "h ";
+        }
+        if (hours > 0 || minutes > 0) {
+            oss << minutes << "m ";
+        }
+        oss << seconds << "." << std::setw(3) << std::setfill('0') << duration_ms % 1000 << "s";
+        return oss.str();
+    }
+
+    std::string getDurationString() const { return formatDuration(getDurationMs()); }
 
     void addStep(std::shared_ptr<Step> step) {
         StepId id = getNewStepId();
@@ -79,9 +134,6 @@ public:
                           << ")"
                           << " -> " << next->getId() << "("
                           << steps_.at(next->getStepId())->getName() << ")" << std::endl;
-                if (!action->getResultsString().empty()) {
-                    std::cout << "Results: " << action->getResultsString() << std::endl;
-                }
                 actions.push(next);
             }
         }
@@ -98,12 +150,47 @@ public:
         num_ongoing_actions_ += 1;
     }
 
+    // Collect every non-null output of every action of this workflow.
+    // Walks actions_ instead of the action DAG, so mid-pipeline results (e.g. a
+    // fluorescence read) and the results of the very last action are both kept,
+    // and an action with several next actions is not reported more than once.
+    Variables collectResults() const {
+        Variables results = Variables::array();
+        for (const auto& [action_id, action] : actions_) {
+            for (const auto& [phase, phase_results] : action->getResultsMap()) {
+                for (const auto& result : phase_results) {
+                    if (result.output.is_null()) {
+                        continue;
+                    }
+                    auto step = action->getStep();
+                    results.push_back(Variables{
+                        {"action_id", action_id},
+                        {"step_id", action->getStepId()},
+                        {"step_name", step ? step->getName() : std::string()},
+                        {"phase", phase},
+                        {"output", result.output},
+                    });
+                }
+            }
+        }
+        return results;
+    }
+
     void printResults() {
         std::cout << "Workflow " << id_ << std::endl;
         for (const auto& step : steps_) {
             std::cout << "Step " << step.first << ": " << step.second->getName() << std::endl;
         }
         displayActions();
+
+        std::cout << "Total time of workflow " << id_ << ": " << getDurationString() << " ("
+                  << getDurationMs() << " ms, interruptions included)" << std::endl;
+
+        auto results = collectResults();
+        std::cout << "Results of workflow " << id_ << " (" << results.size() << "):" << std::endl;
+        for (const auto& result : results) {
+            std::cout << "  " << result.dump() << std::endl;
+        }
     }
 
     void setPreAlloc(bool is_pre_alloc) { is_pre_alloc_ = is_pre_alloc; }
@@ -116,6 +203,9 @@ private:
     uint        original_times_      = 1;
     uint        step_id_             = 1;
     uint        num_ongoing_actions_ = 0;
+
+    uint64_t start_time_ms_ = 0;
+    uint64_t end_time_ms_   = 0;
 
     bool is_pre_alloc_ = false;
 
