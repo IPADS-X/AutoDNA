@@ -9,7 +9,7 @@ public:
               MachineType::AMPLIFICATION, ip, port,
               {Equipment::build(EquipmentType::ROBOT_ARM),
                Equipment::build(EquipmentType::PIPETEE_GUN),
-               Equipment::build(EquipmentType::PCR, 3), Equipment::build(EquipmentType::ENTER_POS),
+               Equipment::build(EquipmentType::PCR, 1), Equipment::build(EquipmentType::ENTER_POS),
                Equipment::build(EquipmentType::EXIT_POS)},
               {(AreaId)AmplificationArea::SAMPLE_AREA, (AreaId)AmplificationArea::TUBE_AREA_01,
                (AreaId)AmplificationArea::TUBE_AREA_02}) {}
@@ -172,6 +172,10 @@ public:
 
     void aspirate_mix(uint16_t pos, uint16_t index, uint16_t volume, uint16_t total, uint16_t num,
                       uint16_t pipette_tr_index, uint16_t mix_speed, ActionId action_id);
+
+    void sequencing(ActionId action_id);
+
+    uint16_t get_sequencing_file_index();
 };
 
 class PortageModbusMachine : public ModbusMachine {

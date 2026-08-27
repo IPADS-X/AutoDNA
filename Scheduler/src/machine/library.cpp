@@ -256,3 +256,18 @@ void LibraryModbusMachine::aspirate_mix(uint16_t pos, uint16_t index, uint16_t v
     rc = client_.writeSingleRegister(LibAspirateMixModbus::START_ADDR, action_id);
     SPDLOG_ASSERT(rc == 1, "");
 }
+
+void LibraryModbusMachine::sequencing(ActionId action_id) {
+    subscribe((int)LibSequencingModbus::FINISH_ADDR, action_id, action_id);
+
+    int rc = client_.writeSingleRegister(LibSequencingModbus::START_ADDR, action_id);
+    SPDLOG_ASSERT(rc == 1, "");
+}
+
+uint16_t LibraryModbusMachine::get_sequencing_file_index() {
+    uint16_t index = 0;
+    int      rc    = client_.readHoldingRegisters(LibSequencingModbus::FILE_INDEX_ADDR, 1, &index);
+    SPDLOG_ASSERT(rc == 1, "");
+    logger->debug("read sequencing file index({}) from library machine", index);
+    return index;
+}

@@ -215,6 +215,15 @@ public:
     enum class TimeType { MILLISECOND, SECOND, MINUTE };
 };
 
+class LibSequencingModbus {
+public:
+    static const int START_ADDR  = 50030;
+    static const int FINISH_ADDR = 50080;
+
+    // machine side counter of the sequencing run, read back to build the file name
+    static const int FILE_INDEX_ADDR = 53000;
+};
+
 class FluoMoveCarrierModbus {
 public:
     static const int START_ADDR  = 50018;

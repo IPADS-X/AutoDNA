@@ -35,6 +35,8 @@ public:
         OPEN_PORT = 20,
         CLOSE_PORT = 21,
 
+        SEQUENCING = 22,
+
         ALLOC_TUBE          = 100,
         GET_TUBE            = 101,
     };

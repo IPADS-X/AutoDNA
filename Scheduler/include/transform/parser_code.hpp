@@ -26,6 +26,7 @@
 #include "process/library/move_carrier.hpp"
 #include "process/library/move_tube.hpp"
 #include "process/library/pipette.hpp"
+#include "process/library/sequencing.hpp"
 #include "process/library/timer.hpp"
 #include "process/portage.hpp"
 #include "process/purification.hpp"
@@ -114,6 +115,8 @@ public:
             {{"container_get", TubeType::STRIP_TUBE}, Dummy::DummyType::GET_TUBE},
             {{"container_get", TubeType::PCR_TUBE}, Dummy::DummyType::GET_TUBE},
             {{"container_get", TubeType::CHAMBER}, Dummy::DummyType::GET_TUBE},
+            {{"start_sequencing", TubeType::STRIP_TUBE}, Dummy::DummyType::SEQUENCING},
+            {{"start_sequencing", TubeType::PCR_TUBE}, Dummy::DummyType::SEQUENCING},
     };
 
     static const inline std::map<std::string, TubeType> tube_type_map_ = {

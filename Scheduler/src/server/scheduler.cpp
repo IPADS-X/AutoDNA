@@ -51,8 +51,11 @@ bool ProductionLineScheduler::waitChangeCode(std::shared_ptr<Action> action) {
     // remove the workflow and all of the action/stage/step from scheduler
     // resume code executing
 
-    paused_workflows_[workflows_.at(action->getWorkflowId())->getName()] =
-        std::make_pair(action, workflows_.at(action->getWorkflowId()));
+    auto paused_workflow = workflows_.at(action->getWorkflowId());
+    paused_workflows_[paused_workflow->getName()] = std::make_pair(action, paused_workflow);
+    // keep the earliest start time, so the whole interrupted span is counted later
+    interrupted_start_time_ms_.emplace(paused_workflow->getName(),
+                                       paused_workflow->getStartTimeMs());
 
     // called PDA
     auto succ = callCodeAgent(action, message);
@@ -69,13 +72,33 @@ bool ProductionLineScheduler::waitConfirmChangeEquipment(std::shared_ptr<Action>
 
     message += ", step change to: " + action->getStep()->getName();
 
-    paused_workflows_[workflows_.at(action->getWorkflowId())->getName()] =
-        std::make_pair(action, workflows_.at(action->getWorkflowId()));
+    auto paused_workflow = workflows_.at(action->getWorkflowId());
+    paused_workflows_[paused_workflow->getName()] = std::make_pair(action, paused_workflow);
+    // keep the earliest start time, so the whole interrupted span is counted later
+    interrupted_start_time_ms_.emplace(paused_workflow->getName(),
+                                       paused_workflow->getStartTimeMs());
 
     // called PDA
     auto succ = callCodeAgent(action, message);
 
     return true;
+}
+
+void ProductionLineScheduler::dispatchBatch(const PendingBatch& pending) {
+    auto workflows = TransferManager::parse_and_generate(
+        reality_, mac_manager_, pending.batch, pending.jump_from, pending.is_prealloc);
+    for (int i = 0; i < workflows.size(); ++i) {
+        auto& workflow = workflows[i];
+        logger->info("Generate a new workflow: {}", workflow->getName());
+        workflow->setName(pending.batch[i]);
+        workflow->setOriginalTimes(pending.exec_times);
+        workflow->setPreAlloc(pending.is_prealloc);
+        active_user_workflows_++;
+        if (!addWorkflowAndReOrder(nullptr, workflow)) {
+            logger->info("Added workflow {} to scheduler failed, will be retried",
+                         workflow->getName());
+        }
+    }
 }
 
 void ProductionLineScheduler::start() {
@@ -172,8 +195,8 @@ void ProductionLineScheduler::start() {
                 const size_t kBatchThreshold = WORKFLOW_BATCH_THRESHOLD;
                 const size_t kBatchSize      = WORKFLOW_BATCH_SIZE;
 
-                std::vector<std::vector<std::string>> batches;
                 if (all_workflow_names.size() > kBatchThreshold) {
+                    std::vector<std::vector<std::string>> batches;
                     for (size_t start = 0; start < all_workflow_names.size(); start += kBatchSize) {
                         size_t end = start + kBatchSize;
                         if (end > all_workflow_names.size()) {
@@ -185,12 +208,15 @@ void ProductionLineScheduler::start() {
                     logger->info("Workflow count {} exceeds {}, dispatching in {} batches of {}",
                                  all_workflow_names.size(), kBatchThreshold, batches.size(),
                                  kBatchSize);
+                    for (const auto& batch : batches) {
+                        pending_batches_.push({batch, jump_from, exec_times, is_prealloc});
+                    }
                 } else {
-                    batches.push_back(all_workflow_names);
-                }
-
-                for (const auto& batch : batches) {
-                    pending_batches_.push({batch, jump_from, exec_times, is_prealloc});
+                    // Not split, so nothing to pipeline: add it now, exactly as before.
+                    // Going through pending_batches_ would make it wait for the running
+                    // workflows to finish, and would queue it behind the batches of an
+                    // over-threshold dispatch that is still in flight.
+                    dispatchBatch({all_workflow_names, jump_from, exec_times, is_prealloc});
                 }
             }
         } else if (web_event) {
@@ -198,23 +224,11 @@ void ProductionLineScheduler::start() {
             logger->debug("not accepted: {}", web_event->get()->data);
         }
 
+        // the next batch of an over-threshold dispatch, once the previous one is done
         if (active_user_workflows_ == 0 && !pending_batches_.empty()) {
             auto pending = pending_batches_.front();
             pending_batches_.pop();
-            auto workflows = TransferManager::parse_and_generate(
-                reality_, mac_manager_, pending.batch, pending.jump_from, pending.is_prealloc);
-            for (int i = 0; i < workflows.size(); ++i) {
-                auto& workflow = workflows[i];
-                logger->info("Generate a new workflow: {}", workflow->getName());
-                workflow->setName(pending.batch[i]);
-                workflow->setOriginalTimes(pending.exec_times);
-                workflow->setPreAlloc(pending.is_prealloc);
-                active_user_workflows_++;
-                if (!addWorkflowAndReOrder(nullptr, workflow)) {
-                    logger->info("Added workflow {} to scheduler failed, will be retried",
-                                 workflow->getName());
-                }
-            }
+            dispatchBatch(pending);
         }
 
         if (failed_prealloc_workflows_.size() > 0) {

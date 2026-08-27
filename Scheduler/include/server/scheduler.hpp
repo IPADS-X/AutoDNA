@@ -97,6 +97,7 @@ public:
         workflow->setBaseStepId(std::stoi(stage->getId()));
 #endif
         stage->generateWorkflow(*workflow);
+        workflow->markStarted();
         auto action = activateStep(stage->getMyStep(), workflow);
         workflow->setInitialAction(action);
 
@@ -152,6 +153,18 @@ public:
             }
         }
 
+        // A workflow resumed after an interruption keeps the start time of the run it
+        // continues, so the reported total covers the paused gap as well.
+        auto interrupted_start = interrupted_start_time_ms_.find(workflow->getName());
+        if (interrupted_start != interrupted_start_time_ms_.end()) {
+            logger->info("Workflow {} resumes an interrupted run, keeping its start time {} ms",
+                         workflow->getName(), interrupted_start->second);
+            workflow->setStartTimeMs(interrupted_start->second);
+            interrupted_start_time_ms_.erase(interrupted_start);
+        } else {
+            workflow->markStarted();
+        }
+
         auto action = activateStep(workflow->getSteps()[0], workflow);
         workflow->setInitialAction(action);
         workflows_[new_workflow_id] = workflow;
@@ -202,6 +215,33 @@ public:
             {"message", message},
             {"times", original_times},
         };
+
+        web_send_queue_.push(std::make_shared<WebEvent>(send_json.dump()));
+
+        return true;
+    }
+
+    // Report every result the workflow produced (including mid-pipeline ones such
+    // as fluorescence reads) to the Code agent once the whole workflow is done.
+    bool sendResultsToHardwareAgent(std::shared_ptr<Workflow> workflow) {
+        auto results = workflow->collectResults();
+
+        auto send_json = nlohmann::json{
+            {"type", "workflow_results"},
+            {"workflow_id", workflow->getId()},
+            {"workflow_name", workflow->getName()},
+            {"times", workflow->getOriginalTimes()},
+            {"num_results", results.size()},
+            {"results", results},
+            // total wall-clock time of the workflow, interruptions included
+            {"duration_ms", workflow->getDurationMs()},
+            {"duration", workflow->getDurationString()},
+        };
+
+        logger->info("Workflow {} ({}) finished in {} ({} ms, interruptions included) with {} "
+                     "results: {}",
+                     workflow->getId(), workflow->getName(), workflow->getDurationString(),
+                     workflow->getDurationMs(), results.size(), results.dump());
 
         web_send_queue_.push(std::make_shared<WebEvent>(send_json.dump()));
 
@@ -342,8 +382,9 @@ public:
             if (workflow->getId() < system_workflow_id_base_) {
                 active_user_workflows_--;
             }
-            // TODO: NOTIFY finished?
+            workflow->markFinished();
             workflow->printResults();
+            sendResultsToHardwareAgent(workflow);
             if (workflow->isPreAlloc()) {
                 auto steps = workflow->getSteps();
                 for (int i = 0; i < steps.size(); i++) {
@@ -437,13 +478,23 @@ private:
         int                      exec_times;
         bool                     is_prealloc;
     };
+    // only holds the batches of an over-threshold dispatch: those are pipelined, i.e.
+    // each batch waits until the previous one has finished. A dispatch that was not
+    // split never enters this queue, it is added right away.
     std::queue<PendingBatch> pending_batches_;
     int                      active_user_workflows_ = 0;
+
+    // parse/merge/alloc one dispatch batch and add its workflows to the scheduler
+    void dispatchBatch(const PendingBatch& pending);
 
     std::unordered_map<ActionId, std::shared_ptr<Action>> actions_waiting_ack_;
 
     std::map<std::string, std::pair<std::shared_ptr<Action>, std::shared_ptr<Workflow>>>
         paused_workflows_;
+
+    // workflow name -> start time of the interrupted run, handed to the workflow that
+    // resumes it so the interruption is counted in the total time
+    std::unordered_map<std::string, uint64_t> interrupted_start_time_ms_;
 
     std::mutex TOCTTOU_mutex_;
 

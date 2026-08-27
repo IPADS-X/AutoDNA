@@ -25,6 +25,7 @@
 #include "process/library/move_carrier.hpp"
 #include "process/library/move_tube.hpp"
 #include "process/library/pipette.hpp"
+#include "process/library/sequencing.hpp"
 #include "process/library/timer.hpp"
 #include "process/portage.hpp"
 #include "process/purification.hpp"
@@ -84,6 +85,8 @@ class AllocMachine {
             {std::make_pair(Dummy::DummyType::HEATER, MachineType::LIBRARY),
              LibHeatStep::fromDummy},
             {std::make_pair(Dummy::DummyType::TIME, MachineType::LIBRARY), LibTimeStep::fromDummy},
+            {std::make_pair(Dummy::DummyType::SEQUENCING, MachineType::LIBRARY),
+             LibSequencingStep::fromDummy},
             {std::make_pair(Dummy::DummyType::TIME, MachineType::PURIFICATION),
              PuriTimeStep::fromDummy},
             {std::make_pair(Dummy::DummyType::TIME, MachineType::FLUORESCENCE),
@@ -117,6 +120,7 @@ class AllocMachine {
         {Dummy::DummyType::PIPETTE_PCR_TUBE, {MachineType::LIBRARY}},
         {Dummy::DummyType::MOVE_PCR_TUBE, {MachineType::LIBRARY}},
         {Dummy::DummyType::CENTRIFUGE_PCR_TUBE, {MachineType::LIBRARY}},
+        {Dummy::DummyType::SEQUENCING, {MachineType::LIBRARY}},
     };
 
     static const inline std::map<Dummy::DummyEquipment, std::vector<MachineType>>
