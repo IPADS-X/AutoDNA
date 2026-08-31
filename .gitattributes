@@ -1,0 +1,1 @@
+Data/sequencing/**/*.fastq.zip filter=lfs diff=lfs merge=lfs -text
