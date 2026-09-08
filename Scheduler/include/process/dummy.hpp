@@ -37,6 +37,8 @@ public:
 
         SEQUENCING = 22,
 
+        FLUO_CONCENTRATION = 23,
+
         ALLOC_TUBE          = 100,
         GET_TUBE            = 101,
     };
@@ -202,7 +204,8 @@ public:
         if (type_ == Dummy::DummyType::CAP || type_ == Dummy::DummyType::SHAKE ||
             type_ == Dummy::DummyType::TIME || type_ == Dummy::DummyType::HEATER ||
             type_ == Dummy::DummyType::PCR || type_ == Dummy::DummyType::CENTRIFUGE ||
-            type_ == Dummy::DummyType::FLUO || type_ == Dummy::DummyType::CENTRIFUGE_PCR_TUBE) {
+            type_ == Dummy::DummyType::FLUO || type_ == Dummy::DummyType::FLUO_CONCENTRATION ||
+            type_ == Dummy::DummyType::CENTRIFUGE_PCR_TUBE) {
             return true;
         }
         return false;

@@ -76,6 +76,9 @@ public:
     void start_read_fluorescence(ActionId action_id);
 
     void get_fluorescence_values(ActionId action_id, std::vector<float>& results);
+
+    // 读换算后的浓度, 与 get_fluorescence_values 同构, 只是结果区地址不同
+    void get_concentration_values(ActionId action_id, std::vector<float>& results);
 };
 
 class PurificationModbusMachine : public ModbusMachine {

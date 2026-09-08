@@ -13,6 +13,7 @@
 #include "process/fluorescence.hpp"
 #include "process/fluorescence/aspirate_mix.hpp"
 #include "process/fluorescence/captube.hpp"
+#include "process/fluorescence/concentration.hpp"
 #include "process/fluorescence/fluo.hpp"
 #include "process/fluorescence/move_carrier.hpp"
 #include "process/fluorescence/move_tube.hpp"
@@ -82,6 +83,8 @@ class AllocMachine {
              FluoCapTubeStep::fromDummy},
             {std::make_pair(Dummy::DummyType::FLUO, MachineType::FLUORESCENCE),
              FluoFluoStep::fromDummy},
+            {std::make_pair(Dummy::DummyType::FLUO_CONCENTRATION, MachineType::FLUORESCENCE),
+             FluoConcentrationStep::fromDummy},
             {std::make_pair(Dummy::DummyType::HEATER, MachineType::LIBRARY),
              LibHeatStep::fromDummy},
             {std::make_pair(Dummy::DummyType::TIME, MachineType::LIBRARY), LibTimeStep::fromDummy},
@@ -116,6 +119,7 @@ class AllocMachine {
         // {Dummy::DummyType::PCR, {MachineType::AMPLIFICATION}},
         {Dummy::DummyType::CENTRIFUGE, {MachineType::PURIFICATION, MachineType::LIBRARY}},
         {Dummy::DummyType::FLUO, {MachineType::FLUORESCENCE}},
+        {Dummy::DummyType::FLUO_CONCENTRATION, {MachineType::FLUORESCENCE}},
         {Dummy::DummyType::CAP, {MachineType::FLUORESCENCE}},
         {Dummy::DummyType::PIPETTE_PCR_TUBE, {MachineType::LIBRARY}},
         {Dummy::DummyType::MOVE_PCR_TUBE, {MachineType::LIBRARY}},

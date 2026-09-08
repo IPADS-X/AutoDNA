@@ -243,6 +243,31 @@ void FluorescenceModbusMachine::start_read_fluorescence(ActionId action_id) {
     SPDLOG_ASSERT(rc == 1, "");
 }
 
+void FluorescenceModbusMachine::get_concentration_values(ActionId            action_id,
+                                                         std::vector<float>& results) {
+
+    int     rc;
+    uint8_t buf[SN_LEN * 2];
+    memset(buf, 0, sizeof(buf));
+    results.resize(TUBE_LEN);
+
+    std::vector<uint16_t> raw(RESULT_LEN);
+    rc = client_.readHoldingRegisters(FluorescenceModbus::FINISH_CONCENTRATION_ADDR, TUBE_LEN,
+                                      raw.data());
+    ASSERT(rc == TUBE_LEN) << rc;
+
+    rc = client_.readHoldingRegisters(FluorescenceModbus::FINISH_CONCENTRATION_ADDR + TUBE_LEN,
+                                      TUBE_LEN, raw.data() + TUBE_LEN);
+    ASSERT(rc == TUBE_LEN) << rc;
+
+    for (int i = 0; i < TUBE_LEN; ++i) {
+        float result = modbus_get_float(raw.data() + i * 2);
+        results[i]   = result;
+    }
+
+    reduce_vector_zero_part(results);
+}
+
 void FluorescenceModbusMachine::get_fluorescence_values(ActionId            action_id,
                                                         std::vector<float>& results) {
 

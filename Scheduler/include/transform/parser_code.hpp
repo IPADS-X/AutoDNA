@@ -15,6 +15,7 @@
 #include "process/fluorescence.hpp"
 #include "process/fluorescence/aspirate_mix.hpp"
 #include "process/fluorescence/captube.hpp"
+#include "process/fluorescence/concentration.hpp"
 #include "process/fluorescence/fluo.hpp"
 #include "process/fluorescence/move_carrier.hpp"
 #include "process/fluorescence/move_tube.hpp"
@@ -93,6 +94,10 @@ public:
             {{"MIX", TubeType::STRIP_TUBE}, Dummy::DummyType::MIX},
             {{"fluorometer_measure", TubeType::STRIP_TUBE}, Dummy::DummyType::FLUO},
             {{"fluorometer_measure", TubeType::PCR_TUBE}, Dummy::DummyType::FLUO},
+            {{"fluorometer_concentration", TubeType::STRIP_TUBE},
+             Dummy::DummyType::FLUO_CONCENTRATION},
+            {{"fluorometer_concentration", TubeType::PCR_TUBE},
+             Dummy::DummyType::FLUO_CONCENTRATION},
             // {{"capper_cap_tube", TubeType::STRIP_TUBE}, Dummy::DummyType::CAP},
             // {{"capper_cap_tube", TubeType::PCR_TUBE}, Dummy::DummyType::CAP},
             {{"capper_cap_container", TubeType::STRIP_TUBE}, Dummy::DummyType::CAP},

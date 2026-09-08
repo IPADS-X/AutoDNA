@@ -110,6 +110,10 @@ public:
     static const int FINISH_SN_ADDR     = 40123;
     static const int FINISH_RESULT_ADDR = 40146;
 
+    // 浓度结果区: 每管 2 个寄存器拼一个 float, 共 TUBE_LEN 管
+    // NOTE: 地址需与荧光计侧的寄存器表核对
+    static const int FINISH_CONCENTRATION_ADDR = 40400;
+
     static const int FINISH_CONFIRM_ADDR    = 40004;
     static const int FINISH_CONFIRM_SN_ADDR = 40133;
 };
