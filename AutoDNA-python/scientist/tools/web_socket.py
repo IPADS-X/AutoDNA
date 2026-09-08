@@ -73,7 +73,7 @@ class WebSocketClient:
                 
                 # 遍历并调用所有注册的回调
                 if self._callbacks:
-                    for cb in self._callbacks.values():
+                    for cb in tuple(self._callbacks.values()):
                         # 在同步模式下，直接调用回调函数
                         cb(message)
         except websocket.WebSocketConnectionClosedException:

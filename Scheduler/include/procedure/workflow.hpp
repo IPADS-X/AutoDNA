@@ -28,6 +28,10 @@ public:
 
     const std::string& getName() const { return name_; }
 
+    void setResultTracking(const Variables& tracking) { result_tracking_ = tracking; }
+
+    const Variables& getResultTracking() const { return result_tracking_; }
+
     void setOriginalTimes(uint times) { original_times_ = times; }
 
     const uint getOriginalTimes() const { return original_times_; }
@@ -198,6 +202,7 @@ public:
     bool isPreAlloc() const { return is_pre_alloc_; }
 
 private:
+    Variables   result_tracking_;
     WorkflowId  id_;
     std::string name_;
     uint        original_times_      = 1;

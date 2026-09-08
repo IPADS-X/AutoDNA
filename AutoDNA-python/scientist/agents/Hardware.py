@@ -9,12 +9,15 @@ from agents.Literature import answer_one_question
 from agents.constants import AgentName, AgentOutputPrefix
 from prompts.agents.Hardware.prompt import intermediate_products_prompt
 from tools.file_manager import file_manager
+from tools.hardware_metrics import fill_metrics
 from tools.utils import CoflowCache, to_numeric, WorkflowCache
 import os
 import sys
 from enum import Enum
 import asyncio
 import json
+import threading
+import uuid
 
 from tools.web_socket import WebSocketClient
 
@@ -129,6 +132,83 @@ def _ordered_execution_mode(file_ids: list[str]) -> tuple[str, list[str]]:
     return "parallel_batch", ordered_ids
 
 
+class _SchedulerResults:
+    """Collect the actual workflows produced by each tracked submission."""
+
+    def __init__(self, request_ids, workflow_names):
+        self.request_ids = request_ids
+        self.workflow_names = set(workflow_names)
+        self.results = {request_id: {} for request_id in request_ids}
+        self.batch_counts = {}
+        self.workflow_counts = {request_id: {} for request_id in request_ids}
+        self.error = None
+        self.condition = threading.Condition()
+
+    def receive(self, raw_message):
+        try:
+            message = json.loads(raw_message)
+        except (TypeError, json.JSONDecodeError):
+            return
+        if not isinstance(message, dict) or message.get("type") != "workflow_results":
+            return
+
+        tracking = message.get("result_tracking")
+        with self.condition:
+            if not tracking:
+                if message.get("workflow_name") in self.workflow_names:
+                    self.error = RuntimeError(
+                        "Scheduler results lack tracking metadata; rebuild the updated "
+                        "MinorFix Scheduler before using --real."
+                    )
+                    self.condition.notify_all()
+                return
+            request_id = tracking.get("request_id")
+            if request_id not in self.results:
+                return
+            try:
+                batch = int(tracking["batch_index"])
+                index = int(tracking["workflow_index"])
+                batch_count = int(tracking["batch_count"])
+                workflow_count = int(tracking["workflow_count"])
+                if not (0 <= batch < batch_count and 0 <= index < workflow_count):
+                    raise ValueError("Invalid Scheduler result indexes.")
+                self.batch_counts[request_id] = batch_count
+                self.workflow_counts[request_id][batch] = workflow_count
+                self.results[request_id][batch, index] = message
+            except (KeyError, TypeError, ValueError) as exc:
+                self.error = exc
+            self.condition.notify_all()
+
+    def complete(self):
+        for request_id in self.request_ids:
+            count = self.batch_counts.get(request_id)
+            if count is None:
+                return False
+            for batch in range(count):
+                workflows = self.workflow_counts[request_id].get(batch)
+                if workflows is None or any(
+                    (batch, index) not in self.results[request_id]
+                    for index in range(workflows)
+                ):
+                    return False
+        return True
+
+    def wait(self, client):
+        with self.condition:
+            while not self.complete():
+                if self.error is not None:
+                    raise self.error
+                connection = client.websocket
+                if connection is None or not connection.connected:
+                    raise ConnectionError("Scheduler disconnected while waiting for results.")
+                self.condition.wait(timeout=1.0)
+            return [
+                self.results[request_id][key]
+                for request_id in self.request_ids
+                for key in sorted(self.results[request_id])
+            ]
+
+
 def _convert_code_to_scheduler_file(file_id: str, lib_path: str) -> str:
     code = file_manager.get_file_content(file_id)
     if not code:
@@ -184,6 +264,7 @@ def execute_code_to_scheduler(
     lib_path: str,
     times: int,
     parallel_batch: bool = False,
+    collect_results: bool = False,
 ) -> dict:
     if not file_ids:
         raise ValueError("At least one workflow Code ID is required.")
@@ -215,16 +296,36 @@ def execute_code_to_scheduler(
         ]
 
     scheduler_client = WebSocketClient.get_instance()
-    for message_data in messages:
-        message = json.dumps(message_data)
-        scheduler_client.send_message(message)
-        logger.info(f"Sent message to scheduler: {message}")
+    collector = None
+    callback_id = None
+    if collect_results:
+        for message_data in messages:
+            message_data["result_request_id"] = uuid.uuid4().hex
+        request_ids = [message["result_request_id"] for message in messages]
+        collector = _SchedulerResults(request_ids, file_ids)
+        callback_id = f"Hardware metrics {request_ids[0]}"
+        scheduler_client.register_callback(callback_id, collector.receive)
 
-    return {
+    workflow_results = []
+    try:
+        for message_data in messages:
+            message = json.dumps(message_data)
+            scheduler_client.send_message(message)
+            logger.info(f"Sent message to scheduler: {message}")
+        if collector is not None:
+            workflow_results = collector.wait(scheduler_client)
+    finally:
+        if callback_id is not None:
+            scheduler_client.unregister_callback(callback_id)
+
+    result = {
         "workflow_names": list(file_ids),
         "workflow_files": workflow_files,
         "messages": messages,
     }
+    if collect_results:
+        result["workflow_results"] = workflow_results
+    return result
 
 def judge_info_enough(current_return: str):
     user_prompt = get_current_user_prompt()
@@ -484,11 +585,12 @@ def Hardware(file_ids: list[str], repeat_num: int, pure_software: bool = False):
 
     try:
         resolved_mode, ordered_file_ids = _ordered_execution_mode(file_ids)
-        execute_code_to_scheduler(
+        scheduler_result = execute_code_to_scheduler(
             ordered_file_ids,
             scheduler_path,
             repeat_num,
             parallel_batch=resolved_mode == "parallel_batch",
+            collect_results=settings.real,
         )
     except Exception as exc:
         logger.error(f"Failed to prepare or submit scheduler workflows: {exc}")
@@ -517,11 +619,27 @@ def Hardware(file_ids: list[str], repeat_num: int, pure_software: bool = False):
     )
     logger.info(f"The number of records is: {optimizing_num}")
 
+    metric_context = get_current_user_prompt() if settings.real else ""
     for i in range(int(optimizing_num)):
-        optimizing_result = {}
-        for metric in metrics:
-            optimizing_result[metric] = get_input(metric)
-        result[i] = optimizing_result
+        if settings.real:
+            record_ids = (
+                ordered_file_ids if resolved_mode == "parallel_batch" else [ordered_file_ids[i]]
+            )
+            record_results = [
+                item for item in scheduler_result["workflow_results"]
+                if item.get("workflow_name") in record_ids
+            ]
+            result[i] = fill_metrics(
+                metrics,
+                real=True,
+                scheduler_results=record_results,
+                experiment_context=metric_context,
+            )
+        else:
+            optimizing_result = {}
+            for metric in metrics:
+                optimizing_result[metric] = get_input(metric)
+            result[i] = optimizing_result
 
     best_index = 0
     procedure_id = None

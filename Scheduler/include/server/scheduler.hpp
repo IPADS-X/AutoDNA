@@ -238,6 +238,10 @@ public:
             {"duration", workflow->getDurationString()},
         };
 
+        if (!workflow->getResultTracking().empty()) {
+            send_json["result_tracking"] = workflow->getResultTracking();
+        }
+
         logger->info("Workflow {} ({}) finished in {} ({} ms, interruptions included) with {} "
                      "results: {}",
                      workflow->getId(), workflow->getName(), workflow->getDurationString(),
@@ -477,6 +481,7 @@ private:
         int                      jump_from;
         int                      exec_times;
         bool                     is_prealloc;
+        Variables                result_tracking = Variables();
     };
     // only holds the batches of an over-threshold dispatch: those are pipelined, i.e.
     // each batch waits until the previous one has finished. A dispatch that was not

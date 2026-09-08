@@ -93,6 +93,15 @@ void ProductionLineScheduler::dispatchBatch(const PendingBatch& pending) {
         workflow->setName(pending.batch[i]);
         workflow->setOriginalTimes(pending.exec_times);
         workflow->setPreAlloc(pending.is_prealloc);
+        auto tracking = pending.result_tracking;
+        if (!tracking.empty()) {
+            // A recovered workflow keeps its original logical result slot.
+            if (!tracking.contains("workflow_index")) {
+                tracking["workflow_index"] = i;
+                tracking["workflow_count"] = workflows.size();
+            }
+            workflow->setResultTracking(tracking);
+        }
         active_user_workflows_++;
         if (!addWorkflowAndReOrder(nullptr, workflow)) {
             logger->info("Added workflow {} to scheduler failed, will be retried",
@@ -164,6 +173,22 @@ void ProductionLineScheduler::start() {
                     jump_from = paused_workflows_[workflow_names[0]].first->getStep()->getId();
                 }
 
+                Variables result_tracking;
+                if (json_data.contains("result_request_id")) {
+                    result_tracking = {{"request_id", json_data["result_request_id"]}};
+                } else if (paused_workflows_.count(workflow_names[0]) > 0) {
+                    result_tracking =
+                        paused_workflows_[workflow_names[0]].second->getResultTracking();
+                }
+                auto tracking_for_batch = [&](size_t index, size_t count) {
+                    auto tracking = result_tracking;
+                    if (!tracking.empty() && !tracking.contains("workflow_index")) {
+                        tracking["batch_index"] = index;
+                        tracking["batch_count"] = count;
+                    }
+                    return tracking;
+                };
+
                 int exec_times = 1;
                 if (json_data.contains("times")) {
                     exec_times = json_data["times"];
@@ -208,15 +233,17 @@ void ProductionLineScheduler::start() {
                     logger->info("Workflow count {} exceeds {}, dispatching in {} batches of {}",
                                  all_workflow_names.size(), kBatchThreshold, batches.size(),
                                  kBatchSize);
-                    for (const auto& batch : batches) {
-                        pending_batches_.push({batch, jump_from, exec_times, is_prealloc});
+                    for (size_t i = 0; i < batches.size(); ++i) {
+                        pending_batches_.push({batches[i], jump_from, exec_times, is_prealloc,
+                                               tracking_for_batch(i, batches.size())});
                     }
                 } else {
                     // Not split, so nothing to pipeline: add it now, exactly as before.
                     // Going through pending_batches_ would make it wait for the running
                     // workflows to finish, and would queue it behind the batches of an
                     // over-threshold dispatch that is still in flight.
-                    dispatchBatch({all_workflow_names, jump_from, exec_times, is_prealloc});
+                    dispatchBatch({all_workflow_names, jump_from, exec_times, is_prealloc,
+                                   tracking_for_batch(0, 1)});
                 }
             }
         } else if (web_event) {

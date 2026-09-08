@@ -68,6 +68,7 @@ class AppConfig:
     """A simple configuration holder."""
     def __init__(self):
         self.mock_mode = False
+        self.real = False
         self.no_filtering = False
         self.synthesis = False
         self.storage = False

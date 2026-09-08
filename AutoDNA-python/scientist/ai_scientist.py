@@ -987,6 +987,11 @@ def main_routine():
 def main():
     parser = argparse.ArgumentParser(description="Multi-Agent System with Mock Mode")
     parser.add_argument(
+        '--real',
+        action='store_true',
+        help="Fill Hardware metric values automatically from Scheduler results using the LLM."
+    )
+    parser.add_argument(
         '-m', '--mock_mode',
         action='store_true',  # Makes it a flag, e.g., presence means True
         help="Run the system in mock mode for debugging."
@@ -1066,6 +1071,8 @@ def main():
     )
 
     args = parser.parse_args()
+
+    settings.real = args.real
 
     if args.no_filtering:
         logger.info("🚫 Protocol input filtering is disabled.")
